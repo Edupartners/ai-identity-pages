@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Andrea Míčková - PR specialista, copywriter a stratég obsahu. Pomáhám značkám získat медiální pozornost a vytvářím obsah, který přitahuje nové zákazníky.">
+	<meta property="og:title" content="Andrea Míčková - PR Specialista a Copywriter">
+	<meta property="og:description" content="Zviditelnění značek v médiích, tvorba efektivního obsahu a PR strategie pro realitní sektor.">
+	<meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/andrea-mickova/foto.jpg">
+	<meta property="og:url" content="https://andrea-mickova.cz">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Andrea Míčková | PR Specialista a Copywriter</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #0a0a0a;
+			color: #e0e0e0;
+			line-height: 1.6;
+			overflow-x: hidden;
+		}
+
+		/* NAVBAR */
+		nav {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			background: rgba(10, 10, 10, 0.95);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid rgba(255, 87, 34, 0.1);
+			z-index: 1000;
+			padding: 1.5rem 0;
+		}
+
+		.nav-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.nav-logo {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #fff;
+			text-decoration: none;
+			letter-spacing: -1px;
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 3rem;
+			align-items: center;
+			list-style: none;
+		}
+
+		.nav-links a {
+			color: #e0e0e0;
+			text-decoration: none;
+			font-size: 0.95rem;
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		.nav-links a:hover {
+			color: #ff5722;
+		}
+
+		.nav-cta {
+			background: #ff5722;
+			color: #fff;
+			padding: 0.7rem 1.8rem;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 0.9rem;
+			transition: all 0.3s ease;
+			border: none;
+			cursor: pointer;
+		}
+
+		.nav-cta:hover {
+			background: #e64a19;
+			transform: translateY(-2px);
+			box-shadow: 0 10px 30px rgba(255, 87, 34, 0.3);
+		}
+
+		@media (max-width: 768px) {
+			.nav-links {
+				display: none;
+			}
+		}
+
+		/* HERO SECTION */
+		.hero {
+			padding-top: 120px;
+			padding-bottom: 80px;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0a 100%);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			right: -10%;
+			width: 600px;
+			height: 600px;
+			background: radial-gradient(circle, rgba(255, 87, 34, 0.1) 0%, transparent 70%);
+			border-radius: 50%;
+		}
+
+		.hero-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 2rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+			position: relative;
+			z-index: 2;
+		}
+
+		.hero-content h1 {
+			font-size: 3.5rem;
+			font-weight: 800;
+			line-height: 1.2;
+			margin-bottom: 1.5rem;
+			color: #fff;
+		}
+
+		.hero-content h1 .accent {
+			color: #ff5722;
+		}
+
+		.hero-content p {
+			font-size: 1.1rem;
+			color: #b0b0b0;
+			margin-bottom: 2rem;
+			line-height: 1.8;
+		}
+
+		.hero-buttons {
+			display: flex;
+			gap: 1.5rem;
+			margin-bottom: 3rem;
+			flex-wrap: wrap;
+		}
+
+		.btn-primary {
+			background: #ff5722;
+			color: #fff;
+			padding: 1rem 2.2rem;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 1rem;
+			border: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+
+		.btn-primary:hover {
+			background: #e64a19;
+			transform: translateY(-3px);
+			box-shadow: 0 15px 40px rgba(255, 87, 34, 0.4);
+		}
+
+		.btn-secondary {
+			background: transparent;
+			color: #ff5722;
+			padding: 1rem 2.2rem;
+			border: 2px solid #ff5722;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+
+		.btn-secondary:hover {
+			background: #ff5722;
+			color: #fff;
+			transform: translateY(-3px);
+		}
+
+		.hero-image {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hero-image-circle {
+			width: 380px;
+			height: 380px;
+			border-radius: 50%;
+			border: 3px solid #ff5722;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: radial-gradient(circle at 30% 30%, rgba(255, 87, 34, 0.2), rgba(10, 10, 10, 1));
+			box-shadow: 0 0 60px rgba(255, 87, 34, 0.3);
+			animation: float 3s ease-in-out infinite;
+		}
+
+		.hero-image-circle img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@keyframes float {
+			0%, 100% { transform: translateY(0px); }
+			50% { transform: translateY(-20px); }
+		}
+
+		@media (max-width: 968px) {
+			.hero-container {
+				grid-template-columns: 1fr;
+			}
+
+			.hero-content h1 {
+				font-size: 2.5rem;
+			}
+
+			.hero-image-circle {
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		/* STATS SECTION */
+		.stats {
+			padding: 6rem 2rem;
+			background: #0a0a0a;
+			border-top: 1px solid rgba(255, 87, 34, 0.1);
+		}
+
+		.stats-grid {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 3rem;
+		}
+
+		.stat-item {
+			text-align: center;
+		}
+
+		.stat-number {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #ff5722;
+			margin-bottom: 0.5rem;
+		}
+
+		.stat-label {
+			font-size: 1rem;
+			color: #b0b0b0;
+			font-weight: 500;
+		}
+
+		/* ABOUT SECTION */
+		.about {
+			padding: 8rem 2rem;
+			background: #0d0d0d;
+		}
+
+		.about-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+		}
+
+		.about-content {
+			order: 2;
+		}
+
+		.about-badge {
+			display: inline-block;
+			background: rgba(255, 87, 34, 0.1);
+			color: #ff5722;
+			padding: 0.5rem 1.2rem;
+			border-radius: 50px;
+			font-size: 0.85rem;
+			font-weight: 600;
+			margin-bottom: 1.5rem;
+			border: 1px solid rgba(255, 87, 34, 0.3);
+		}
+
+		.about-content h2 {
+			font-size: 2.5rem;
+			font-weight: 800;
+			margin-bottom: 1.5rem;
+			color: #fff;
+			line-height: 1.3;
+		}
+
+		.about-content p {
+			font-size: 1.05rem;
+			color: #b0b0b0;
+			margin-bottom: 2.5rem;
+			line-height: 1.9;
+		}
+
+		.about-values {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		.value-item {
+			display: flex;
+			gap: 1rem;
+		}
+
+		.value-icon {
+			width: 50px;
+			height: 50px;
+			background: rgba(255, 87, 34, 0.15);
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			color: #ff5722;
+			font-weight: 700;
+			font-size: 1.5rem;
+		}
+
+		.value-content h3 {
+			font-size: 0.95rem;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 0.3rem;
+		}
+
+		.value-content p {
+			font-size: 0.85rem;
+			color: #808080;
+			margin: 0;
+		}
+
+		.about-visual {
+			height: 400px;
+			background: linear-gradient(135deg, rgba(255, 87, 34, 0.2) 0%, rgba(255, 87, 34, 0.05) 100%);
+			border-radius: 20px;
+			border: 1px solid rgba(255, 87, 34, 0.2);
+			order: 1;
+		}
+
+		@media (max-width: 968px) {
+			.about-container {
+				grid-template-columns: 1fr;
+			}
+
+			.about-visual {
+				order: -1;
+			}
+
+			.about-content {
+				order: 0;
+			}
+
+			.about-content h2 {
+				font-size: 2rem;
+			}
+		}
+
+		/* SERVICES SECTION */
+		.services {
+			padding: 8rem 2rem;
+			background: #0a0a0a;
+		}
+
+		.services-header {
+			max-width: 1200px;
+			margin: 0 auto 4rem;
+			text-align: center;
+		}
+
+		.services-header h2 {
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 1rem;
+		}
+
+		.services-header p {
+			color: #b0b0b0;
+			font-size: 1.1rem;
+		}
+
+		.services-grid {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+			gap: 2.5rem;
+		}
+
+		.service-card {
+			background: #141414;
+			padding: 2.5rem;
+			border-radius: 15px;
+			border: 1px solid rgba(255, 87, 34, 0.1);
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+
+		.service-card:hover {
+			transform: translateY(-10px);
+			border-color: rgba(255, 87, 34, 0.3);
+			box-shadow: 0 20px 50px rgba(255, 87, 34, 0.2);
+			background: #1a1a1a;
+		}
+
+		.service-icon {
+			width: 60px;
+			height: 60px;
+			background: rgba(255, 87, 34, 0.15);
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 1.5rem;
+			color: #ff5722;
+			font-size: 1.8rem;
+		}
+
+		.service-card h3 {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 0.8rem;
+		}
+
+		.service-card p {
+			color: #909090;
+			font-size: 0.95rem;
+			line-height: 1.7;
+		}
+
+		/* PROCESS SECTION */
+		.process {
+			padding: 8rem 2rem;
+			background: #0d0d0d;
+		}
+
+		.process-header {
+			max-width: 1200px;
+			margin: 0 auto 4rem;
+		}
+
+		.process-header h2 {
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 1rem;
+		}
+
+		.process-grid {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 3rem;
+		}
+
+		.process-item {
+			position: relative;
+		}
+
+		.process-number {
+			font-size: 4rem;
+			font-weight: 800;
+			color: #ff5722;
+			margin-bottom: 1rem;
+			opacity: 0.8;
+		}
+
+		.process-item h3 {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 0.8rem;
+		}
+
+		.process-item p {
+			color: #b0b0b0;
+			font-size: 0.95rem;
+			line-height: 1.7;
+		}
+
+		/* FAQ SECTION */
+		.faq {
+			padding: 8rem 2rem;
+			background: #0a0a0a;
+		}
+
+		.faq-container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.faq-header {
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+
+		.faq-header h2 {
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 1rem;
+		}
+
+		.faq-item {
+			background: #141414;
+			border: 1px solid rgba(255, 87, 34, 0.1);
+			border-radius: 12px;
+			margin-bottom: 1.5rem;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.faq-item:hover {
+			border-color: rgba(255, 87, 34, 0.3);
+		}
+
+		.faq-question {
+			padding: 1.8rem;
+			background: #141414;
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: 600;
+			font-size: 1.05rem;
+			color: #fff;
+			transition: all 0.3s ease;
+			border: none;
+			width: 100%;
+			text-align: left;
+		}
+
+		.faq-question:hover {
+			background: #1a1a1a;
+		}
+
+		.faq-question.active {
+			background: rgba(255, 87, 34, 0.1);
+			color: #ff5722;
+		}
+
+		.faq-toggle {
+			color: #ff5722;
+			font-size: 1.5rem;
+			transition: transform 0.3s ease;
+		}
+
+		.faq-question.active .faq-toggle {
+			transform: rotate(180deg);
+		}
+
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease;
+			background: #0f0f0f;
+		}
+
+		.faq-answer.active {
+			max-height: 300px;
+			padding: 1.8rem;
+		}
+
+		.faq-answer p {
+			color: #b0b0b0;
+			line-height: 1.8;
+			margin: 0;
+		}
+
+		/* CONTACT SECTION */
+		.contact {
+			padding: 8rem 2rem;
+			background: #0d0d0d;
+		}
+
+		.contact-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+		}
+
+		.contact-content h2 {
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 1.5rem;
+			line-height: 1.3;
+		}
+
+		.contact-badge {
+			display: inline-block;
+			background: rgba(255, 87, 34, 0.1);
+			color: #ff5722;
+			padding: 0.5rem 1.2rem;
+			border-radius: 50px;
+			font-size: 0.85rem;
+			font-weight: 600;
+			margin-bottom: 1.5rem;
+			border: 1px solid rgba(255, 87, 34, 0.3);
+		}
+
+		.contact-content p {
+			color: #b0b0b0;
+			font-size: 1.05rem;
+			margin-bottom: 2.5rem;
+			line-height: 1.8;
+		}
+
+		.contact-info {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+
+		.contact-item {
+			display: flex;
+			gap: 1.2rem;
+			align-items: flex-start;
+		}
+
+		.contact-icon {
+			width: 50px;
+			height: 50px;
+			background: rgba(255, 87, 34, 0.15);
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ff5722;
+			font-size: 1.3rem;
+			flex-shrink: 0;
+		}
+
+		.contact-item-content h3 {
+			font-size: 0.9rem;
+			color: #808080;
+			font-weight: 500;
+			margin-bottom: 0.3rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.contact-item-content a,
+		.contact-item-content p {
+			color: #fff;
+			font-size: 1rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+
+		.contact-item-content a:hover {
+			color: #ff5722;
+		}
+
+		.contact-card {
+			background: #141414;
+			border: 1px solid rgba(255, 87, 34, 0.2);
+			padding: 3rem;
+			border-radius: 15px;
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+
+		.contact-buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.contact-buttons .btn-primary,
+		.contact-buttons .btn-secondary {
+			width: 100%;
+			text-align: center;
+		}
+
+		.contact-social {
+			display: flex;
+			gap: 1rem;
+		}
+
+		.social-btn {
+			flex: 1;
+			padding: 1rem;
+			background: rgba(255, 87, 34, 0.1);
+			color: #ff5722;
+			border: 1px solid rgba(255, 87, 34, 0.3);
+			border-radius: 10px;
+			text-decoration: none;
+			font-weight: 600;
+			text-align: center;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			font-size: 0.9rem;
+		}
+
+		.social-btn:hover {
+			background: #ff5722;
+			color: #fff;
+			border-color: #ff5722;
+		}
+
+		@media (max-width: 968px) {
+			.contact-container {
+				grid-template-columns: 1fr;
+			}
+
+			.contact-content h2 {
+				font-size: 2rem;
+			}
+		}
+
+		/* FOOTER */
+		footer {
+			background: #000;
+			padding: 3rem 2rem;
+			text-align: center;
+			border-top: 1px solid rgba(255, 87, 34, 0.1);
+		}
+
+		footer p {
+			color: #707070;
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+		}
+
+		footer a {
+			color: #ff5722;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		footer a:hover {
+			text-decoration: underline;
+		}
+
+		/* ANIMATIONS */
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.fade-in {
+			animation: fadeInUp 0.6s ease-out forwards;
+		}
+
+		.fade-in-delay-1 { animation-delay: 0.1s; }
+		.fade-in-delay-2 { animation-delay: 0.2s; }
+		.fade-in-delay-3 { animation-delay: 0.3s; }
+	</style>
+</head>
+<body>
+	<!-- NAVBAR -->
+	<nav>
+		<div class="nav-container">
+			<a href="#" class="nav-logo">Andrea Míčková</a>
+			<ul class="nav-links">
+				<li><a href="#o-mne">O mně</a></li>
+				<li><a href="#sluzby">Služby</a></li>
+				<li><a href="#postup">Postup práce</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+			</ul>
+			<button class="nav-cta" onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });">Napište mi</button>
+		</div>
+	</nav>
+
+	<!-- HERO SECTION -->
+	<section class="hero" id="hero">
+		<div class="hero-container">
+			<div class="hero-content fade-in">
+				<h1>Zviditelnění vaší značky <span class="accent">v médiích</span></h1>
+				<p>Specialista na PR, copywriting a strategii obsahu. Pomáhám značkám získat mediální pozornost, tvořím obsah, který přitahuje nové zákazníky a buduju dlouhodobé PR strategie zaměřené na realitní sektor a investice.</p>
+				<div class="hero-buttons">
+					<a href="#kontakt" class="btn-primary">Začneme pracovat</a>
+					<button class="btn-secondary" onclick="document.getElementById('o-mne').scrollIntoView({ behavior: 'smooth' });">Více o mně</button>
+				</div>
+			</div>
+			<div class="hero-image fade-in fade-in-delay-1">
+				<div class="hero-image-circle">
+					<img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/andrea-mickova/foto.jpg" alt="Andrea Míčková">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- STATS SECTION -->
+	<section class="stats">
+		<div class="stats-grid">
+			<div class="stat-item fade-in">
+				<div class="stat-number">150+</div>
+				<div class="stat-label">Zpublikovaných článků v médiích</div>
+			</div>
+			<div class="stat-item fade-in fade-in-delay-1">
+				<div class="stat-number">50+</div>
+				<div class="stat-label">Obsloužených klientů a projektů</div>
+			</div>
+			<div class="stat-item fade-in fade-in-delay-2">
+				<div class="stat-number">8+</div>
+				<div class="stat-label">Let zkušeností v PR a copywritingu</div>
+			</div>
+			<div class="stat-item fade-in fade-in-delay-3">
+				<div class="stat-number">40%</div>
+				<div class="stat-label">Nárůst mediálního pokrytí klientů</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ABOUT SECTION -->
+	<section class="about" id="o-mne">
+		<div class="about-container">
+			<div class="about-visual"></div>
+			<div class="about-content fade-in">
+				<span class="about-badge">O MNĚ</span>
+				<h2>Jak pracuji na vaší viditelnosti</h2>
+				<p>Jsem PR specialistka a copywriterka s dlouholetou zkušeností v oblasti mediálního pokrytí a tvorby obsahu. Zaměřuji se především na realitní sektor, investice a strategické komunikaci. Mým cílem je pomoci vašim značkám získat zaslouženou mediální pozornost a vybudovat kredibilitu v očích veřejnosti.</p>
+				<div class="about-values">
+					<div class="value-item">
+						<div class="value-icon">📰</div>
+						<div class="value-content">
+							<h3>Mediální pokrytí</h3>
+							<p>Strategické umístění v předních médiích</p>
+						</div>
+					</div>
+					<div class="value-item">
+						<div class="value-icon">✍️</div>
+						<div class="value-content">
+							<h3>Copywriting</h3>
+							<p>Obsah, který prodává a upoutává</p>
+						</div>
+					</div>
+					<div class="value-item">
+						<div class="value-icon">🎯</div>
+						<div class="value-content">
+							<h3>Strategie obsahu</h3>
+							<p>Dlouhodobé plány pro růst viditelnosti</p>
+						</div>
+					</div>
+					<div class="value-item">
+						<div class="value-icon">🏢</div>
+						<div class="value-content">
+							<h3>Realitní specialista</h3>
+							<p>Expertise v realitním sektoru</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SERVICES SECTION -->
+	<section class="services" id="sluzby">
+		<div class="services-header">
+			<h2>Služby a expertise</h2>
+			<p>Komplexní řešení pro vaši mediální přítomnost a růst značky</p>
+		</div>
+		<div class="services-grid">
+			<div class="service-card fade-in">
+				<div class="service-icon">📢</div>
+				<h3>PR strategie</h3>
+				<p>Vypracuji individuální PR strategii zaměřenou na zvýšení mediálního pokrytí a budování kredibility vaší značky v očích veřejnosti.</p>
+			</div>
+			<div class="service-card fade-in fade-in-delay-1">
+				<div class="service-icon">✍️</div>
+				<h3>Copywriting obsahu</h3>
+				<p>Tvořím přesvědčivý obsah pro web, sociální sítě a tiskové zprávy, který přitahuje vaší cílovou skupinu a generuje zájem.</p>
+			</div>
+			<div class="service-card fade-in fade-in-delay-2">
+				<div class="service-icon">📊</div>
+				<h3>Strategie obsahu</h3>
+				<p>Navrhuji dlouhodobé strategie tvorby obsahu, která zajišťuje konzistentní růst vašeho publika a engagement.</p>
+			</div>
+			<div class="service-card fade-in">
+				<div class="service-icon">🏠</div>
+				<h3>Realitní PR</h3>
+				<p>Specializuji se na mediální pokrytí projektů, developerů a investičních příležitostí v realitním sektoru.</p>
+			</div>
+			<div class="service-card fade-in fade-in-delay-1">
+				<div class="service-icon">💼</div>
+				<h3>Krizová komunikace</h3>
+				<p>Pomáhám značkám efektivně komunikovat během krizových situací a chránit jejich reputaci.</p>
+			</div>
+			<div class="service-card fade-in fade-in-delay-2">
+				<div class="service-icon">📱</div>
+				<h3>Media Relations</h3>
+				<p>Vytvářím silné vztahy s novináři a redakcemi, aby vaše příběhy dosáhly na správné cílové skupiny.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- PROCESS SECTION -->
+	<section class="process" id="postup">
+		<div class="process-header">
+			<h2>Jak probíhá naše spolupráce</h2>
+		</div>
+		<div class="process-grid">
+			<div class="process-item fade-in">
+				<div class="process-number">01</div>
+				<h3>Analýza situace</h3>
+				<p>Podrobně analyzuji vaši značku, konkurenci a mediální landscape, abych pochopila vaše cíle a příležitosti.</p>
+			</div>
+			<div class="process-item fade-in fade-in-delay-1">
+				<div class="process-number">02</div>
+				<h3>Plánování strategie</h3>
+				<p>Vypracuji personalizovanou PR a content strategii s konkrétními cíly, timelinými a klíčovými metrikami úspěchu.</p>
+			</div>
+			<div class="process-item fade-in fade-in-delay-2">
+				<div class="process-number">03</div>
+				<h3>Implementace a tvorba</h3>
+				<p>Vytvářím obsah, navazuji kontakty s novináři a realizuji PR aktivity podle schválené strategie.</p>
+			</div>
+			<div class="process-item fade-in fade-in-delay-3">
+				<div class="process-number">04</div>
+				<h3>Reporting a optimalizace</h3>
+				<p>Sleduji výsledky, informuji vás o pokroku a kontinuálně optimalizuji přístup pro maximální dopad.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ SECTION -->
+	<section class="faq" id="faq">
+		<div class="faq-container">
+			<div class="faq-header">
+				<h2>Často kladené otázky</h2>
+			</div>
+			<div class="faq-item">
+				<button class="faq-question" onclick="toggleFaq(this)">
+					<span>Jak správně dělat PR pro moderní značku?</span>
+					<span class="faq-toggle">▼</span>
+				</button>
+				<div class="faq-answer">
+					<p>Efektivní PR v moderní době je kombinací tradičních mediálních vztahů a digitálního storytellingu. Klíčové je mít jasně definované cíle, hlubokému rozumět své cílové skupině a tvořit autentické příběhy, které rezonují s novináři i s publiem. Zaměřuji se na dlouhodobou budování kredibility spíše než na krátkodobé triky. Důležitou součástí je také analýza výsledků a kontinuální optimalizace strategie.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-question" onclick="toggleFaq(this)">
+					<span>Jak dlouho trvá, než se objeví první výsledky?</span>
+					<span class="faq-toggle">▼</span>
+				</button>
+				<div class="faq-answer">
+					<p>Prvních výsledků se obvykle dočkáte do 2-4 týdnů po spuštění kampaně. Mediální pokrytí však může být nepředvídatelné. Některé příběhy se zajistí velmi rychle, zatímco jiné mohou vyžadovat delší výstavbu. Zaměřuji se na dlouhodobý přístup, kde viditelnost a kredibilita vaší značky roste postupně a stabilně.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-question" onclick="toggleFaq(this)">
+					<span>Proč se zaměřujete na realitní sektor?</span>
+					<span class="faq-toggle">▼</span>
+				</button>
+				<div class="faq-answer">
+					<p>Realitní sektor je mou specialitou. Mám hluboké porozumění trhu, klíčovým hráčům, novinářům a médiím, která se věnují realitám a investicím. Tato expertise mi umožňuje vytvářet relevantní obsah a navazovat silné vztahy s novináři, kteří o těchto tématech píší. Znam specifické výzvy a příležitosti v tomto sektoru.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-question" onclick="toggleFaq(this)">
+					<span>Jaké jsou vaše obvyklé cenové modely?</span>
+					<span class="faq-toggle">▼</span>
+				</button>
+				<div class="faq-answer">
+					<p>Nabízím flexibilní cenové modely podle vašich potřeb. Pracuji na základě měsíčního retaineru pro dlouhodobou spolupráci, projektových honorářů pro specifické kampaně nebo kombinaci obojího. Vždy se domluvíme na ceně, která odpovídá vašemu rozpočtu a vaším cílům. Kontaktujte mě pro konkrétní nabídku.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTACT SECTION -->
+	<section class="contact" id="kontakt">
+		<div class="contact-container">
+			<div class="contact-content fade-in">
+				<span class="contact-badge">KONTAKT</span>
+				<h2>Začneme pracovat spolu?</h2>
+				<p>Máte projekt, který chcete zviditelnit v médiích? Pojďme si o něm pohovořit. Jsem připravena pomoci vaší značce dosáhnout nových výšin a získat zaslouženou mediální pozornost.</p>
+				<div class="contact-info">
+					<div class="contact-item">
+						<div class="contact-icon">✉️</div>
+						<div class="contact-item-content">
+							<h3>Email</h3>
+							<a href="mailto:andrea.v@seznam.cz">andrea.v@seznam.cz</a>
+						</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-icon">💼</div>
+						<div class="contact-item-content">
+							<h3>LinkedIn</h3>
+							<a href="https://www.linkedin.com/in/andreavotrubova/?locale=cs" target="_blank">Andrea Votrubová</a>
+						</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-icon">📍</div>
+						<div class="contact-item-content">
+							<h3>Místo</h3>
+							<p>Praha, Česká republika</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact-card fade-in fade-in-delay-1">
+				<div class="contact-buttons">
+					<a href="mailto:andrea.v@seznam.cz" class="btn-primary">Napište mi na email</a>
+					<a href="tel:+420" class="btn-secondary">Zavolejte mi</a>
+				</div>
+				<div class="contact-social">
+					<a href="https://www.linkedin.com/in/andreavotrubova/?locale=cs" target="_blank" class="social-btn">LinkedIn</a>
+					<a href="mailto:andrea.v@seznam.cz" class="social-btn">Email</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer>
+		<p>&copy; 2024 Andrea Míčková. Všechna práva vyhrazena.</p>
+		<p><a href="https://www.linkedin.com/in/andreavotrubova/?locale=cs" target="_blank">Sledujte mě na LinkedIn</a></p>
+	</footer>
+
+	<script>
+		function toggleFaq(button) {
+			const answer = button.nextElementSibling;
+			const isActive = button.classList.contains('active');
+			
+			document.querySelectorAll('.faq-question').forEach(q => {
+				q.classList.remove('active');
+				q.nextElementSibling.classList.remove('active');
+			});
+			
+			if (!isActive) {
+				button.classList.add('active');
+				answer.classList.add('active');
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const elements = document.querySelectorAll('.fade-in');
+			elements.forEach(el => {
+				el.style.opacity = '0';
+				el.style.transform = 'translateY(30px)';
+				el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+			});
+
+			setTimeout(() => {
+				elements.forEach(el => {
+					el.style.opacity = '1';
+					el.style.transform = 'translateY(0)';
+				});
+			}, 100);
+		});
+	</script>
+</body>
+</html>
