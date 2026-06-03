@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Franta Franta - Specialista na BMW | Prodejce Automobilů</title>
+    <meta name="description" content="Franta Franta - Specialista na BMW v Ostravě. Prodejce automobilů s 300 prodanými auty v roce 2025.">
+    <meta name="author" content="Franta Franta">
+    <meta property="og:title" content="Franta Franta - Specialista na BMW">
+    <meta property="og:description" content="Specialista na BMW. Prodejce automobilů s výjimečnými výsledky.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/franta-franta/foto.jpg">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Primární akcent z AUTOHITY - oranžová/červená */
+        :root {
+            --primary-color: #ff5c2e;
+            --dark-bg: #0a0a0a;
+            --card-bg: #141414;
+            --border-color: #2a2a2a;
+            --text-light: #e0e0e0;
+            --text-muted: #999999;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-logo span {
+            color: var(--primary-color);
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .navbar-cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-cta:hover {
+            background: #ff7a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 92, 46, 0.3);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #ff7a4a;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 92, 46, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 92, 46, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+            object-fit: cover;
+            box-shadow: 0 0 50px rgba(255, 92, 46, 0.2);
+            animation: floatImage 3s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* STATS SECTION */
+        .stats {
+            background: var(--card-bg);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            border-color: var(--primary-color);
+            background: rgba(255, 92, 46, 0.05);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: rgba(255, 92, 46, 0.15);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .about-content h2 span {
+            color: var(--primary-color);
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 92, 46, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--primary-color);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .value-text h4 {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .value-text p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .about-svg {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 5rem 2rem;
+            background: var(--card-bg);
+            margin: 4rem 0;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header .badge {
+            display: inline-block;
+            background: rgba(255, 92, 46, 0.15);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 span {
+            color: var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #0a0a0a;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(255, 92, 46, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 92, 46, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--primary-color);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            border-color: var(--primary-color);
+            background: rgba(255, 92, 46, 0.05);
+        }
+
+        .process-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ SECTION */
+        .faq {
+            padding: 5rem 2rem;
+            background: var(--card-bg);
+            margin: 4rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #0a0a0a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 92, 46, 0.05);
+            color: var(--primary-color);
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(255, 92, 46, 0.03);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 1.5rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .contact-content h2 span {
+            color: var(--primary-color);
+        }
+
+        .contact-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 92, 46, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-color);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .contact-item-text h4 {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-item-text p {
+            color: var(--primary-color);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-item-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item-text a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-cta {
+            width: 100%;
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-cta-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .contact-cta-primary:hover {
+            background: #ff7a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 92, 46, 0.3);
+        }
+
+        .contact-cta-secondary {
+            background: rgba(255, 92, 46, 0.1);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .contact-cta-secondary:hover {
+            background: rgba(255, 92, 46, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 3rem 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-svg {
+                order: -1;
+            }
+
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-logo {
+                font-size: 1.2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .value-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .value-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">Franta <span>Franta</span></div>
+            <ul class="navbar-nav">
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#process">Postup</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <a href="#contact" class="navbar-cta">Napište mi</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Specialista na <span>BMW</span> v Ostravě</h1>
+            <p class="hero-subtitle">Prodejce automobilů s více než 10 lety zkušeností. Jsem vášnivý odborník na výběr, poradenství a prodej prémiových vozů. Moji klienti si cení mojí poctivosti a hlubokých znalostí BMW.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Chci poradit</a>
+                <a href="#about" class="btn-secondary">Více o mně</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/franta-franta/foto.jpg" alt="Franta Franta">
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">300+</div>
+                <div class="stat-label">Prodaných aut za rok 2025</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Spokojenost klientů</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Let v oboru</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Spokojených zákazníků</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-svg">
+            <svg viewBox="0 0 400 400" width="350" height="350" style="max-width: 100%;">
+                <!-- Auto ilustrace -->
+                <defs>
+                    <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff5c2e;stop-opacity:0.2" />
+                        <stop offset="100%" style="stop-color:#ff5c2e;stop-opacity:0.05" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Pozadí -->
+                <rect width="400" height="400" fill="none"/>
+                
+                <!-- Auto hlavní těleso -->
+                <path d="M 80 200 Q 80 160 120 140 L 280 140 Q 320 160 320 200 L 320 260 Q 320 280 300 280 L 100 280 Q 80 280 80 260 Z" fill="none" stroke="#ff5c2e" stroke-width="2.5" stroke-linejoin="round"/>
+                
+                <!-- Okno přední -->
+                <path d="M 130 150 L 200 145 L 210 170 L 130 180 Z" fill="none" stroke="#ff5c2e" stroke-width="2" stroke-linejoin="round"/>
+                
+                <!-- Okno zadní -->
+                <path d="M 220 150 L 280 155 L 280 200 L 220 190 Z" fill="none" stroke="#ff5c2e" stroke-width="2" stroke-linejoin="round"/>
+                
+                <!-- Přední kolo -->
+                <circle cx="130" cy="290" r="25" fill="none" stroke="#ff5c2e" stroke-width="2.5"/>
+                <circle cx="130" cy="290" r="15" fill="none" stroke="#ff5c2e" stroke-width="1.5"/>
+                <line x1="115" y1="290" x2="145" y2="290" stroke="#ff5c2e" stroke-width="1.5"/>
+                <line x1="130" y1="275" x2="130" y2="305" stroke="#ff5c2e" stroke-width="1.5"/>
+                
+                <!-- Zadní kolo -->
+                <circle cx="270" cy="290" r="25" fill="none" stroke="#ff5c2e" stroke-width="2.5"/>
+                <circle cx="270" cy="290" r="15" fill="none" stroke="#ff5c2e" stroke-width="1.5"/>
+                <line x1="255" y1="290" x2="285" y2="290" stroke="#ff5c2e" stroke-width="1.5"/>
+                <line x1="270" y1="275" x2="270" y2="305" stroke="#ff5c2e" stroke-width="1.5"/>
+                
+                <!-- Přední světla -->
+                <circle cx="85" cy="175" r="8" fill="none" stroke="#ff5c2e" stroke-width="2"/>
+                <circle cx="85" cy="190" r="8" fill="none" stroke="#ff5c2e" stroke-width="2"/>
+                
+                <!-- Zadní světla -->
+                <rect x="315" y="170" width="8" height="15" fill="none" stroke="#ff5c2e" stroke-width="2" rx="2"/>
+                <rect x="315" y="200" width="8" height="15" fill="none" stroke="#ff5c2e" stroke-width="2" rx="2"/>
+                
+                <!-- Dekorace na kapotě -->
+                <path d="M 150 155 L 250 155" stroke="#ff5c2e" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/>
+                
+                <!-- Horní dekorace -->
+                <text x="200" y="80" font-family="Inter" font-size="28" font-weight="800" text-anchor="middle" fill="#ff5c2e" opacity="0.8">BMW</text>
+                
+                <!-- Dolní dekorace - statistika -->
+                <g opacity="0.6">
+                    <text x="100" y="340" font-family="Inter" font-size="12" fill="#ff5c2e" font-weight="600">Kvalita</text>
+                    <text x="200" y="340" font-family="Inter" font-size="12" fill="#ff5c2e" font-weight="600" text-anchor="middle">Péče</text>
+                    <text x="300" y="340" font-family="Inter" font-size="12" fill="#ff5c2e" font-weight="600" text-anchor="end">Služba</text>
+                </g>
+            </svg>
+        </div>
+        <div class="about-content">
+            <span class="about-badge">O mně</span>
+            <h2>Vášeň pro <span>BMW</span> a zákaznickou péči</h2>
+            <p class="about-text">Jsem Franta Franta, prodejce automobilů se specializací na BMW. Moje cesta v tomto oboru mě naučila, že každý zákazník je jedinečný a zaslouží si personalizované přístupu. Kombinuji hluboké technické znalosti s autentickým zájmem o spokojenost svých klientů.</p>
+            
+            <div class="about-values">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <div class="value-text">
+                        <h4>Přátelský přístup</h4>
+                        <p>Dostupný a komunikativní</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="value-text">
+                        <h4>Odbornost BMW</h4>
+                        <p>Hluboké znalosti značky</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <div class="value-text">
+                        <h4>Čestnost</h4>
+                        <p>Transparentní a poctivý obchod</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="value-text">
+                        <h4>Záruka spokojenosti</h4>
+                        <p>Post-sales servis a podpora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <span class="badge">Služby</span>
+                <h2>Komplexní řešení pro <span>BMW</span></h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4-2h2v20h-2zm4 4h2v16h-2zm4 8h2v8h-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Výběr a procházení</h3>
+                    <p>Pomáhám vám vybrat ten nejlepší BMW, který splňuje vaše specifické potřeby a rozpočet s důkladným průzkumem a porovnáním.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h3.54l4.04-5.71-1.63-1.63-3.2 4.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Odborný posudek</h3>
+                    <p>Provedeme detailní technickou kontrolu vozidla a získáte veškeré informace o jeho historii, stavu a hodnotě.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Financování a leasing</h3>
+                    <p>Pomáhám s celým procesem financování, včetně výpočtu splátek a najití nejlepších podmínek pro vaši situaci.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/>
+                        </svg>
+                    </div>
+                    <h3>Asistance při nákupu</h3>
+                    <p>Provádím vás každým krokem nákupního procesu, od hledání vozu až po finální dohodnutí a transmission.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Garantované vozidlo</h3>
+                    <p>Všechna vozidla, která nabízím, prochází důkladnou kontrolou a mají rozšířenou záruku na klíčové součásti.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Poradna a konzultace</h3>
+                    <p>Dostanete veškeré informace potřebné k informovanému rozhodnutí o koupi vašeho dalšího BMW.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process" id="process">
+        <div class="section-header" style="margin-bottom: 4rem;">
+            <span class="badge">Postup práce</span>
+            <h2>Jak si se mnou <span>koupíte BMW</span></h2>
+        </div>
+        
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-number">01</div>
+                <h3>Konzultace</h3>
+                <p>Seznámíme se a zjistím vaše potřeby, rozpočet a představy o ideálním BMW. Bez tlaku, jen upřímný rozhovor.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-number">02</div>
+                <h3>Hledání vozidla</h3>
+                <p>Vyhledám vozidla, která odpovídají vašim kritériím. Nabídnu vám nejlepší dostupné BMW s nejlepší cenou.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-number">03</div>
+                <h3>Prohlídka a zkušební jízda</h3>
+                <p>Společně vozidlo prohlédneme, provedu vám technickou kontrolu a pojede si s ním, abyste si jej mohl vyzkoušet.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="process-number">04</div>
+                <h3>Finalizace a předání</h3>
+                <p>Dosetleme všechny detaily, zajistím financování a papírování. Pak se můžete těšit na svůj nový BMW.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <div class="section-header" style="margin-bottom: 3rem; text-align: center;">
+                <span class="badge">FAQ</span>
+                <h2>Často kladené <span>otázky</span></h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Co je staré auto?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Staré auto je obecně vozidlo, které má více let na tachometru a mohou se na něm projevovat známky opotřebení. V kontextu BMW to ale není vždy pravidlo. Mnohá starší BMW jsou lépe udržovaná a lépe konstruovaná než novější vozidla jiných značek. Klíčové je zajistit si důkladnou technickou kontrolu a historii údržby. Já vám pomůžu vybrat vozidlo, které bude mít nejlepší poměr ceny a kvality bez ohledu na jeho věk.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Jaké BMW doporučujete pro běžného řidiče?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Existuje celá řada BMW modelů vhodných pro různé potřeby. BMW řady 3 je klasická volba pro každodenní řidiče - spolehlivá, hospodárná a s vynikajícím jízdním komfortem. Pokud máte větší rodinu, BMW řady 5 nebo SUV řada X5 jsou skvělé možnosti. Pro ty, kteří hledají kompaktní vůz, je ideální BMW i3 nebo i4. Rád vám pomohu vybrat ten nejlepší model pro vaši situaci.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Kolik stojí typické BMW na trhu?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ceny BMW se velmi liší v závislosti na modelu, věku a stavu vozidla. Starší BMW řady 3 lze sehnat za 200-400 tisíc korun, novější a lepší udržované modely stojí více. Prémiové modely a SUV jsou naturálně dražší. Já vám pomohu najít nejlepší poměr ceny a kvality v rámci vašeho rozpočtu. Mám přístup k výběru vozidel v různých cenových kategorií.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Mohu si vozidlo na dobu vzít na zkoušku?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ano, rádi vám poskytneme zkušební jízdu, abyste si vozidlo mohli vyzkoušet. Obvykle trvá 30-60 minut, což je dostatek na to, aby ste si utvořili představu o chování vozu. Během jízdy jsem s vámi, odpovídám na otázky a pomáhám vám pochopit speciální vlastnosti BMW.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Jaké mám možnosti financování?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Nabízím různé možnosti financování včetně přímého nákupu, financování prostřednictvím bank, leasingu a splátkového prodeje. Mohu vám pomoci porovnat různé možnosti a najít tu nejlepší pro vaši finanční situaci. Máme partnery, kteří nabízejí konkurenceschopné sazby a pružné podmínky.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Co je součástí procesu nákupu?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Celý proces nákupu zahrnuje: 1) Konzultaci a výběr vozidla, 2) Technickou prohlídku a zkušební jízdu, 3) Schválení financování, 4) Sepsání kupní smlouvy, 5) Registraci vozidla na vaše jméno, 6) Dohodnutí pojistky. Provedu vás každým krokem a zajistím, abyste měli úplný přehled a nebyly překvapeny skrytými náklady.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <span class="about-badge">Kontakt</span>
+            <h2>Pojďme mluvit o vašem <span>BMW</span></h2>
+            <p class="contact-text">Jsou tu pro vás. Ať máte jakékoliv otázky, chcete konzultaci nebo si jen chcete povídat o BMW - jsem tu pro vás. Kontaktujte mě bez obav, rád vám pomohu.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-item-text">
+                        <h4>Email</h4>
+                        <a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17.92 7.02C17.45 6.18 16.51 5.55 15.5 5.55c-.9 0-1.75.42-2.3 1.1l-.57.8c-.25.35-.25.92 0 1.27l.57.8c.55.68 1.4 1.1 2.3 1.1.99 0 1.93-.63 2.42-1.48.39-.66.39-1.5 0-2.16zM5 10.5h5V5H5v5.5zm7 0h5V8c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v2.5zm7-7H1c-.55 0-1 .45-1 1v14c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V4.5c0-.55-.45-1-1-1z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-item-text">
+                        <h4>Telefon</h4>
+                        <a href="tel:+420">Zavolejte</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-item-text">
+                        <h4>Město</h4>
+                        <p>Ostrava, Česká republika</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-card">
+            <a href="mailto:micek.michal@seznam.cz" class="contact-cta contact-cta-primary">Napište mi email</a>
+            <a href="tel:+420" class="contact-cta contact-cta-secondary">Zavolejte mi</a>
+            <a href="https://www.linkedin.com/in/michalmicek/" class="contact-cta contact-cta-secondary" target="_blank">LinkedIn profil</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Franta Franta. Všechna práva vyhrazena. | <a href="https://www.linkedin.com/in/michalmicek/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- JavaScript for FAQ Accordion -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
