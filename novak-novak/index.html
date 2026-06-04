@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Novák Novák - Senior profesionál v oblasti digitálních řešení. Specialista na transformaci firemních procesů s prokázanými výsledky.">
+    <meta property="og:title" content="Novák Novák - Váš partner pro digitální úspěch">
+    <meta property="og:description" content="Objevte jak mohu transformovat váš byznys prostřednictvím inovativních řešení.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/novak-novak/foto.jpg">
+    <title>Novák Novák - Digitální Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(255, 165, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-links a:hover {
+            color: #ffa500;
+        }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffa500;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: #ffa500;
+            color: #0a0a0a;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background-color: #ff9500;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 165, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-weight: 800;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-text h1 .accent {
+            color: #ffa500;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .cta-button-primary {
+            background-color: #ffa500;
+            color: #0a0a0a;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button-primary:hover {
+            background-color: #ff9500;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 165, 0, 0.4);
+        }
+
+        .cta-button-secondary {
+            background-color: transparent;
+            color: #ffa500;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: 2px solid #ffa500;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button-secondary:hover {
+            background-color: rgba(255, 165, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 0.8s ease-out 0.3s backwards;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid #ffa500;
+            object-fit: cover;
+            box-shadow: 0 20px 60px rgba(255, 165, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 6rem 2rem;
+            background-color: #0d0d0d;
+            border-top: 1px solid rgba(255, 165, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 165, 0, 0.1);
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffa500;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #b0b0b0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background-color: rgba(255, 165, 0, 0.1);
+            color: #ffa500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 165, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #ffa500;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .value-text h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .value-text p {
+            color: #808080;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .about-svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background-color: #0d0d0d;
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+        }
+
+        .services-header h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .services-header p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: #141414;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 165, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 165, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 165, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 165, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: #ffa500;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .service-card h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #909090;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .process-header h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+            background-color: #141414;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 165, 0, 0.1);
+        }
+
+        .process-step:hover {
+            border-color: rgba(255, 165, 0, 0.3);
+        }
+
+        .process-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ffa500;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .process-step p {
+            color: #909090;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            background-color: #0d0d0d;
+        }
+
+        .faq-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .faq-header h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 165, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #141414;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            color: #fff;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255, 165, 0, 0.05);
+        }
+
+        .faq-toggle {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffa500;
+            font-weight: 800;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+            color: #b0b0b0;
+            background-color: rgba(255, 165, 0, 0.02);
+        }
+
+        .faq-answer.active {
+            max-height: 300px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .reviews-header h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background-color: #141414;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 165, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 165, 0, 0.3);
+            box-shadow: 0 15px 35px rgba(255, 165, 0, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 165, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .review-avatar svg {
+            width: 30px;
+            height: 30px;
+            stroke: #ffa500;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .review-author h3 {
+            color: #fff;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .review-author p {
+            color: #808080;
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        .review-stars {
+            color: #ffa500;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background-color: #0d0d0d;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-text h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .contact-text p {
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 165, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .contact-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: #ffa500;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .contact-detail h3 {
+            color: #fff;
+            margin: 0 0 0.25rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .contact-detail p {
+            color: #808080;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact-detail a {
+            color: #ffa500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: #ff9500;
+        }
+
+        .contact-card {
+            background-color: #141414;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 165, 0, 0.1);
+        }
+
+        .contact-card h3 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            padding: 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .contact-btn-primary {
+            background-color: #ffa500;
+            color: #0a0a0a;
+        }
+
+        .contact-btn-primary:hover {
+            background-color: #ff9500;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+        }
+
+        .contact-btn-secondary {
+            background-color: transparent;
+            color: #ffa500;
+            border: 2px solid #ffa500;
+        }
+
+        .contact-btn-secondary:hover {
+            background-color: rgba(255, 165, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 2rem;
+            background-color: #000;
+            border-top: 1px solid rgba(255, 165, 0, 0.1);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #808080;
+            font-size: 0.95rem;
+        }
+
+        .footer a {
+            color: #ffa500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff9500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image {
+                margin-top: 2rem;
+            }
+
+            .hero-image img {
+                width: 280px;
+                height: 280px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-header h2,
+            .reviews-header h2,
+            .process-header h2,
+            .faq-header h2,
+            .contact-text h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .cta-button-primary,
+            .cta-button-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">Novák</div>
+            <ul class="navbar-links">
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#reviews">Reference</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#contact" class="cta-button">Kontaktuj mě</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Přeměňuju výzvy v <span class="accent">digitální řešení</span></h1>
+                <p>Specialista na transformaci firemních procesů s prokázanými výsledky. Pomáhám klientům dosahovat jejich cílů prostřednictvím inovativních a ověřených strategie.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-button-primary">Začněme spolu</a>
+                    <a href="#about" class="cta-button-secondary">Zjistit více</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/novak-novak/foto.jpg" alt="Novák Novák">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Projektů dokončeno</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Spokojenosti klientů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Let zkušenosti</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50M+</div>
+                <div class="stat-label">Generovaného zisku</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div>
+            <span class="section-badge">O mně</span>
+        </div>
+        <div class="about-content">
+            <div class="about-svg">
+                <svg viewBox="0 0 400 400" width="400" height="400" style="max-width: 100%;">
+                    <defs>
+                        <style>
+                            .svg-line { stroke: #ffa500; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+                            .svg-fill { fill: rgba(255, 165, 0, 0.1); stroke: #ffa500; stroke-width: 1.5; }
+                        </style>
+                    </defs>
+                    <rect width="400" height="400" fill="#1a1a1a" rx="20"/>
+                    
+                    <!-- Laptop -->
+                    <rect x="80" y="100" width="240" height="160" rx="8" class="svg-fill"/>
+                    <rect x="70" y="270" width="260" height="8" fill="#ffa500" rx="2"/>
+                    <line x1="200" y1="270" x2="200" y2="280" class="svg-line"/>
+                    
+                    <!-- Screen elements -->
+                    <circle cx="200" cy="140" r="15" class="svg-fill"/>
+                    <line x1="140" y1="170" x2="260" y2="170" class="svg-line"/>
+                    <line x1="140" y1="185" x2="260" y2="185" class="svg-line"/>
+                    <line x1="140" y1="200" x2="220" y2="200" class="svg-line"/>
+                    
+                    <!-- Upward arrow -->
+                    <line x1="80" y1="340" x2="150" y2="280" class="svg-line"/>
+                    <line x1="150" y1="280" x2="140" y2="295" class="svg-line"/>
+                    <line x1="150" y1="280" x2="165" y2="285" class="svg-line"/>
+                    
+                    <!-- Check marks -->
+                    <line x1="290" y1="140" x2="300" y2="150" class="svg-line" stroke-width="3"/>
+                    <line x1="300" y1="150" x2="320" y2="120" class="svg-line" stroke-width="3"/>
+                    <line x1="290" y1="200" x2="300" y2="210" class="svg-line" stroke-width="3"/>
+                    <line x1="300" y1="210" x2="320" y2="180" class="svg-line" stroke-width="3"/>
+                </svg>
+            </div>
+            <div class="about-text">
+                <h2>Proč si mě vybrat?</h2>
+                <p>Mám dlouholeté zkušenosti v transformaci firemních procesů a digitalizaci. Pracuji s obrovským nadšením a v každém projektu vidím příležitost vytvořit něco výjimečného. Můj přístup je vždy individuální, přizpůsobený konkrétním potřebám vašeho týmu.</p>
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="6" x2="12" y2="12"/>
+                                <line x1="12" y1="12" x2="15" y2="15"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Strategie</h3>
+                            <p>Promyšlené přístupy se zaměřením na váš cíl</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                                <polyline points="13 2 13 9 20 9"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Dokumentace</h3>
+                            <p>Jasné procesy a průhledná komunikace</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Výsledky</h3>
+                            <p>Měřitelné a overitelné úspěchy</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Dostupnost</h3>
+                            <p>Vždy připraven vám pomoci</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-header">
+            <h2>Jak ti mohu <span class="accent">pomoci</span></h2>
+            <p>Nabízím komplexní řešení přizpůsobená tvým potřebám</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                    </svg>
+                </div>
+                <h3>Strategické plánování</h3>
+                <p>Vytvářím dlouhodobé vize a akční plány, které vedou k dosažení vašich obchodních cílů.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="1"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/>
+                    </svg>
+                </div>
+                <h3>Procesní optimalizace</h3>
+                <p>Zefektivňuji vaše procesy a odstraňuji zbytečné kroky pro maximální produktivitu.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                    </svg>
+                </div>
+                <h3>Digitální transformace</h3>
+                <p>Převádím tradičních procesů na moderní digitální řešení, která ušetří čas a náklady.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                    </svg>
+                </div>
+                <h3>Tréninky a workshopy</h3>
+                <p>Školím týmy v nejlepších praktikách a novinkách, aby zůstaly vždy aktuální a konkurenceschopné.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    </svg>
+                </div>
+                <h3>Konzultace a mentoring</h3>
+                <p>Personální vedení pro vaše manažery a lídry, aby mohli efektivněji řídit své týmy.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                    </svg>
+                </div>
+                <h3>Měření a analytics</h3>
+                <p>Nastavuji klíčové metriky a dashboardy pro sledování pokroku a změnách vaší strategie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="process-header">
+            <h2>Jak spolu <span class="accent">pracujeme</span></h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-number">01</div>
+                <h3>Discovery</h3>
+                <p>Detailně se seznámím s vašimi potřebami, cíly a výzvami, na kterých můžeme pracovat.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">02</div>
+                <h3>Strategie</h3>
+                <p>Vytváříme společný akční plán s jasným timeline a milníky, které chceme dosáhnout.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">03</div>
+                <h3>Implementace</h3>
+                <p>Realizuji strategii s pravidelným reportingem a komunikací o pokroku na všech úrovních.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">04</div>
+                <h3>Optimalizace</h3>
+                <p>Měříme výsledky, učíme se a neustále zlepšujeme pro dlouhodobý, trvalý úspěch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="faq-content">
+            <div class="faq-header">
+                <h2>Často kladené <span class="accent">otázky</span></h2>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Jak dlouhá je typická spolupráce?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Délka spolupráce se liší podle rozsahu projektu. Obvykle pracuji s klienty 3-6 měsíců na implementaci strategie, ale pokračuji v mentoringu i déle podle potřeby.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Jaké jsou tvé časové zóny?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Pracuji převážně v češtině a angličtině. Mohu se přizpůsobit různým časovým zónám v Evropě, aby se setkání shodovala s vaším harmonogramem.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Oferuješ online nebo offline setkání?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Nabízím flexibilitu - můžeme pracovat online přes video konference nebo se setkávat osobně v Ostravě. Volim ten formát, který funguje nejlépe pro vás.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Jaké jsou ceny za tvoje služby?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Ceny se liší v závislosti na rozsahu projektu a vašich potřebách. Vždy nabízím transparentní ceník a bez skrytých nákladů. Kontaktujte mě pro individuální nabídku.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Jaké máte referenční projekty?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Měl jsem čest pracovat s řadou úspěšných startupů a etablovaných společností. Na vyžádání mohu poskytnout případové studie a reference od spokojených klientů.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="reviews-header">
+            <h2>Co říkají mí <span class="accent">klienti</span></h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-8 3-8 3v6h16v-6c0 0-2-3-8-3z"/>
+                        </svg>
+                    </div>
+                    <div class="review-author">
+                        <h3>Jan Svoboda</h3>
+                        <p>CEO, TechStartup s.r.o.</p>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">
+                    Spolupráce s Novákem byla transformativní. Pomohl mi reorganizovat celý tým a zvýšit produktivitu o 40%. Jeho přístup je praktický a skutečně orientovaný na výsledky.
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-8 3-8 3v6h16v-6c0 0-2-3-8-3z"/>
+                        </svg>
+                    </div>
+                    <div class="review-author">
+                        <h3>Marie Kučerová</h3>
+                        <p>Projektový manažer, Digital Agency</p>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">
+                    Skvělý mentor a konzultant. Dokáže složité situace zjednodušit a navrhnout funkční řešení. Velmi doporučuji jeho služby pro každý tým.
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-8 3-8 3v6h16v-6c0 0-2-3-8-3z"/>
+                        </svg>
+                    </div>
+                    <div class="review-author">
+                        <h3>Petr Novotný</h3>
+                        <p>Zakladatel, Innovation Hub</p>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">
+                    Profesionál od A do Z. Přinesl svěží pohled na naše procesy a pomohl nám eliminovat zbytečné náklady. Vřele ho doporučuji.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-text">
+                <span class="section-badge">Kontakt</span>
+                <h2>Poďme spolu <span class="accent">tvořit</span></h2>
+                <p>Mám vždy čas na nové projekty a zajímavé výzvy. Kontaktuj mě a pojďme se domluvit na tom, jak ti mohu pomoci.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail">
+                            <h3>Email</h3>
+                            <p><a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+420606663826">+420 606 663 826</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/michalmicek/" target="_blank">LinkedIn profil</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail">
+                            <h3>Město</h3>
+                            <p>Ostrava, Česká republika</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>Kontaktuj mě přímo</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="contact-btn contact-btn-primary">Napište mi email</a>
+                    <a href="tel:+420606663826" class="contact-btn contact-btn-primary">Zavolejte mi</a>
+                    <a href="https://www.linkedin.com/in/michalmicek/" target="_blank" class="contact-btn contact-btn-secondary">Připojit se na LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Novák Novák. Všechna práva vyhrazena. | <a href="https://www.linkedin.com/in/michalmicek/" target="_blank">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
