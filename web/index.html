@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Andrea Votrub - profesionál s expertise v digitálních řešeních. Pomáhám firmám dosahovat výjimečných výsledků.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/andrea-votrub/foto.jpg">
+    <title>Andrea Votrub - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content h1 span {
+            color: #00d4ff;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00d4ff;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #00d4ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid #00d4ff;
+            object-fit: cover;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+        }
+
+        /* STATS SECTION */
+        .stats {
+            padding: 4rem 2rem;
+            background: rgba(26, 26, 26, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #b0b0b0;
+            font-weight: 500;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.15);
+            color: #00d4ff;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            font-size: 1rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .value-item {
+            padding: 1.5rem;
+            background: rgba(26, 26, 26, 0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .value-item:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            background: rgba(26, 26, 26, 0.8);
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .value-title {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-desc {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        .about-svg {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 6rem 2rem;
+            background: rgba(26, 26, 26, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .section-header span {
+            color: #00d4ff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+            background: rgba(20, 20, 20, 1);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .process-number {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+
+        /* FAQ SECTION */
+        .faq {
+            padding: 6rem 2rem;
+            background: rgba(26, 26, 26, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(20, 20, 20, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(0, 212, 255, 0.05);
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .faq-toggle {
+            color: #00d4ff;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+
+        /* REVIEWS SECTION */
+        .reviews {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .review-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00d4ff;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .review-info h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-info p {
+            color: #b0b0b0;
+            font-size: 0.85rem;
+        }
+
+        .review-stars {
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .review-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            background: rgba(26, 26, 26, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info .about-badge {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .contact-item a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-buttons .btn-primary {
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-buttons a {
+            display: block;
+            text-align: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-buttons .btn-primary:hover,
+        .contact-buttons a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #808080;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 4rem 1.5rem;
+                margin-top: 100px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-image img {
+                width: 280px;
+                height: 280px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-logo">Andrea Votrub</div>
+        <ul class="nav-links">
+            <li><a href="#about">O mně</a></li>
+            <li><a href="#services">Služby</a></li>
+            <li><a href="#reviews">Reference</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#contact" class="nav-cta">Začínam</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pozvedni svůj <span>byznys</span> na další úroveň</h1>
+            <p>Jsem tu pro tebe, abych ti pomohl dosáhnout výjimečných výsledků. Společně vytvoříme strategii, která bude fungovat a přinese ti konkrétní hodnotu.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Pojďme si popovídat</a>
+                <a href="#services" class="btn-secondary">Jaké jsem schopnosti</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/andrea-votrub/foto.jpg" alt="Andrea Votrub">
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Spokojených klientů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1200%</div>
+                <div class="stat-label">Průměrný nárůst prodejů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8 let</div>
+                <div class="stat-label">Zkušeností v oboru</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Míra spokojnosti</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div>
+            <svg class="about-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle cx="200" cy="200" r="180" fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.3"/>
+                <circle cx="200" cy="150" r="30" fill="none" stroke="url(#grad)" stroke-width="2"/>
+                <path d="M 150 220 Q 150 260 200 280 Q 250 260 250 220" fill="none" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 120 200 L 160 200" fill="none" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 240 200 L 280 200" fill="none" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 140 280 L 170 310" fill="none" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 260 280 L 230 310" fill="none" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div>
+            <div class="about-badge">O MNĚ</div>
+            <h2>Jsem tu pro lidi, kteří chtějí dosáhnout více</h2>
+            <p>Věřím v sílu autentické komunikace a pragmatických řešení. S každým klientem pracuji jako s partnerem a společně nacházíme cestu, která vskutku funguje. Není to o složitých teoriích – je to o konkrétních výsledcích a dlouhodobých vztazích.</p>
+            <div class="values-grid">
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="#00d4ff" stroke-width="2"/>
+                        <path d="M12 7v5l4 2.5" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <div class="value-title">Efektivita</div>
+                    <div class="value-desc">Tvůj čas je cenný, takže jdu na věc přímo.</div>
+                </div>
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L15.09 8.26H21.77L16.84 12.45L18.94 18.71L12 14.5L5.06 18.71L7.16 12.45L2.23 8.26H8.91L12 2Z" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="value-title">Kvalita</div>
+                    <div class="value-desc">Přesnost a pečlivost v každém detailu.</div>
+                </div>
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#00d4ff"/>
+                        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" fill="#00d4ff"/>
+                    </svg>
+                    <div class="value-title">Transparentnost</div>
+                    <div class="value-desc">Bez překvapení, bez skrývání. Vše jasně.</div>
+                </div>
+                <div class="value-item">
+                    <svg class="value-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L22 7V12C22 18.63 12 22 12 22S2 18.63 2 12V7L12 2Z" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M9 13L11 15L15 11" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="value-title">Spolehlivost</div>
+                    <div class="value-desc">Když slíbím, dodělám. Vždy.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Čím ti mohu <span>pomoci</span></h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" stroke="#00d4ff" stroke-width="2"/>
+                    <line x1="6" y1="12" x2="18" y2="12" stroke="#00d4ff" stroke-width="2"/>
+                    <line x1="12" y1="6" x2="12" y2="18" stroke="#00d4ff" stroke-width="2"/>
+                </svg>
+                <h3>Strategická konzultace</h3>
+                <p>Pomohu ti přesně definovat cíle a najít nejefektivnější cestu, jak je dosáhnout. Bez tlachání, jen věci, které skutečně fungují.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12Z" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M12 7V12L16 14" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3>Projektový management</h3>
+                <p>Budu dohlížet na každou fázi tvého projektu. Včas, v rozpočtu, s předvídanými výsledky.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H17C18.1046 3 19 3.89543 19 5V19C19 20.1046 18.1046 21 17 21Z" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M8 7H16M8 11H16M8 15H14" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3>Tvorba obsahu</h3>
+                <p>Písemný obsah, který opravdu konvertuje. Budu ti psát způsobem, který osloví tvé ideální zákazníky.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="1" fill="#00d4ff"/>
+                    <circle cx="19" cy="12" r="1" fill="#00d4ff"/>
+                    <circle cx="5" cy="12" r="1" fill="#00d4ff"/>
+                    <path d="M12 5V1M12 23V19M5 12H1M23 12H19M8.46 5.46L5.46 2.46M18.54 18.54L15.54 15.54M15.54 5.46L18.54 2.46M5.46 18.54L2.46 15.54" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3>Digitální marketing</h3>
+                <p>Od SEO přes sociální sítě až po email kampaně. Všechno tak, aby ti to přineslo konkrétní obchody.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M9 11L11 13L15 9" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Optimalizace procesů</h3>
+                <p>Tvůj tým pracuje lépe, když je všechno promyšlené. Pomáhám ti najít a odstranit zbytečné kroky.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V9L13 2Z" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M13 2V9H20" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <h3>Lektorství a školení</h3>
+                <p>Chceš, aby si tvůj tým vzal nové dovednosti? Učím tak, aby to všichni pochopili a uplaťovali.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <div class="section-header">
+            <h2>Jak <span>pracuji</span></h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-number">01</div>
+                <h3>Seznámení se</h3>
+                <p>Chci porozumět tvému byznysu, tvojím cílům a výzvám. Bez tohohle nemůžeme dál.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">02</div>
+                <h3>Analýza situace</h3>
+                <p>Důkladně se podívám na to, co funguje a co ne. Bez názorů, jen fakta a data.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">03</div>
+                <h3>Plán akce</h3>
+                <p>Vytvoříme konkrétní plán s timelineama a KPI. Bude jasné, co se má dělat a kdy.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">04</div>
+                <h3>Realizace a monitoring</h3>
+                <p>Spolu půjdeme všechny kroky. Budu ti regulérně reportovat pokroky a přizpůsobovat strategii.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h2>Časté <span>otázky</span></h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Jak dlouho bude trvat, než vidím výsledky?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Je to různé podle toho, co řešíme. Některé věci vidíš hned, jiné trvají déle. Ale vždy ti řeknu, co realisticky můžeš čekat a kdy. Obvykle vidíš první pozitivní signály do měsíce.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Kolik to bude stát?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ceny se liší podle rozsahu a typu práce. Jednomu klientovi pomáhám s jedním konkrétním projektem, jinému s komplexní strategií. Vždy ti dám jasnou nabídku s rozpočtem. Pokud chceš vědět přibližně, napiš mi – poradím ti.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Pracuješ jen s určitými obory?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ne, pracuji se všemi druhy podniků. Už jsem pomáhal startupům, SMEs i větším společnostem. Důležité je, aby měl člověk vůli věci měnit a byl ochoten spolupracovat. To ostatní si vždycky můžeme vysvětlit.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Můžeme pracovat online?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Samozřejmě. Online schůzky, e-maily, dokumenty – všechno je možné. Někdy je setkání osobně skvělé, ale není to podmínka. Kdekoliv na světě, zvládneme to.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Co když mi tvůj přístup nebude vyhovovat?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Chci, aby ses s prací cítil pohodlně. Pokud během prvních týdnů zjistíme, že to není ideální match, raději se rozlučme jako přátelé. Kvalita vztahu je pro mě důležitější než peníze.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews" id="reviews">
+        <div class="section-header">
+            <h2>Co o mně říkají <span>klienti</span></h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">JK</div>
+                    <div class="review-info">
+                        <h4>Jan Kavalec</h4>
+                        <p>CEO StartUp Brno</p>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <p>Andrea mi pomohl strukturovat naši strategii růstu a přinesla konkrétní nápady, které jsme mohli hned zavedl. Nejlíp se mi líbilo, že mluvila přímo a bez zbytečných teorií. Doporučuji ji ze srdce.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">MN</div>
+                    <div class="review-info">
+                        <h4>Michaela Nováková</h4>
+                        <p>Marketing Manager</p>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <p>Jsem moc vděčná. Andrea nám pomohla optimalizovat naše procesy a ušetřili jsme spoustu času i peněz. Je to profesionálka, které se můžeš věřit, a přitom je super člověk na komunikaci.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">PK</div>
+                    <div class="review-info">
+                        <h4>Petr Krabice</h4>
+                        <p>Vlastník e-shop</p>
+                    </div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+                <p>Andrea mě naučila nové věci o digitálním marketingu, které jsem si prostě neuměl představit. Od té doby má náš e-shop objem prodejů jako nikdy předtím. Měl bych ji zaměstnat na plný úvazek!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="about-badge">KONTAKT</div>
+                <h2>Pojďme pracovat <span>spolu</span></h2>
+                <p>Mám otevřené uši pro nové projekty a zajímavé lidi. Jestli myslíš, že si můžeme rozumět, napiš mi nebo zavolej. Bez dlouhého čekání, bez byrokracie.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="4" width="20" height="16" rx="2" stroke="#00d4ff" stroke-width="2"/>
+                            <path d="M2 6L12 13L22 6" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="tel:+420606663826">+420 606 663 826</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="#00d4ff" stroke-width="2"/>
+                            <path d="M12 7V12L15 15" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Praha</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8C17.5913 9.5913 18.5 11.7456 18.5 14C18.5 16.2544 17.5913 18.4087 16 19.9999M8 8C6.40873 9.5913 5.5 11.7456 5.5 14C5.5 16.2544 6.40873 18.4087 8 19.9999M20 4C22.3203 6.3203 23.5 9.464 23.5 12.9999C23.5 16.536 22.3203 19.6797 20 22M4 4C1.67969 6.3203 0.5 9.464 0.5 12.9999C0.5 16.536 1.67969 19.6797 4 22M12 13C11.4477 13 11 13.4477 11 14C11 14.5523 11.4477 15 12 15C12.5523 15 13 14.5523 13 14C13 13.4477 12.5523 13 12 13Z" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <a href="https://www.linkedin.com/in/michalmicek/" target="_blank">LinkedIn profil</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="contact-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="btn-primary">Napište mi e-mail</a>
+                    <a href="tel:+420606663826" class="btn-primary" style="background: linear-gradient(135deg, #0099cc, #00d4ff);">Zavolejte mi</a>
+                    <a href="https://www.linkedin.com/in/michalmicek/" target="_blank" class="btn-secondary">Conectte se na LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Andrea Votrub. Všechna práva vyhrazena. | <a href="https://www.linkedin.com/in/michalmicek/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            const toggle = element.querySelector('.faq-toggle');
+            const answer = element.nextElementSibling;
+            
+            document.querySelectorAll('.faq-answer.active').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+                }
+            });
+            
+            toggle.classList.toggle('active');
+            answer.classList.toggle('active');
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
