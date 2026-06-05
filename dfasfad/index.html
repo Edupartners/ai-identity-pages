@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="dfasfad - fdasdfas. Specialista na fdsaf s výsledky v oblasti fdsaf.">
+    <meta property="og:title" content="dfasfad | fdasdfas">
+    <meta property="og:description" content="Profesionál s expertizou v fdsaf. Pomáhám fdsaf dosahovat jejich cílů.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/dfasfad/foto.jpg">
+    <meta property="og:type" content="website">
+    <title>dfasfad | fdasdfas</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Barvový systém */
+        :root {
+            --accent: #00d4ff;
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --text-light: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border: #2a2a2a;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            letter-spacing: -1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background-color: var(--accent);
+            color: #000;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+
+        .nav-cta:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 1rem;
+            }
+            .nav-menu {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* HERO SEKCE */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            animation: fadeInHero 1s ease-out;
+        }
+
+        @keyframes fadeInHero {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            letter-spacing: -2px;
+        }
+
+        .hero-content h1 .accent {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(0, 212, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+            animation: floatImage 3s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 6rem;
+                min-height: auto;
+            }
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* STATS GRID */
+        .stats {
+            padding: 5rem 2rem;
+            background-color: #0a0a0a;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* O MNĚ SEKCE */
+        .about {
+            padding: 5rem 2rem;
+            background-color: #0a0a0a;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background-color: rgba(0, 212, 255, 0.1);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--accent);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background-color: rgba(0, 212, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .value-text h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .value-text p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .about-illustration {
+            width: 100%;
+            height: 400px;
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-illustration svg {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* SLUŽBY GRID */
+        .services {
+            padding: 5rem 2rem;
+            background-color: #0a0a0a;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 212, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--accent);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* POSTUP */
+        .process {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        .process-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-step::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 5rem 2rem;
+            background-color: #0a0a0a;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            background-color: var(--bg-card);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background-color: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(0, 212, 255, 0.05);
+            border-color: var(--accent);
+        }
+
+        .faq-question h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            flex: 1;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: rgba(0, 212, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-weight: 700;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-question.active .faq-toggle {
+            transform: rotate(180deg);
+            background-color: rgba(0, 212, 255, 0.2);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+        }
+
+        /* RECENZE */
+        .testimonials {
+            padding: 5rem 2rem;
+            background-color: #0a0a0a;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(0, 212, 255, 0.1);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-avatar svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent);
+        }
+
+        .testimonial-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* KONTAKT */
+        .contact {
+            padding: 5rem 2rem;
+            background-color: #0a0a0a;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 1.5rem 0;
+            color: var(--text-light);
+        }
+
+        .contact-content p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background-color: rgba(0, 212, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .contact-info h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-info p {
+            margin: 0;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        .contact-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-cta-group .btn {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 2rem;
+            background-color: #0a0a0a;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--text-light);
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-logo">dfasfad</div>
+        <ul class="nav-menu">
+            <li><a href="#about">O mně</a></li>
+            <li><a href="#services">Služby</a></li>
+            <li><a href="#testimonials">Reference</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="mailto:micek.michal@seznam.cz" class="nav-cta">Napsat mi</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SEKCE -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Pomáhám <span class="accent">fdsaf</span> dosahovat výjimečných výsledků</h1>
+                <p>Moje specialita je fdsaf. Pracuji s lidmi, kteří si přejí něco zlepšit a jsou ochotní na tom pracovat. Přátelský přístup, reálné řešení a konkrétní výsledky.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Začneme!</a>
+                    <a href="#about" class="btn btn-secondary">Více o mně</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/dfasfad/foto.jpg" alt="dfasfad">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Spokojených klientů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8 let</div>
+                <div class="stat-label">Praxe v oboru</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">450%</div>
+                <div class="stat-label">Průměrný nárůst rezultátů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Míra doporučení</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O MNĚ -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div>
+                <svg class="about-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+                    <circle cx="200" cy="200" r="150" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                    <g transform="translate(200,200)">
+                        <line x1="0" y1="-150" x2="0" y2="150" stroke="#00d4ff" stroke-width="2" opacity="0.3"/>
+                        <line x1="-150" y1="0" x2="150" y2="0" stroke="#00d4ff" stroke-width="2" opacity="0.3"/>
+                    </g>
+                    <circle cx="200" cy="120" r="30" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M 170 160 Q 200 180 230 160" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M 160 190 L 240 190" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+                    <path d="M 180 220 L 220 270" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M 220 220 L 180 270" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M 150 200 L 100 240" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+                    <path d="M 250 200 L 300 240" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="120" cy="100" r="15" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+                    <circle cx="280" cy="100" r="15" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+                </svg>
+            </div>
+            <div>
+                <div class="about-badge">O MNĚ</div>
+                <h2>Jsem tu pro tebe</h2>
+                <p>Věřím, že každý má potenciál dosáhnout čehož chce. Moje role je vám v tom pomoci. Pracuji transparentně, bez zbytečných služeb nebo slibů. Jen reálný přístup, který funguje.</p>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 6v6l4 2.5"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Rychlé řešení</h3>
+                            <p>Nepleťme čas, řešme konkrétně</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Ověřené metody</h3>
+                            <p>Co funguje, znám ze zkušenosti</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Osobní přístup</h3>
+                            <p>Každý klient je jiný, řeším to</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Viditelné výsledky</h3>
+                            <p>Měříme a vylepšujeme neustále</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLUŽBY -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Co pro tebe dělám</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Strategie a plánování</h3>
+                    <p>Vytváříme jasný plán, který vede ke konkrétním výsledkům. Bez zbytečné teoretizace.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Optimalizace procesů</h3>
+                    <p>Zefektivňuji to, co funguje, a odstraňuji co zbytečné. Jednoduše a efektivně.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                        </svg>
+                    </div>
+                    <h3>Školení a koučing</h3>
+                    <p>Předávám poznatky přímo tvému týmu. Prakticky a srozumitelně.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Analýza a reporting</h3>
+                    <p>Měříme vše důležité. Data která rozumíš a na kterých se dá stavět.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Konzultace ad hoc</h3>
+                    <p>Potřebuješ radu v konkrétní situaci? Poradíme si bez dlouhých kontraktů.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Implementace řešení</h3>
+                    <p>Nejen rady. Pomáháme s praktickou implementací a uvedením do provozu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POSTUP PRÁCE -->
+    <section class="process">
+        <div class="process-container">
+            <h2 class="section-title">Jak spolu pracujeme</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h3>Sezení</h3>
+                    <p>Seznámíme se a projdeme tvou situaci. Bez příslibu nic, jen честná zpětná vazba.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h3>Analýza</h3>
+                    <p>Podrobně analyzuji, kde vidím příležitost. Připravím konkrétní plán řešení.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h3>Implementace</h3>
+                    <p>Společně spustíme řešení. Jsem tu s tebou v každém kroku implementace.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h3>Sledování</h3>
+                    <p>Měříme výsledky, optimalizujeme, a zlepšujeme neustále. Dlouhodobě.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2 class="section-title">Často kladené otázky</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kolik stojí tvoje služby?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Cena závisí na rozsahu a typu projektu. Mám flexibilní modely - od hodinových konzultací až po celoroční partnerství. Napíš mi a domluvíme se.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Jak dlouho trvá vidět výsledky?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>To závisí na situaci. Některé věci můžeme zlepšit hned. Ostatní potřebují čas. Obvykle vidíme první výsledky během prvního měsíce, lepší dlouhodobě během čtvrt roku.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Pracuješ s mým oborem?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Mám zkušenost s řadou oborů. Hlavně, že je tam prostor pro zlepšení a ty chceš pracovat na tom. Napiš mi a povíme si o tom.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Mohu si vás vyzkoušet na menší projekt?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Samozřejmě. Nabízím inicialní konzultaci. Zkusíme si spolu pracovat, vidíme, jestli si rozumíme. Pak můžeme pokračovat dál, nebo ne. Bez závazků.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Jaké je vaše dostupnost?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Pracuji s omezením kapacity. Beru si čas na kvalitu. Kontaktuj mě a zjistíme, jestli mám místo pro tvůj projekt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENZE -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Co si lidé myslí</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M12 14c-4 0-6 2-6 2v6h12v-6s-2-2-6-2z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Jan Dvořák</h4>
+                            <p>Majitel firmy</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Přesně takový přístup jsem potřeboval. Bez zbytečné teorie, jen praktické řešení. Vidíme výsledky už v prvním měsíci."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M12 14c-4 0-6 2-6 2v6h12v-6s-2-2-6-2z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Marie Novotná</h4>
+                            <p>Projektová manažerka</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Skvělý přístup a super komunikace. Odpoví v chvíli, když ho potřebujem, a vždy má jasné řešení. Doporučujem!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M12 14c-4 0-6 2-6 2v6h12v-6s-2-2-6-2z"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Petr Svoboda</h4>
+                            <p>Vedoucí prodeje</p>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Profesionál na všech frontách. Znal přesně, co dělá, a předal to našemu týmu tak, aby to všichni pochopili. Děkujem!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <div class="about-badge">KONTAKT</div>
+                <h2>Pojďme spolu pracovat</h2>
+                <p>Jsem tu proto, abys dosáhl svých cílů. Napíš mi a domluvíme si první schůzku. Bez zbytečných procesů, jen prakticky.</p>
+                
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p><a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Město</h3>
+                            <p>fdas</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.658 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/michalmicek/" target="_blank">Podívej se na mý profil</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Připraven jsem</h3>
+                <div class="contact-cta-group">
+                    <a href="mailto:micek.michal@seznam.cz" class="btn btn-primary">Napíšu mail</a>
+                    <a href="https://www.linkedin.com/in/michalmicek/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 dfasfad. Všechna práva vyhrazena. | <a href="https://www.linkedin.com/in/michalmicek/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <!-- FAQ JavaScript -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
