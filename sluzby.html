@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurátor služeb – AIID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --bg-card: #131313;
+            --bg-input: #1e1e1e;
+            --border: rgba(255,255,255,0.08);
+            --border-hover: rgba(255,255,255,0.15);
+            --accent: #00d4ff;
+            --accent-dim: rgba(0,212,255,0.08);
+            --accent-glow: rgba(0,212,255,0.2);
+            --success: #00ff9d;
+            --text: #f0f0f0;
+            --text-secondary: #888;
+            --text-muted: #444;
+            --error: #ff4757;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0,212,255,0.04) 0%, transparent 65%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8,8,8,0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+
+        .header-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--text); }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HERO */
+        .page-hero {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .page-eyebrow {
+            display: inline-block;
+            background: var(--accent-dim);
+            border: 1px solid rgba(0,212,255,0.3);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .page-hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(30px, 4vw, 48px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .page-hero h1 span { color: var(--accent); }
+
+        .page-hero p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        /* LAYOUT */
+        .configurator-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 24px;
+            align-items: start;
+        }
+
+        /* SERVICES LIST */
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 8px 0 4px;
+            margin-top: 8px;
+        }
+
+        .service-item {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 14px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            user-select: none;
+        }
+
+        .service-item:hover {
+            border-color: var(--border-hover);
+        }
+
+        .service-item.selected {
+            border-color: var(--accent);
+            background: rgba(0,212,255,0.04);
+        }
+
+        .service-item.selected::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            border-radius: 14px 14px 0 0;
+        }
+
+        /* Custom checkbox */
+        .service-checkbox {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 2px solid rgba(255,255,255,0.2);
+            background: var(--bg-input);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .service-item.selected .service-checkbox {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .service-checkbox::after {
+            content: '';
+            width: 5px;
+            height: 9px;
+            border: 2px solid #000;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg) translateY(-1px);
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+
+        .service-item.selected .service-checkbox::after { opacity: 1; }
+
+        .service-info { flex: 1; }
+
+        .service-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+
+        .service-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .service-price-tag {
+            font-family: 'Syne', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .service-item.selected .service-price-tag { color: var(--accent); }
+
+        /* STICKY SUMMARY */
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 20px;
+            padding: 28px;
+            position: sticky;
+            top: 90px;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .summary-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .summary-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .summary-item-name { color: var(--text-secondary); }
+        .summary-item-price { color: var(--text); font-weight: 600; }
+
+        .summary-empty {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .summary-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 16px 0;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .summary-total-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .summary-total-price {
+            font-family: 'Syne', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .summary-total-price span {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* CONTACT FORM */
+        .contact-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-input {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1.5px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.2s;
+            margin-bottom: 12px;
+        }
+
+        .contact-input:focus {
+            border-color: var(--accent);
+            background: #242424;
+            box-shadow: 0 0 0 3px var(--accent-dim);
+        }
+
+        .contact-input.error { border-color: var(--error); }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-family: 'Syne', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .btn-submit.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .btn-submit.active:hover {
+            box-shadow: 0 0 28px var(--accent-glow);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            transform: none;
+        }
+
+        /* SUCCESS */
+        .success-state {
+            display: none;
+            text-align: center;
+            padding: 32px 20px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .success-state.visible { display: block; }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(0,255,157,0.1);
+            border: 2px solid var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 16px;
+        }
+
+        .success-state h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .success-state p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* Note */
+        .note {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            header { padding: 14px 16px; }
+            .container { padding: 90px 16px 60px; }
+            .configurator-layout { grid-template-columns: 1fr; }
+            .summary-card { position: static; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">AI<span>ID</span></a>
+        <nav class="header-nav">
+            <a href="/sluzby.html">← Zpět na služby</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="page-hero">
+            <div class="page-eyebrow">Konfigurátor služeb</div>
+            <h1>Udělej svůj web<br><span>skutečně svým.</span></h1>
+            <p>Zaškrtni co potřebuješ, zadej email a my se ti ozveme s dalším krokem.</p>
+        </div>
+
+        <div class="configurator-layout">
+
+            <!-- LEVÁ STRANA — seznam služeb -->
+            <div class="services-list">
+
+                <div class="section-label">Obsah</div>
+
+                <div class="service-item" data-id="texty" data-price="500" data-name="Úprava textů" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Úprava textů</div>
+                        <div class="service-desc">Tvůj hlas, tvoje příběhy, tvoje čísla — přepis AI textů podle tvých podkladů</div>
+                    </div>
+                    <div class="service-price-tag">500 Kč</div>
+                </div>
+
+                <div class="service-item" data-id="recenze" data-price="500" data-name="Skutečné recenze" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Skutečné recenze</div>
+                        <div class="service-desc">Dodáš 3–5 referencí od klientů, zapracujeme na web</div>
+                    </div>
+                    <div class="service-price-tag">500 Kč</div>
+                </div>
+
+                <div class="service-item" data-id="formular" data-price="1000" data-name="Kontaktní formulář" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Kontaktní formulář</div>
+                        <div class="service-desc">Získávej leady přímo z webu — notifikace na tvůj email</div>
+                    </div>
+                    <div class="service-price-tag">1 000 Kč</div>
+                </div>
+
+                <div class="service-item" data-id="mapa" data-price="500" data-name="Mapa + lokace" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Mapa + lokace</div>
+                        <div class="service-desc">Google Maps embed + adresa — důležité pro lokální podnikatele</div>
+                    </div>
+                    <div class="service-price-tag">500 Kč</div>
+                </div>
+
+                <div class="service-item" data-id="zip" data-price="199" data-name="ZIP — zdrojové soubory" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">ZIP — zdrojové soubory</div>
+                        <div class="service-desc">Nahraj si web kamkoliv chceš — žádná závislost na nás</div>
+                    </div>
+                    <div class="service-price-tag">199 Kč</div>
+                </div>
+
+                <div class="section-label">Technické</div>
+
+                <div class="service-item" data-id="domena" data-price="1000" data-name="Vlastní doména" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Vlastní doména</div>
+                        <div class="service-desc">Zajistíme nákup domény (vlastníkem jsi ty) + propojení s webem · + cena domény</div>
+                    </div>
+                    <div class="service-price-tag">1 000 Kč</div>
+                </div>
+
+                <div class="section-label">Hosting</div>
+
+                <div class="service-item" data-id="hosting" data-price="299" data-name="Hosting + AI update (1 rok)" onclick="toggleService(this)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Hosting + AI update</div>
+                        <div class="service-desc">Roční obnova hostingu + update llms.txt, robots.txt a sitemap</div>
+                    </div>
+                    <div class="service-price-tag">299 Kč<span style="font-size:11px;color:var(--text-muted);font-weight:400;display:block;text-align:right">/rok</span></div>
+                </div>
+
+                <div class="section-label">Balíčky — výhodnější než jednotlivě</div>
+
+                <div class="service-item package-item" data-id="starter" data-price="1490" data-name="Balíček Starter" data-includes="texty,recenze,formular" onclick="togglePackage(this)" style="border-color:rgba(255,255,255,0.12)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Starter <span style="font-size:12px;color:var(--text-muted);font-weight:400;text-decoration:line-through;margin-left:8px">hodnota 2 000 Kč</span></div>
+                        <div class="service-desc">Úprava textů · Skutečné recenze · Kontaktní formulář</div>
+                        <div style="margin-top:6px"><span style="font-size:11px;background:rgba(0,255,157,0.1);color:var(--success);padding:2px 8px;border-radius:6px;font-weight:700">ušetříš 510 Kč</span></div>
+                    </div>
+                    <div class="service-price-tag">1 490 Kč<span style="font-size:11px;color:var(--text-muted);font-weight:400;display:block;text-align:right">jednorázově</span></div>
+                </div>
+
+                <div class="service-item package-item" data-id="pro" data-price="2990" data-name="Balíček Pro" data-includes="texty,recenze,formular,domena,hosting,mapa" onclick="togglePackage(this)" style="border-color:rgba(0,212,255,0.25)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Pro <span style="background:var(--accent);color:#000;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:700;margin-left:8px">Nejlepší hodnota</span> <span style="font-size:12px;color:var(--text-muted);font-weight:400;text-decoration:line-through;margin-left:4px">hodnota 5 500 Kč</span></div>
+                        <div class="service-desc">Vše ze Starter · Vlastní doména · 1 rok hostingu · Mapa + lokace</div>
+                        <div style="margin-top:6px"><span style="font-size:11px;background:rgba(0,255,157,0.1);color:var(--success);padding:2px 8px;border-radius:6px;font-weight:700">ušetříš 2 510 Kč</span></div>
+                    </div>
+                    <div class="service-price-tag">2 990 Kč<span style="font-size:11px;color:var(--text-muted);font-weight:400;display:block;text-align:right">jednorázově</span></div>
+                </div>
+
+                <div class="service-item package-item" data-id="full" data-price="9990" data-name="Balíček Full" data-includes="texty,recenze,formular,domena,hosting,mapa,zip" onclick="togglePackage(this)" style="background:linear-gradient(135deg,#131313,#0f1a1e)">
+                    <div class="service-checkbox"></div>
+                    <div class="service-info">
+                        <div class="service-name">Full <span style="font-size:12px;color:var(--text-muted);font-weight:400;text-decoration:line-through;margin-left:8px">hodnota 14 690 Kč</span></div>
+                        <div class="service-desc">Vše z Pro · ZIP soubory · 1 revize do 30 dnů · Prioritní podpora</div>
+                        <div style="margin-top:6px"><span style="font-size:11px;background:rgba(0,255,157,0.1);color:var(--success);padding:2px 8px;border-radius:6px;font-weight:700">ušetříš 4 700 Kč</span></div>
+                    </div>
+                    <div class="service-price-tag" style="text-align:right">
+                        <span style="font-size:20px;font-family:'Syne',sans-serif;font-weight:800;color:var(--text-secondary)">9 990 Kč</span>
+                        <span style="font-size:11px;color:var(--text-muted);font-weight:400;display:block">jednorázově</span>
+                    </div>
+                </div>
+            <div class="summary-card" style="position:relative">
+
+                <div id="summaryForm">
+                    <div class="summary-title">Tvoje objednávka</div>
+
+                    <div class="summary-items" id="summaryItems">
+                        <div class="summary-empty" id="summaryEmpty">Zatím nic nevybráno</div>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <div class="summary-total-label">Celkem</div>
+                        <div class="summary-total-price" id="totalPrice">0 <span>Kč</span></div>
+                    </div>
+
+                    <div class="contact-section">
+                        <label class="contact-label">Tvoje jméno</label>
+                        <input type="text" class="contact-input" id="orderName" placeholder="Jan Novák">
+
+                        <label class="contact-label">Email</label>
+                        <input type="email" class="contact-input" id="orderEmail" placeholder="jan@example.cz">
+
+                        <label class="contact-label">URL tvého webu na aiid.cz</label>
+                        <input type="text" class="contact-input" id="orderWeb" placeholder="aiid.cz/jan-novak">
+
+                        <button class="btn-submit" id="submitBtn" onclick="submitOrder()">
+                            Odeslat objednávku →
+                        </button>
+
+                        <p class="note">Po odeslání tě kontaktujeme do 24 hodin s platebními údaji a dalším krokem.</p>
+                    </div>
+                </div>
+
+                <div class="success-state" id="successState">
+                    <div class="success-icon">✓</div>
+                    <h3>Objednávka přijata!</h3>
+                    <p>Zavolám ti a pošlu email na <strong id="confirmedEmail"></strong> s platebními údaji a dalším postupem. Ozvu se do 24 hodin.</p>
+                    <p style="margin-top:12px;font-size:13px;color:var(--text-muted)">Mezitím můžeš sdílet svůj web s kolegy a klienty. 🚀</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 <a href="/">MÍČEK</a><sup style="font-size:9px;">®</sup> · <a href="/sluzby.html" style="color:#444;text-decoration:none;">Všechny služby</a></p>
+    </footer>
+
+    <script>
+        // Webhook URL — stejný jako hlavní formulář nebo nový pro objednávky
+        const WEBHOOK_URL = 'DOPLŇ_WEBHOOK_URL_PRO_OBJEDNAVKY';
+
+        const selected = new Map();
+
+        function toggleService(el) {
+            const id = el.dataset.id;
+            const price = parseInt(el.dataset.price);
+            const name = el.dataset.name;
+
+            if (selected.has(id)) {
+                selected.delete(id);
+                el.classList.remove('selected');
+            } else {
+                selected.set(id, { name, price });
+                el.classList.add('selected');
+            }
+
+            updateSummary();
+            updateButton();
+        }
+
+        function updateSummary() {
+            const container = document.getElementById('summaryItems');
+            const empty = document.getElementById('summaryEmpty');
+            const totalEl = document.getElementById('totalPrice');
+
+            container.innerHTML = '';
+
+            if (selected.size === 0) {
+                container.innerHTML = '<div class="summary-empty">Zatím nic nevybráno</div>';
+                totalEl.innerHTML = '0 <span>Kč</span>';
+                return;
+            }
+
+            let total = 0;
+            selected.forEach(({ name, price }) => {
+                total += price;
+                const item = document.createElement('div');
+                item.className = 'summary-item';
+                item.innerHTML = `
+                    <span class="summary-item-name">${name}</span>
+                    <span class="summary-item-price">${price.toLocaleString('cs-CZ')} Kč</span>
+                `;
+                container.appendChild(item);
+            });
+
+            totalEl.innerHTML = `${total.toLocaleString('cs-CZ')} <span>Kč</span>`;
+        }
+
+        function updateButton() {
+            const btn = document.getElementById('submitBtn');
+            const email = document.getElementById('orderEmail').value;
+            const name = document.getElementById('orderName').value;
+            if (selected.size > 0 && email.includes('@') && name.trim()) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        }
+
+        function togglePackage(el) {
+            const id = el.dataset.id;
+            const price = parseInt(el.dataset.price);
+            const name = el.dataset.name;
+            const includes = el.dataset.includes.split(',');
+
+            if (selected.has(id)) {
+                // Odebrat balíček
+                selected.delete(id);
+                el.classList.remove('selected');
+                // Odebrat i jednotlivé služby které balíček obsahuje
+                includes.forEach(sid => {
+                    selected.delete(sid);
+                    const serviceEl = document.querySelector(`.service-item[data-id="${sid}"]`);
+                    if (serviceEl) serviceEl.classList.remove('selected');
+                });
+            } else {
+                // Přidat balíček — odebrat ostatní balíčky
+                document.querySelectorAll('.package-item').forEach(p => {
+                    if (p !== el) {
+                        const pid = p.dataset.id;
+                        const pincludes = p.dataset.includes.split(',');
+                        selected.delete(pid);
+                        p.classList.remove('selected');
+                        pincludes.forEach(sid => {
+                            selected.delete(sid);
+                            const serviceEl = document.querySelector(`.service-item[data-id="${sid}"]`);
+                            if (serviceEl) serviceEl.classList.remove('selected');
+                        });
+                    }
+                });
+                selected.set(id, { name, price });
+                el.classList.add('selected');
+                // Označit zahrnuté služby
+                includes.forEach(sid => {
+                    const serviceEl = document.querySelector(`.service-item[data-id="${sid}"]`);
+                    if (serviceEl) serviceEl.classList.add('selected');
+                });
+            }
+
+            updateSummary();
+            updateButton();
+        }
+        document.getElementById('orderName').addEventListener('input', updateButton);
+
+        async function submitOrder() {
+            const email = document.getElementById('orderEmail').value;
+            const name = document.getElementById('orderName').value;
+            const web = document.getElementById('orderWeb').value;
+
+            if (!email.includes('@') || !name.trim() || selected.size === 0) return;
+
+            const services = Array.from(selected.values()).map(s => s.name).join(', ');
+            const total = Array.from(selected.values()).reduce((sum, s) => sum + s.price, 0);
+
+            const btn = document.getElementById('submitBtn');
+            btn.textContent = 'Odesílám...';
+            btn.classList.remove('active');
+
+            const payload = {
+                typ: 'objednavka_sluzby',
+                jmeno: name,
+                email: email,
+                web: web,
+                sluzby: services,
+                celkem: total + ' Kč',
+                datum: new Date().toLocaleString('cs-CZ')
+            };
+
+            try {
+                await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    mode: 'no-cors'
+                });
+            } catch(e) {}
+
+            document.getElementById('confirmedEmail').textContent = email;
+            document.getElementById('summaryForm').style.display = 'none';
+            document.getElementById('successState').classList.add('visible');
+        }
+    </script>
+
+</body>
+</html>
