@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Irena Míčková - Ekonom a tvůrce mandal. Objevuj krásu mandal a relaxaci pro duši.">
+    <meta name="og:title" content="Irena Míčková - Mandaly s láskou">
+    <meta name="og:description" content="Ekonom, který malujeMandalů pro radost. Jedinečné umělecké díla, která tě inspirují.">
+    <meta name="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/irena-mickova/foto.jpg">
+    <title>Irena Míčková - Mandaly s Láskou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+            padding: 1.5rem 2rem;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #8b5cf6;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #8b5cf6;
+            padding: 0.75rem 1.75rem;
+            border: 2px solid #8b5cf6;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(139, 92, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            margin-top: 60px;
+            animation: fadeInHero 1s ease-out;
+        }
+
+        @keyframes fadeInHero {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-content h1 .accent {
+            color: #8b5cf6;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #a0a0a0;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid #8b5cf6;
+            object-fit: cover;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
+        }
+
+        /* STATS GRID */
+        .stats {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(167, 139, 250, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: -40px 2rem 0;
+            max-width: calc(100% - 4rem);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #8b5cf6;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            color: #8b5cf6;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(139, 92, 246, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid #8b5cf6;
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #8b5cf6;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .value-text {
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .svg-illustration {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.03) 0%, rgba(167, 139, 250, 0.03) 100%);
+        }
+
+        .services .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #141414;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #8b5cf6;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: #8b5cf6;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 6rem 2rem;
+        }
+
+        .process .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            background: #141414;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            text-align: center;
+        }
+
+        .process-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #8b5cf6;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        /* FAQ SECTION */
+        .faq {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.03) 0%, rgba(167, 139, 250, 0.03) 100%);
+        }
+
+        .faq .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: #141414;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #1a1a1a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #222222;
+            color: #8b5cf6;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b5cf6;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #a0a0a0;
+            background: #141414;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        /* REVIEWS SECTION */
+        .reviews {
+            padding: 6rem 2rem;
+        }
+
+        .reviews .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: #141414;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            border-color: #8b5cf6;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .review-info h4 {
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-info p {
+            font-size: 0.85rem;
+            color: #8b5cf6;
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #a0a0a0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.03) 0%, rgba(167, 139, 250, 0.03) 100%);
+        }
+
+        .contact .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-left h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .contact-left p {
+            font-size: 1.05rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #8b5cf6;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .contact-item a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #8b5cf6;
+        }
+
+        .contact-card {
+            background: #141414;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .contact-card-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-card-buttons a {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card-buttons .btn-primary {
+            width: 100%;
+        }
+
+        .contact-card-buttons .btn-secondary {
+            width: 100%;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #8b5cf6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                gap: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image img {
+                width: 280px;
+                height: 280px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+
+            .contact .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services h2,
+            .reviews h2,
+            .faq h2,
+            .process h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats {
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 0.75rem;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container">
+            <div class="logo">Irena Míčková</div>
+            <ul class="nav-links">
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#reviews">Reference</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="mailto:irena.mickova@seznam.cz" class="btn-primary">Napsat zprávu</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mandaly, které <span class="accent">tě</span> inspirují</h1>
+                <p>Jsem Irena, ekonom, který našel svou vášeň v malování mandal. Každý obrázek je únik do světa klidna a harmonie. Pojď si objevit sílu mandal pro tvou duši.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Zjisti víc</a>
+                    <a href="mailto:irena.mickova@seznam.cz" class="btn-secondary">Pošli mi zprávu</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/irena-mickova/foto.jpg" alt="Irena Míčková">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Vytvořených mandal</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Spokojených zákazníků</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Let zkušeností</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Osobní přístup</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="section-badge">O MNĚ</div>
+        <div class="about-content">
+            <div>
+                <svg class="svg-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>
+                            .mandala-line { stroke: #8b5cf6; stroke-width: 2; fill: none; }
+                        </style>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" class="mandala-line"/>
+                    <circle cx="200" cy="200" r="150" class="mandala-line"/>
+                    <circle cx="200" cy="200" r="120" class="mandala-line"/>
+                    <circle cx="200" cy="200" r="90" class="mandala-line"/>
+                    <circle cx="200" cy="200" r="60" class="mandala-line"/>
+                    <circle cx="200" cy="200" r="30" class="mandala-line"/>
+                    
+                    <g class="mandala-line">
+                        <line x1="200" y1="20" x2="200" y2="380"/>
+                        <line x1="20" y1="200" x2="380" y2="200"/>
+                        <line x1="58" y1="58" x2="342" y2="342"/>
+                        <line x1="342" y1="58" x2="58" y2="342"/>
+                    </g>
+                    
+                    <g class="mandala-line">
+                        <line x1="200" y1="50" x2="200" y2="80"/>
+                        <line x1="200" y1="320" x2="200" y2="350"/>
+                        <line x1="50" y1="200" x2="80" y2="200"/>
+                        <line x1="320" y1="200" x2="350" y2="200"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="about-text">
+                <h2>Harmonie skrz umění</h2>
+                <p>Ahoj, jsem Irena. Moje cesta začala jako ekonom, ale srdce mě táhlo k něčemu hlubšímu. Před lety jsem objevila sílu mandal a jejich meditativní účinky. Dnes věnuji čas vytváření jedinečných mandal, které mají sílu transformovat prostor a mysl těch, kdo je obklopují.</p>
+                <p>Každá mandala je vytvářena s láskou, pozorností a hlubokým porozuměním symboliky. Věřím, že umění má moc léčit, inspirovat a měnit.</p>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">Autentičnost</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">Kvalita</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">Přátelství</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 18c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8zm0-12.5c-2.49 0-4.5 2.01-4.5 4.5S9.51 16.5 12 16.5s4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">Harmonie</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Co pro tebe mohu vytvořit</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Osobní mandaly</h3>
+                    <p>Vytvoříme mandalu speciálně pro tebe, která bude odrážet tvou jedinečnost a duchovní cestu.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Mandaly pro interiér</h3>
+                    <p>Převeď svůj prostor v oázu klidu s ručně malovanými mandalami speciálně pro tvůj domov.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Meditační mandaly</h3>
+                    <p>Speciálně navržené mandaly s mantry a meditativními prvky, které tě pomohou najít vnitřní mír.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Workshops a kurzy</h3>
+                    <p>Nauč se umění malování mandal v přátelské atmosféře a objevi svou vlastní tvůrčí cestu.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.3-1.54c-.31-.36-.88-.39-1.24-.09-.36.29-.41.89-.12 1.25l2.38 2.83c.17.21.44.33.71.33.27 0 .54-.12.71-.33l3.99-5.08c.29-.37.25-.96-.09-1.25-.34-.26-.95-.23-1.25.09z"/>
+                        </svg>
+                    </div>
+                    <h3>Dárkové mandaly</h3>
+                    <p>Dej najevo péči o své blízké s unikátní mandálou, která bude symbolizovat tvou lásku a podporu.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/>
+                        </svg>
+                    </div>
+                    <h3>Digitální mandaly</h3>
+                    <p>Získej mandalu v digitální podobě, kterou můžeš sdílet, tisknout nebo používat na zařízeních.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <div class="container">
+            <h2>Jak spolu budeme pracovat</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h3>Setkání a inspirace</h3>
+                    <p>Společně si povíme o tvých představách, barvách, která tě táhnou, a energii, kterou chceš v mandále cítit.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h3>Vytváření konceptu</h3>
+                    <p>Vypracuji pro tebe návrh mandaly, který bude odrážet tvé přání. Můžeme iterovat, dokud nebudeš zcela spokojen.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h3>Malování se srdcem</h3>
+                    <p>Začnu malovat tvou mandalu s péčí a soustředěním. Každý tah štětce je meditace a projev vděčnosti.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h3>Finalizace a předání</h3>
+                    <p>Mandala je hotova, zapakována s láskou a připravena vejít do tvého domova jako symbol změny a harmonie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Často kladené otázky</h2>
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>Jak dlouho trvá vytvoření mandaly?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Dle velikosti a složitosti mandaly trvá vytvoření obvykle 2 až 4 týdny. Jednodušší mandaly mohou být hotovy již za týden. Po domluvě mohu být i rychlejší.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Jaké materiály používáš?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Používám kvalitní akrylové barvy a speciální papír vyšší gramáže. Všechny materiály jsou profesionální kvality a dlouhodobě odolné.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Mohu si vybrat barvy mandaly?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Samozřejmě! Barvy si můžeš vybrat dle svých preferencí nebo energií, které tvě v tu chvíli táhnou. Ráda ti pomůžu s kombinacemi.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Jaké jsou ceny mandal?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ceny se liší dle velikosti, složitosti a typu mandaly. Osobní mandaly začínají na 2000 Kč. Rád se podíváme na tvé představy a dohodnem si cenu.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Kam můžeš mandalu poslat?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Mandaly odesílám po celé České republice a také do zahraničí. Balím je s velkou péčí, aby dorazily v perfektním stavu.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Jaká je záruka na mandalu?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Kvůli kvalitě materiálů mají mandaly dlouhodobou životnost. Pokud by měla mandala nějakou vadu, jsem připravena ji opravit nebo vytvořit znovu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2>Co si o mě myslí</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">MK</div>
+                        <div class="review-info">
+                            <h4>Markéta Kučerová</h4>
+                            <p>Ostrava</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Irena vykouzlila mandalu přesně takovou, jakou jsem si představovala. Každý detail je dokonalý a energie, kterou z ní cítím, je neuvěřitelná. Děkuji!</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">JN</div>
+                        <div class="review-info">
+                            <h4>Jana Novotná</h4>
+                            <p>Brno</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Koupit mandalu od Ireny bylo jedno z nejlepších rozhodnutí. Závěšená v mém pokoji mi každý den připomíná harmonii a mír. Prakticky meditace na zdi!</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">PV</div>
+                        <div class="review-info">
+                            <h4>Pavel Vráblík</h4>
+                            <p>Praha</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Mandalu jsem dal své přítelkyni k narozeninám. Reakce byla nádherná. Kvalita je opravdu špičková a osobní přístup Ireny je bezkonkurenční.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <div class="section-badge">KONTAKT</div>
+                <h2>Pojďme spolu vytvořit něco krásného</h2>
+                <p>Mám radost, když se ozvou noví přátelé. Neváhej mě kontaktovat - ráda si s tebou popovídám o tvých představách a jak společně vytvoříme mandalu, která bude právě pro tebe.</p>
+                
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <a href="mailto:irena.mickova@seznam.cz">irena.mickova@seznam.cz</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.92 7.02C17.45 6.18 16.51 5.55 15.46 5.55c-2.52 0-4.55 2.64-4.55 5.89 0 3.36 2.03 5.89 4.55 5.89 1.05 0 1.99-.63 2.46-1.47.16.3.77 1.63.77 1.63.26.49.12 1.06-.35 1.34-.23.14-.57.22-.91.22h-.01c-1.7 0-3.29-.82-4.31-2.18-.24-.33-.58-.89-.88-1.63-.3.74-.64 1.3-.88 1.63-1.02 1.36-2.61 2.18-4.31 2.18h-.01c-.34 0-.68-.08-.91-.22-.47-.28-.61-.85-.35-1.34.77-1.39 1.77-3.57 1.77-3.57.16-.3.77-1.63.77-1.63.47.84 1.41 1.47 2.46 1.47 2.52 0 4.55-2.64 4.55-5.89 0-3.36-2.03-5.89-4.55-5.89-1.05 0-1.99.63-2.46 1.47z"/>
+                            </svg>
+                        </div>
+                        <a href="tel:+420604307905">+420 604 307 905</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <span>Ostrava, Česká republika</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <h3>Kontaktuj mě</h3>
+                <div class="contact-card-buttons">
+                    <a href="mailto:irena.mickova@seznam.cz" class="btn-primary">Napřít zprávu</a>
+                    <a href="tel:+420604307905" class="btn-secondary">Zavolat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Irena Míčková. Všechna práva vyhrazena. | Vytvořeno s láskou v Ostravě</p>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
