@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TesterX | Marketingový konzultant – Ostrava</title>
+    <meta name="description" content="TesterX je marketingový konzultant z praxe se sídlem v Ostravě. Proškolil více než 1000 lidí v oblasti marketingu a digitálního vzdělávání. Zaměřuje se na praktické znalosti a reálné výsledky." />
+    <meta name="keywords" content="TesterX, marketingový konzultant, marketing, vzdělávání, Ostrava, školení, digitální marketing" />
+    <meta name="author" content="TesterX" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="TesterX | Marketingový konzultant" />
+    <meta property="og:description" content="TesterX je marketingový konzultant z praxe se sídlem v Ostravě. Proškolil více než 1000 lidí v oblasti marketingu a digitálního vzdělávání." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/testerx/foto.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TesterX | Marketingový konzultant" />
+    <meta name="twitter:description" content="TesterX je marketingový konzultant z praxe se sídlem v Ostravě. Proškolil více než 1000 lidí v oblasti marketingu a digitálního vzdělávání." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/testerx/foto.jpg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "TesterX",
+      "jobTitle": "Marketingový konzultant",
+      "description": "Marketingový konzultant se zaměřením na praktické znalosti z praxe. Proškolil 1000 lidí v oblasti vzdělávání a digitálního marketingu.",
+      "email": "micek.michal@seznam.cz",
+      "telephone": "88888",
+      "url": "https://aiid.cz/testerx",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/testerx/foto.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Ostrava", "addressCountry": "CZ" },
+      "sameAs": ["https://www.linkedin.com"]
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2563eb;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #2563eb;
+        }
+
+        .navbar-cta {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-cta:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(37, 99, 235, 0.04) 100%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .accent {
+            color: #2563eb;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            max-width: 420px;
+            line-height: 1.7;
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background-color: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 20px;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            color: #374151;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pill-icon {
+            width: 16px;
+            height: 16px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #374151;
+            padding: 0.85rem 2rem;
+            border: 1px solid #d1d5db;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f9fafb;
+            border-color: #9ca3af;
+            transform: translateY(-2px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 3px solid #2563eb;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .hero-bg-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* STATS SECTION */
+        .stats {
+            padding: 4rem 2rem;
+            background-color: #f5f5f3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 2rem;
+            background-color: #ffffff;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background-color: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .about-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-title .accent {
+            color: #2563eb;
+        }
+
+        .about-text {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: #2563eb;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .value-text h4 {
+            color: #111827;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .value-text p {
+            color: #6b7280;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .about-svg {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 6rem 2rem;
+            background-color: #f5f5f3;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .services-title .accent {
+            color: #2563eb;
+        }
+
+        .services-subtitle {
+            color: #6b7280;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: #2563eb;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .service-card h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #111827;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 6rem 2rem;
+            background-color: #ffffff;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .process-title .accent {
+            color: #2563eb;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2563eb;
+        }
+
+        .step-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ SECTION */
+        .faq {
+            padding: 6rem 2rem;
+            background-color: #f5f5f3;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .faq-title .accent {
+            color: #2563eb;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+
+        .faq-question:hover {
+            background-color: rgba(37, 99, 235, 0.02);
+        }
+
+        .faq-question-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: #111827;
+            font-size: 1rem;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            color: #2563eb;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            background-color: #f5f5f3;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info-badge {
+            display: inline-block;
+            background-color: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .contact-title .accent {
+            color: #2563eb;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-detail-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .contact-detail-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: #2563eb;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .contact-detail-text h4 {
+            color: #111827;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-detail-text p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .contact-detail-text a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-detail-text a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-card {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact-card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            padding: 0.85rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-btn-primary {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .contact-btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .contact-btn-secondary {
+            background-color: #f9fafb;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .contact-btn-secondary:hover {
+            background-color: #f3f4f6;
+            border-color: #9ca3af;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 2rem;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .navbar-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 4rem 1.5rem;
+                gap: 3rem;
+                margin-top: 70px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-image {
+                width: 250px;
+                height: 250px;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+
+            .services-title,
+            .process-title,
+            .faq-title,
+            .contact-title,
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-logo">TesterX</div>
+        <div class="navbar-links">
+            <a href="#about">O mně</a>
+            <a href="#services">Služby</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Kontakt</a>
+            <a href="#contact" class="navbar-cta">Začít</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Marketingový konzultant
+            </div>
+            <h1 class="hero-title">Marketing <span class="accent">z praxe</span> pro tvou zesproblemémy</h1>
+            <p class="hero-subtitle">Jsem TesterX, konzultant se sídlem v Ostravě. Pomohu ti rozvinout marketing a vzdělávání s praktickými znalostmi.</p>
+            
+            <div class="hero-pills">
+                <div class="pill">
+                    <span class="pill-icon"></span>
+                    1000+ proškolených
+                </div>
+                <div class="pill">
+                    <span class="pill-icon"></span>
+                    AI certifikát
+                </div>
+                <div class="pill">
+                    <span class="pill-icon"></span>
+                    Ostrava
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="mailto:micek.michal@seznam.cz" class="btn-primary">Napište mi</a>
+                <a href="tel:88888" class="btn-secondary">Zavolejte</a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <div class="hero-bg-glow"></div>
+            <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/testerx/foto.jpg" alt="TesterX" class="hero-image">
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Proškolených lidí</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Završených projektů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Let zkušeností</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Spokojených klientů</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div>
+                <span class="about-badge">O MNĚ</span>
+                <h2 class="about-title">Moje <span class="accent">cesta</span> do marketingu</h2>
+                <p class="about-text">Přihlášeníím se k praktickému přístupu — ne jen teorie. Během své kariéry jsem vedl projekty, které přinesly konkrétní výsledky. Věřím v sílu vzdělávání a sdílení znalostí se svými klienty.</p>
+                
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h4>Praktické znalosti</h4>
+                            <p>Veškeré mé poučení vychází z reálných zkušeností</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h4>Přátelský přístup</h4>
+                            <p>Komunikuji bez zbytečné složitosti a formality</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h4>Výsledky první</h4>
+                            <p>Mou prioritou je tvůj rozvoj a úspěch</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h4>Neustálý rozvoj</h4>
+                            <p>Sleduju trendy a zdokonáluji své dovednosti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg class="about-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.1" />
+                        <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.05" />
+                    </linearGradient>
+                </defs>
+                <circle cx="200" cy="200" r="150" fill="url(#grad1)" stroke="#2563eb" stroke-width="2" opacity="0.3"/>
+                <circle cx="200" cy="200" r="100" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.3"/>
+                <circle cx="200" cy="200" r="50" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.3"/>
+                <g opacity="0.4">
+                    <line x1="200" y1="50" x2="200" y2="100" stroke="#2563eb" stroke-width="1"/>
+                    <line x1="350" y1="200" x2="300" y2="200" stroke="#2563eb" stroke-width="1"/>
+                    <line x1="200" y1="350" x2="200" y2="300" stroke="#2563eb" stroke-width="1"/>
+                    <line x1="50" y1="200" x2="100" y2="200" stroke="#2563eb" stroke-width="1"/>
+                </g>
+                <circle cx="200" cy="200" r="8" fill="#2563eb" opacity="0.6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="services-header">
+            <h2 class="services-title">Co ti <span class="accent">nabízím</span></h2>
+            <p class="services-subtitle">Komplexní řešení pro tvoj růst v marketingu a vzdělávání</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L22 7V12C22 18.63 12 22 12 22S2 18.63 2 12V7L12 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Marketingová strategie</h3>
+                <p>Pomáhám vytvářet efektivní strategie na základě reálných trendů a vašich cílů</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 6V12L16 16" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Školení a workshopy</h3>
+                <p>Pořádám interaktivní školení pro týmy i jednotlivce se zaměřením na praktiku</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Konzultace na míru</h3>
+                <p>Individuální konzultace přizpůsobené přímo vašim potřebám a výzvám</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V9L13 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 2V9H20" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Vzdělávací obsah</h3>
+                <p>Vytvářím kvalitní vzdělávací materiály a průvodce pro tvůj tým</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 11H15M9 15H15M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Projektové vedení</h3>
+                <p>Řídím projekty od plánování až po realizaci s důrazem na kvalitu</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 21H7C5.9 21 5 20.1 5 19V5C5 3.9 5.9 3 7 3H10L12 1L14 3H17C18.1 3 19 3.9 19 5V19C19 20.1 18.1 21 17 21Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Mentoringový program</h3>
+                <p>Dlouhodobá spolupráce zaměřená na tvůj osobní a profesionální rozvoj</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <div class="process-header">
+            <h2 class="process-title">Jak <span class="accent">pracuji</span></h2>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3 class="step-title">Zjištění potřeb</h3>
+                <p class="step-description">Podrobně si poslouchnu tvé cíle, výzvy a očekávání</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3 class="step-title">Návrh řešení</h3>
+                <p class="step-description">Vypracuji konkrétní plán přizpůsobený tvým potřebám</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3 class="step-title">Implementace</h3>
+                <p class="step-description">Aktivně pracuji na realizaci se zpětnou vazbou</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3 class="step-title">Optimalizace</h3>
+                <p class="step-description">Monitoruji výsledky a neustále zlepšuji strategie</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="faq-header">
+            <h2 class="faq-title">Často kladené <span class="accent">otázky</span></h2>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Jaké jsou tvé ceny?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Moje ceny se liší v závislosti na rozsahu projektu a typu spolupráce. Nabízím flexibilní balíčky od jednorázových konzultací až po dlouhodobé partnerství. Rádi si domluví individuální nabídku přímo s tebou.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Jak dlouho trvá typický projekt?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Doba trvání projektu se pohybuje od několika týdnů u jednoduchých konzultací až po několik měsíců u rozsáhlejších projektů. Vždy se snažím definovat jasné harmonogramy a milníky na začátku spolupráce.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Pracuješ i se startup týmy?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Ano, velmi rád pracuji se startupy a malými týmy. Rozumím jejich limitům a výzvám. Pomohu vám vybudovat efektivní marketingové strategie, které fungují i s omezeným rozpočtem.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div>
+                <span class="contact-info-badge">KONTAKT</span>
+                <h2 class="contact-title">Pojďme <span class="accent">spolupracovat</span></h2>
+                
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6L12 13L2 6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92V19.92C22.0013 20.1999 21.9371 20.4759 21.8133 20.7262C21.6895 20.9765 21.5097 21.1964 21.2882 21.3679C21.0667 21.5393 20.8082 21.6578 20.5313 21.7157C20.2545 21.7735 19.9675 21.7694 19.6917 21.7038C16.3447 21.1164 13.2118 19.7985 10.5944 17.8414C8.18791 16.0851 6.32718 13.5922 5.23258 10.7815C4.13798 7.97085 3.85308 4.95573 4.41039 2.04572C4.46956 1.76937 4.58639 1.51212 4.75646 1.29251C4.92652 1.0729 5.14428 0.894181 5.39346 0.771556C5.64264 0.648931 5.91788 0.585295 6.19683 0.584564C6.47578 0.583833 6.75147 0.646038 7.0007 0.766799L10.1177 2.29335C10.3414 2.40035 10.5362 2.56704 10.6815 2.77413C10.8269 2.98122 10.9178 3.2215 10.9472 3.47081L11.6827 9.37335C11.7121 9.62266 11.6779 9.8743 11.5834 10.1045C11.4889 10.3347 11.3372 10.5354 11.1419 10.6808L8.78547 12.5474C9.96762 14.9183 11.8721 16.8228 14.2429 18.0049L16.1095 15.6485C16.255 15.4533 16.4556 15.3015 16.6859 15.2071C16.9162 15.1126 17.1678 15.0783 17.4171 15.1077L23.3197 15.8432C23.569 15.8726 23.8093 15.9635 24.0164 16.1088C24.2235 16.2542 24.3902 16.4489 24.4972 16.6726L25.2328 19.7896C25.3535 20.0389 25.4157 20.3145 25.4157 20.5931C25.4157 20.8718 25.3535 21.1473 25.2328 21.3967C25.1121 21.646 24.9299 21.8651 24.7085 22.0366C24.487 22.2081 24.2283 22.3266 23.9513 22.3844C23.0902 22.5589 22.2037 22.5589 21.3426 22.3844" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:88888">88888</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8C18.2091 8 20 9.79086 20 12C20 14.2091 18.2091 16 16 16C13.7909 16 12 14.2091 12 12C12 9.79086 13.7909 8 16 8Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2L14.12 6.81C14.6906 6.27924 15.413 5.89545 16.1995 5.72062C16.9861 5.54579 17.8055 5.58574 18.5754 5.83642C19.3454 6.0871 20.0378 6.53886 20.5769 7.15377C21.1159 7.76868 21.4795 8.52659 21.6314 9.33649C21.7833 10.1464 21.7182 10.981 21.4429 11.7575C21.1675 12.534 20.6923 13.2196 20.0608 13.7501C19.4292 14.2805 18.6642 14.6353 17.8458 14.7793C17.0273 14.9233 16.1827 14.8514 15.4 14.5701" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 22L9.88 17.19" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <h4>Město</h4>
+                            <p>Ostrava, Česká republika</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8C18.2091 8 20 9.79086 20 12C20 14.2091 18.2091 16 16 16C13.7909 16 12 14.2091 12 12C12 9.79086 13.7909 8 16 8Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com" target="_blank">Připoj se na LinkedIn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3 class="contact-card-title">Začni heute</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="contact-btn contact-btn-primary">Napište mi email</a>
+                    <a href="tel:88888" class="contact-btn contact-btn-secondary">Zavolejte</a>
+                    <a href="https://www.linkedin.com" target="_blank" class="contact-btn contact-btn-secondary">Visitujte LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2024 TesterX. Všechna práva vyhrazena. | <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', function() {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
