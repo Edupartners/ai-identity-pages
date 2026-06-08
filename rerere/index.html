@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rerere | rererer – erere</title>
+    <meta name="description" content="rerere je rererer s expertizou v rerer. Specialista pro rere s výsledkem rerere. Nacházím se v erere." />
+    <meta name="keywords" content="rerere, rererer, rerer, rere, erere" />
+    <meta name="author" content="rerere" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="rerere | rererer" />
+    <meta property="og:description" content="rerere je rererer s expertizou v rerer. Specialista pro rere s výsledkem rerere. Nacházím se v erere." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/rerere/foto.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="rerere | rererer" />
+    <meta name="twitter:description" content="rerere je rererer s expertizou v rerer. Specialista pro rere s výsledkem rerere. Nacházím se v erere." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/rerere/foto.jpg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "rerere",
+      "jobTitle": "rererer",
+      "description": "Expertiza v rerer s výsledkem rerere",
+      "email": "micek.michal@seznam.cz",
+      "telephone": "7777",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/rerere/foto.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "erere", "addressCountry": "CZ" }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #374151;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        nav.scrolled {
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2563eb;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #2563eb;
+        }
+        
+        .cta-btn {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-btn:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            padding: 120px 20px 80px;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(37, 99, 235, 0.04) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 12px;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+        
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #2563eb;
+        }
+        
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 .accent {
+            color: #2563eb;
+        }
+        
+        .hero-subtitle {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 30px;
+            max-width: 420px;
+            line-height: 1.8;
+        }
+        
+        .hero-pills {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 13px;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .pill::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #2563eb;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #374151;
+            padding: 12px 28px;
+            border: 1px solid #d1d5db;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            background-color: #f5f5f3;
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 3px solid #2563eb;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+        }
+        
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.08), transparent 60%);
+            z-index: -1;
+        }
+        
+        /* Stats Grid */
+        .stats-section {
+            padding: 80px 20px;
+            background-color: #f5f5f3;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        
+        .stat-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 8px;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 120px 20px;
+            background-color: #ffffff;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-left {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about-illustration {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .about-right h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .about-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .about-text {
+            color: #374151;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .value-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        
+        .value-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #2563eb;
+        }
+        
+        .value-text h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+        
+        .value-text p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 120px 20px;
+            background-color: #f5f5f3;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            font-size: 16px;
+            color: #6b7280;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        
+        .service-card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+        }
+        
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
+            color: #2563eb;
+        }
+        
+        .service-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+        
+        .service-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 120px 20px;
+            background-color: #ffffff;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .step-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 16px;
+        }
+        
+        .process-step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+        
+        .process-step p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 120px 20px;
+            background-color: #f5f5f3;
+        }
+        
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #ffffff;
+            margin-bottom: 12px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        
+        .faq-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background-color: #fafaf9;
+        }
+        
+        .faq-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #111827;
+        }
+        
+        .faq-toggle {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+        
+        .faq-item.active .faq-content {
+            max-height: 500px;
+            padding: 0 20px 20px 20px;
+        }
+        
+        .faq-text {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 120px 20px;
+            background-color: #ffffff;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .contact-left h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        
+        .contact-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-item-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #2563eb;
+        }
+        
+        .contact-item-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-item-label {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .contact-item-value {
+            font-size: 15px;
+            color: #111827;
+            font-weight: 500;
+        }
+        
+        .contact-right {
+            background: #f5f5f3;
+            padding: 40px;
+            border-radius: 20px;
+        }
+        
+        .contact-right h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 24px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .contact-btn {
+            padding: 12px 24px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        
+        .contact-btn-primary {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+        
+        .contact-btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+        }
+        
+        .contact-btn-secondary {
+            background-color: #ffffff;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .contact-btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            background-color: #fafaf9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            padding: 40px 20px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #1d4ed8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 16px;
+            }
+            
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 80px 20px 60px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .hero-image::after {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .about-right h2,
+            .contact-left h2 {
+                font-size: 32px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons button,
+            .hero-buttons a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">rerere</div>
+            <ul>
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#process">Postup</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="cta-btn">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <div class="hero-badge">Dostupný nyní</div>
+                    <h1>Jsem <span class="accent">rerere</span>, tvůj <span class="accent">rererer</span></h1>
+                    <p class="hero-subtitle">Specialista v rerer. Pomáhám rere dosáhnout jejich cílů skrz rerere.</p>
+                    
+                    <div class="hero-pills">
+                        <div class="pill">Expertiza: rerer</div>
+                        <div class="pill">Cílová skupina: rere</div>
+                        <div class="pill">Výsledek: rerere</div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="mailto:micek.michal@seznam.cz" class="cta-btn">Napište mi</a>
+                        <a href="tel:7777" class="btn-secondary">Zavolejte: 7777</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/rerere/foto.jpg" alt="rerere">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Let zkušeností</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Spokojených klientů</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">97%</div>
+                    <div class="stat-label">Úspěšnost projektů</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Podpora dostupná</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-left">
+                    <svg class="about-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgba(37,99,235,0.2);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgba(37,99,235,0.05);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="400" height="400" fill="url(#grad1)" rx="20"/>
+                        <circle cx="200" cy="120" r="80" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.4"/>
+                        <circle cx="200" cy="120" r="70" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
+                        <path d="M 140 200 Q 200 250 260 200" stroke="#2563eb" stroke-width="2" fill="none" opacity="0.6"/>
+                        <circle cx="100" cy="280" r="30" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.4"/>
+                        <circle cx="300" cy="280" r="30" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.4"/>
+                        <path d="M 200 180 L 200 320" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
+                        <path d="M 120 200 L 280 200" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
+                    </svg>
+                </div>
+                
+                <div class="about-right">
+                    <div class="about-badge">Zaměření</div>
+                    <h2>Kdo jsem a co dělám</h2>
+                    <p class="about-text">Ahoj! Jsem rerere, rererer se zaměřením na rerer. Mým cílem je pomáhat rere skrz rerere a dosahovat tak výjimečných výsledků. S přístupem zaměřeným na lidské vztahy a přátelský tón, pracuji na tom, aby byla naše spolupráce příjemná a efektivní.</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="value-text">
+                                <h3>Profesionalismus</h3>
+                                <p>Seriózní přístup s důrazem na kvalitu</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="value-text">
+                                <h3>Inovativnost</h3>
+                                <p>Moderní přístupy a kreativní řešení</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="value-text">
+                                <h3>Komunikace</h3>
+                                <p>Jasná, přátelská a otevřená komunikace</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="value-text">
+                                <h3>Spolehlivost</h3>
+                                <p>Jsem zde pro tebe a dodržuji slova</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Moje <span class="accent">služby</span></h2>
+                <p>Nabízím komplexní řešení zaměřená na tvoje potřeby</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Konzultace</h3>
+                    <p>Detailní analýza a personalizované doporučení přesně pro tvou situaci</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Strategie</h3>
+                    <p>Vytvoření dlouhodobé strategie s konkrétními kroky k dosažení cílů</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Implementace</h3>
+                    <p>Praktická podpora při zavádění nových procesů a postupů</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Trénink</h3>
+                    <p>Vzdělávací programy a workshopy pro tebe a tvůj tým</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Mentoring</h3>
+                    <p>Dlouhodobá podpora a osobní rozvoj s pravidelným feedbackem</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Optimalizace</h3>
+                    <p>Zlepšení procesů a zvýšení efektivity tvých operací</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jak s tebou <span class="accent">pracuji</span></h2>
+                <p>Transparentní a strukturovaný přístup k dosažení výsledků</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Seznámení</h3>
+                    <p>Prvotní konzultace, kde se poznáme, pochopím tvé cíle a výzvy, a ujasníme si, jak si můžu pomoci.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Analýza</h3>
+                    <p>Detailní zkoumání tvé situace, identifikace klíčových problémů a příležitostí k zlepšení.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Plánování</h3>
+                    <p>Vytvoření konkrétního plánu akcí s jasnými milníky, termíny a měřitelnými cíli.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Realizace</h3>
+                    <p>Společná realizace plánu s pravidelnou zpětnou vazbou, úpravami a podporou na cestě.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Často kladené <span class="accent">otázky</span></h2>
+                <p>Odpovědi na nejčastější dotazy</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-header" onclick="toggleFAQ(this)">
+                        <span class="faq-title">Co je tvým největším výsledkem?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="faq-text">Mým největším výsledkem je rerere. Jsem na tento výsledek hrdý a těší mě, když vidím dopad své práce na reálné výsledky klientů.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFAQ(this)">
+                        <span class="faq-title">Jak dlouho trvá vidět první výsledky?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="faq-text">První výsledky jsou obvykle viditelné během prvních 2-4 týdnů. Záleží to však na specifické situaci a složitosti řešeného problému. Vždy se zaměřuji na měřitelné výsledky.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFAQ(this)">
+                        <span class="faq-title">Jaké jsou tvé pracovní hodiny?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="faq-text">Jsem dostupný 24/7 pro online komunikaci. Konzultace a schůzky si můžeme naplánovat podle tvého harmonogramu. Snažím se reagovat na zprávy co nejdříve.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFAQ(this)">
+                        <span class="faq-title">Jaká je cena tvých služeb?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="faq-text">Ceny se liší podle rozsahu projektu a typu služby. Poskytuju personalizované nabídky po prvotní konzultaci, kde si ujasníme tvé potřeby a cíle. Kontaktuj mě, rádi si to probereme.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFAQ(this)">
+                        <span class="faq-title">Mám důkaz vaší spolehlivosti?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-content">
+                        <p class="faq-text">Ano, 97% mých projektů je úspěšně dokončeno s maximální spokojeností klientů. Pracuji s 150+ spokojených klientů a vždy se snažím překročit jejich očekávání.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h2>Pojďme pracovat <span class="accent">spolu</span></h2>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Email</span>
+                                <span class="contact-item-value">micek.michal@seznam.cz</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.29 21 3 14.71 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Telefon</span>
+                                <span class="contact-item-value">7777</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <span class="contact-item-label">Město</span>
+                                <span class="contact-item-value">erere</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-right">
+                    <h3>Odešli mi zprávu</h3>
+                    <div class="contact-buttons">
+                        <a href="mailto:micek.michal@seznam.cz" class="contact-btn contact-btn-primary">Napište mi email</a>
+                        <a href="tel:7777" class="contact-btn contact-btn-secondary">Zavolejte mi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 rerere. Všechna práva vyhrazena. | <a href="mailto:micek.michal@seznam.cz">Kontakt</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            allItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+            
+            item.classList.toggle('active');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
