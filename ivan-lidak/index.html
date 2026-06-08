@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Liďák | Tvorba www – Ostrava</title>
+    <meta name="description" content="Učím tvorbu www stránek a eshopu, nastartování online byznysu a práci s AI. Několik desítek začínajících podnikatelů si díky mně zvýšilo kvalifikaci a našlo lepší pracovní pozici.">
+    <meta name="keywords" content="Ivan Liďák, tvorba www, eshop, výuka, online byznys, AI, Ostrava">
+    <meta name="author" content="Ivan Liďák">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ivan Liďák | Tvorba www">
+    <meta property="og:description" content="Učím tvorbu www stránek a eshopu, nastartování online byznysu a práci s AI.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ivan-lidak/foto.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ivan Liďák | Tvorba www">
+    <meta name="twitter:description" content="Učím tvorbu www stránek a eshopu, nastartování online byznysu a práci s AI.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ivan-lidak/foto.jpg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ivan Liďák",
+      "jobTitle": "Tvorba www",
+      "description": "Učím tvorbu www stránek, eshopu a nastartování online byznysu. Pomohu osvojit si a využít AI ke své práci a podnikání. Dlouhá IT praxe, vysoká empatie a přátelský přístup.",
+      "email": "monolit1@gmail.com",
+      "telephone": "+420602577587",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ivan-lidak/foto.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ostrava",
+        "addressCountry": "CZ"
+      }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ccc;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* AKCENTOVÁ BARVA */
+        :root {
+            --accent: #3b82f6;
+        }
+        
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+        
+        .btn-nav {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d0d0d 50%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.12), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            padding: 5px 14px;
+            font-size: 12px;
+            color: #a0a0a0;
+            width: fit-content;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #fff;
+            animation: fadeInDown 0.8s ease-out 0.1s both;
+        }
+        
+        .hero h1 .accent {
+            color: var(--accent);
+        }
+        
+        .hero-subtitle {
+            font-size: 16px;
+            color: #888;
+            max-width: 420px;
+            animation: fadeInDown 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            animation: fadeInDown 0.8s ease-out 0.3s both;
+        }
+        
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 13px;
+            color: #ccc;
+        }
+        
+        .pill-icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInDown 0.8s ease-out 0.4s both;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 32px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .hero-photo-container {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            overflow: hidden;
+            flex-shrink: 0;
+            animation: fadeInDown 0.8s ease-out 0.2s both;
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+        }
+        
+        .hero-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* STATS GRID */
+        .stats {
+            background: #0d0d0d;
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* O MNĚ SECTION */
+        .about {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 12px;
+            color: var(--accent);
+            width: fit-content;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .about h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .about p {
+            color: #888;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .about-traits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .trait {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .trait-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+        
+        .trait-text {
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .about-illustration {
+            width: 100%;
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        /* SERVICES GRID */
+        .services {
+            padding: 6rem 2rem;
+            background: #0d0d0d;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .section-header p {
+            color: #888;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+        }
+        
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .service-card h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* POSTUP PRÁCE */
+        .process {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+        }
+        
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        .step-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .process-step h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .process-step p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* CERTIFIKÁTY */
+        .credentials {
+            padding: 6rem 2rem;
+            background: #0d0d0d;
+        }
+        
+        .credentials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .credential-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .credential-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+        }
+        
+        .credential-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            color: var(--accent);
+        }
+        
+        .credential-card h3 {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+        }
+        
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #fff;
+            background: #1a1a1a;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+        }
+        
+        .faq-question:hover {
+            background: #242424;
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .faq-toggle {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        /* KONTAKT */
+        .contact {
+            padding: 6rem 2rem;
+            background: #0d0d0d;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-info h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #fff;
+            margin: 1rem 0 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .contact-info p {
+            color: #888;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+        
+        .contact-item a,
+        .contact-item span {
+            color: #ccc;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+        
+        .contact-card {
+            background: #1a1a1a;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .contact-card h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .contact-card-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-card-buttons a,
+        .contact-card-buttons button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .contact-card-buttons a:hover,
+        .contact-card-buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #fff;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                gap: 1rem;
+                font-size: 12px;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-photo-container {
+                width: 240px;
+                height: 240px;
+                margin: 0 auto;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about h2 {
+                font-size: 32px;
+            }
+            
+            .about-illustration {
+                height: 300px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-logo">Ivan Liďák</div>
+        <div class="nav-menu">
+            <a href="#about">O mně</a>
+            <a href="#services">Služby</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Kontakt</a>
+            <a href="mailto:monolit1@gmail.com" class="btn-nav">Napište mi</a>
+        </div>
+    </nav>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="badge-dot"></div>
+                    <span>Tvorba www a online byznys</span>
+                </div>
+                
+                <h1>Tvé www stránky a <span class="accent">eshop</span> s podporou AI</h1>
+                
+                <p class="hero-subtitle">Nauč se vytvořit profesionální web a nastartuj svůj online byznys. S mou pomocí a praktickou výukou zvládneš všechno na perfekcionálně.</p>
+                
+                <div class="hero-pills">
+                    <div class="pill">
+                        <svg class="pill-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Dlouhá IT praxe</span>
+                    </div>
+                    <div class="pill">
+                        <svg class="pill-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Vysoká empatie</span>
+                    </div>
+                    <div class="pill">
+                        <svg class="pill-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Přátelský přístup</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="mailto:monolit1@gmail.com" class="btn-primary">Začít s výukou</a>
+                    <a href="#contact" class="btn-secondary">Více informací</a>
+                </div>
+            </div>
+            
+            <div class="hero-photo-container">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ivan-lidak/foto.jpg" alt="Ivan Liďák">
+            </div>
+        </div>
+    </section>
+    
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Úspěšných studentů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Přizpůsobená výuka</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Let praxe v IT</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2x</div>
+                <div class="stat-label">Posun na lepší pozici</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- O MNĚ SECTION -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div>
+                <div class="about-badge">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 6H6.28l-.31-1.243A1 1 0 005 3H3z"></path>
+                        <path d="M16 16a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        <path d="M4 16a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    O MNĚ
+                </div>
+                <h2>Tvůj průvodce na cestě k online úspěchu</h2>
+                <p>Jsem tady proto, aby ti ukázal, jak si vytvořit své vlastní www stránky a eshop. Moje výuka není nuda a teorie – jde mi o to, aby ses vážně něco naučil a pak to hned uplanil. Učím prezenčně i online, vždy se přizpůsobím tvému tempu.</p>
+                <p>Za svými zády mám desítky spokojených studentů, kteří si zvýšili svou kvalifikaci nebo si našli lepší pracovní pozici. Rád pracuji na více projektech souběžně a pomáhám ti s AI, která ti v tvém byznysu neuvěřitelně pomůže.</p>
+                
+                <div class="about-traits">
+                    <div class="trait">
+                        <svg class="trait-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span class="trait-text">Dlouhá praxe v IT</span>
+                    </div>
+                    <div class="trait">
+                        <svg class="trait-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span class="trait-text">Vysoká empatie</span>
+                    </div>
+                    <div class="trait">
+                        <svg class="trait-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span class="trait-text">Vysoká míra praxe</span>
+                    </div>
+                    <div class="trait">
+                        <svg class="trait-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span class="trait-text">Přátelský přístup</span>
+                    </div>
+                    <div class="trait">
+                        <svg class="trait-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span class="trait-text">Trpělivost</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-illustration">
+                <svg viewBox="0 0 400 400" width="100%" height="100%">
+                    <rect width="400" height="400" fill="none"/>
+                    <rect x="80" y="60" width="240" height="280" rx="20" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent)"/>
+                    <rect x="100" y="80" width="200" height="30" rx="5" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent)"/>
+                    <rect x="100" y="130" width="180" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent)"/>
+                    <rect x="100" y="155" width="180" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent)"/>
+                    <rect x="100" y="180" width="150" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent)"/>
+                    <circle cx="100" cy="230" r="5" fill="currentColor" style="color: var(--accent)"/>
+                    <circle cx="130" cy="230" r="5" fill="currentColor" style="color: var(--accent)"/>
+                    <circle cx="160" cy="230" r="5" fill="currentColor" style="color: var(--accent)"/>
+                    <circle cx="190" cy="230" r="5" fill="currentColor" style="color: var(--accent)"/>
+                    <path d="M100 260 L200 280 L300 260" stroke="currentColor" stroke-width="2" fill="none" style="color: var(--accent)"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CERTIFIKÁTY A OCENĚNÍ -->
+    <section class="credentials">
+        <div class="credentials-container">
+            <div class="section-header">
+                <h2>Certifikáty a ocenění</h2>
+                <p>Ověřené znalosti a zkušenosti, kterými se chci podělit s tebou.</p>
+            </div>
+            
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <svg class="credential-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.429a1 1 0 001.17-1.409l-7-14z"></path>
+                    </svg>
+                    <h3>Google Coursera</h3>
+                    <p>AI Fundamentals</p>
+                </div>
+                <div class="credential-card">
+                    <svg class="credential-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <h3>Ocenění od studentů</h3>
+                    <p>Za skvělou výuku a empati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SLUŽBY -->
+    <section class="services" id="services">
+        <div class="services-container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header" style="grid-column: 1 / -1;">
+                <h2>Co tě naučím</h2>
+                <p>Kompletní balíček dovedností pro tvůj online byznys a rozvoj.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; grid-column: 1 / -1;">
+                <div class="service-card">
+                    <svg class="service-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path>
+                        <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6z" clip-rule="evenodd"></path>
+                    </svg>
+                    <h3>Tvorba www stránek</h3>
+                    <p>Nauč se vytvořit profesionální webové stránky od nuly. Budeš ovládat HTML, CSS, design a publikování na internetu.</p>
+                </div>
+                
+                <div class="service-card">
+                    <svg class="service-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 6H6.28l-.31-1.243A1 1 0 005 3H3z"></path>
+                    </svg>
+                    <h3>Tvorba eshopu</h3>
+                    <p>Přidej k tvým stránkám obchod. Nauč se spravovat produkty, platby a expedici tak, aby všechno fungovalo bezchybně.</p>
+                </div>
+                
+                <div class="service-card">
+                    <svg class="service-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                    </svg>
+                    <h3>Start online byznysu</h3>
+                    <p>Vše co potřebuješ k úspěšnému startu. Od obchodního plánu, přes registraci, až po marketing a prodej.</p>
+                </div>
+                
+                <div class="service-card">
+                    <svg class="service-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13 7H7v6h6V7z"></path>
+                        <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2V2a1 1 0 112 0v1a2 2 0 012 2v2h1a2 2 0 012 2v2h1a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2h1V9a2 2 0 012-2h2V6a2 2 0 012-2V2z" clip-rule="evenodd"></path>
+                    </svg>
+                    <h3>Práce s AI nástroji</h3>
+                    <p>Nauč se používat moderní AI nástroje pro copywriting, designu a automatizaci. Ušetři čas a zvýši kvalitu.</p>
+                </div>
+                
+                <div class="service-card">
+                    <svg class="service-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path>
+                    </svg>
+                    <h3>SEO a marketing</h3>
+                    <p>Tvou stránku postaraž na první místo v Google. Nauč se základy SEO, sociálních sítí a online marketingu.</p>
+                </div>
+                
+                <div class="service-card">
+                    <svg class="service-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.82 1.573l-7 10.666A1 1 0 018 17H3a3 3 0 01-3-3V6z" clip-rule="evenodd"></path>
+                    </svg>
+                    <h3>Podpora na tvém projektu</h3>
+                    <p>Pracujeme na tvých vlastních projektech. Všechno učíš na příkladech, které skutečně používaš.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- POSTUP PRÁCE -->
+    <section class="process">
+        <div class="process-container">
+            <div class="section-header">
+                <h2>Jak spolu pracujeme</h2>
+                <p>Jednoduchý a efektivní postup, který tě dovede k tvému cíli krok za krokem.</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Zjistíme tvé potřeby</h3>
+                    <p>Popovídáme si o tobě, tvých cílech a tom, co chceš dosáhnout. Přizpůsobím výuku přesně tobě.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Stanovíme plán</h3>
+                    <p>Společně vytvoříme jasný plán výuky. Budeš vědět, co se naučíš a kdy to zvládneš.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Učíme se praxi</h3>
+                    <p>Veškerou teorii zahrnu do praktických příkladů. Budeš tvořit svůj vlastní projekt hned od začátku.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Podporuji tě dál</h3>
+                    <p>Výuka nekončí. Jsem tu pro tebe i po skončení kurzu. Odpovídám na otázky a pomáhám s problémy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>Často kladené otázky</h2>
+                <p>Odpovědi na nejčastější dotazy od začínajících podnikatelů.</p>
+            </div>
+            
+            <div class="faq-item active">
+                <button class="faq-question">
+                    <span>Budu na to stačit?</span>
+                    <svg class="faq-toggle" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">Ano, vždy přizpůsobím tempo výuky Vám. Neexistuje zde někdo, kdo by to nezvládl. Pokud máš chuť se učit, já tě vedu dál.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Co se naučím?</span>
+                    <svg class="faq-toggle" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">Vytvořit si www stránky a eshop, práci s AI. Celý proces od nuly až po spuštění tvého webu na internetu.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jak probíhá výuka?</span>
+                    <svg class="faq-toggle" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">Prezenčně nebo distančně. Vybereš si to, co ti nejlépe vyhovuje. Obě formy jsou stejně efektivní a prakticky zaměřené.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jaké další vědomosti získám?</span>
+                    <svg class="faq-toggle" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">Komplexní informace o startu byznysu a příklady uplatnění různých nástrojů (AI). Neučím jen techniku, ale i business.</div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Je možná práce na mém projektu?</span>
+                    <svg class="faq-toggle" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer">Ano, můžeme pracovat na více projektech souběžně. Chci aby ses učil na věcech, které tě skutečně zajímají a kterou budeš používat.</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- KONTAKT -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="about-badge">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h6a1 1 0 011 1v12a1 1 0 11-2 0V4H3a1 1 0 01-1-1zm8 0a1 1 0 011-1h6a1 1 0 011 1v12a1 1 0 11-2 0V4h-4a1 1 0 01-1-1z"></path>
+                    </svg>
+                    KONTAKT
+                </div>
+                <h2>Pojď do akce</h2>
+                <p>Máš otázku? Chceš vědět víc? Nebo jsi připravený začít? Teď už jsem jen jeden klik daleko. Napiš mi nebo mi zavolej.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                        <a href="mailto:monolit1@gmail.com">monolit1@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="currentColor" viewBox="0
