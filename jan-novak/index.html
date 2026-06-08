@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Novák | Herec – Brno</title>
+    <meta name="description" content="Jan Novák je herec z Brna. Hraje v divadle a točí filmy. Specializuje se na spolehlivé a autentické představení pro divadla a filmové produkce." />
+    <meta name="keywords" content="Jan Novák, herec, divadlo, filmy, Brno, herec Česká republika" />
+    <meta name="author" content="Jan Novák" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Jan Novák | Herec" />
+    <meta property="og:description" content="Jan Novák je herec z Brna. Hraje v divadle a točí filmy. Specializuje se na spolehlivé a autentické představení pro divadla a filmové produkce." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/jan-novak/foto.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jan Novák | Herec" />
+    <meta name="twitter:description" content="Jan Novák je herec z Brna. Hraje v divadle a točí filmy. Specializuje se na spolehlivé a autentické představení pro divadla a filmové produkce." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/jan-novak/foto.jpg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jan Novák",
+      "jobTitle": "Herec",
+      "description": "Herec z Brna specialista na divadelní a filmové produkce. Hraje v divadle a točí filmy. Dokázal jsem odehrát představení a nepřeřeknout se.",
+      "email": "honza11novak@gmail.com",
+      "telephone": "+420604407335",
+      "url": "https://aiid.cz/jan-novak",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/jan-novak/foto.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brno",
+        "addressCountry": "CZ"
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ccc;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Primární akcentová barva – modrá */
+        :root {
+            --accent: #3b82f6;
+            --accent-dark: #1e40af;
+            --accent-light: #60a5fa;
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --text-tertiary: #a0a0a0;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1.2rem 2rem;
+        }
+        
+        nav > div {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        
+        nav .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        nav a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            animation: fadeInHero 0.8s ease-out;
+        }
+        
+        @keyframes fadeInHero {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            padding: 0.5rem 1rem;
+            width: fit-content;
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+        
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        
+        .hero-title .accent {
+            color: var(--accent);
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 420px;
+            line-height: 1.7;
+        }
+        
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            color: #ccc;
+            transition: all 0.3s ease;
+        }
+        
+        .pill:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: var(--accent);
+        }
+        
+        .pill svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 999px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.12), transparent 60%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .hero-photo {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            overflow: hidden;
+            flex-shrink: 0;
+            z-index: 1;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+        }
+        
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* STATS GRID */
+        .stats {
+            padding: 4rem 2rem;
+            background: rgba(20, 20, 20, 0.5);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            background: rgba(20, 20, 20, 0.8);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 999px;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .value-item {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(59, 130, 246, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .value-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        .value-text h3 {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .value-text p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        .about-illustration {
+            width: 100%;
+            height: 400px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* SERVICES SECTION */
+        .services {
+            padding: 6rem 2rem;
+            background: rgba(20, 20, 20, 0.5);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .services > div {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            background: rgba(20, 20, 20, 0.8);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.1);
+        }
+        
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(59, 130, 246, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        .service-card h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* PROCESS SECTION */
+        .process {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .process h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            background: rgba(20, 20, 20, 0.8);
+        }
+        
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .process-step h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* FAQ SECTION */
+        .faq {
+            padding: 6rem 2rem;
+            background: rgba(20, 20, 20, 0.5);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .faq > div {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .faq h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .faq-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: rgba(59, 130, 246, 0.05);
+            color: var(--accent);
+        }
+        
+        .faq-q-text {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+        
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* CONTACT SECTION */
+        .contact {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-content h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+        }
+        
+        .contact-content p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(59, 130, 246, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+        
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        
+        .contact-label {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .contact-value {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .contact-value a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-value a:hover {
+            color: var(--accent-light);
+        }
+        
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-card h3 {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+        }
+        
+        .contact-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-cta .btn {
+            text-align: center;
+            width: 100%;
+        }
+        
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            background: rgba(10, 10, 10, 0.5);
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--accent-light);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav .nav-right {
+                gap: 1.5rem;
+            }
+            
+            nav a {
+                font-size: 0.85rem;
+            }
+            
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1rem;
+                margin-top: 80px;
+                min-height: auto;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-image {
+                margin-top: 2rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .faq-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div>
+            <div class="logo">Jan Novák</div>
+            <div class="nav-right">
+                <a href="#about">O mně</a>
+                <a href="#services">Služby</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Kontakt</a>
+                <a href="#contact" class="nav-cta">Napište mi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Herec</div>
+            <h1 class="hero-title">
+                Hraní je
+                <span class="accent">moje vášeň</span>
+            </h1>
+            <p class="hero-subtitle">
+                Jsem herec z Brna, který se věnuje divadelním představením a filmovým produkcím. Věřím v autentické a spolehlivé herectví.
+            </p>
+            <div class="hero-pills">
+                <div class="pill">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                    </svg>
+                    Hezký nos
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="mailto:honza11novak@gmail.com" class="btn btn-primary">Napište mi</a>
+                <a href="#contact" class="btn btn-secondary">Více informací</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-photo">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/jan-novak/foto.jpg" alt="Jan Novák">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Divadelních představení</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Filmových projektů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">186</div>
+                <div class="stat-label">cm vysoký</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Spolehlivost</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="section-badge">O mně</div>
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Herec se srdcem pro řemeslo</h2>
+                <p>
+                    Jsem herec z Ostravy, který teď tvůrčí kariéru buduje z Brna. Moje cesta v herectví je plná autenticity, profesionalismu a lásky k umění. Věřím, že nejlepší představení vznikají, když se do role zcela ponořím.
+                </p>
+                <p>
+                    Specializuji se na divadelní produkce a filmové projekty. Moje největší hrdostí je, že jsem schopen odehrát celé představení bez jediné chyby. To je výsledek let práce, přípravy a dedikace.
+                </p>
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Autentickost</h3>
+                            <p>Každá role je živá</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Spolehlivost</h3>
+                            <p>Na mě se můžete spolehnout</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Přátelský přístup</h3>
+                            <p>Lidský a otevřený</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-11c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Kvalita</h3>
+                            <p>Vždy nejlepší výkon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-illustration">
+                <svg viewBox="0 0 400 400" style="width: 300px; height: 300px;">
+                    <circle cx="200" cy="200" r="150" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.2"/>
+                    <circle cx="200" cy="200" r="100" fill="none" stroke="#3b82f6" stroke-width="2"/>
+                    <path d="M 200 100 Q 250 150 200 200 Q 150 150 200 100" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="170" cy="180" r="8" fill="#3b82f6"/>
+                    <circle cx="230" cy="180" r="8" fill="#3b82f6"/>
+                    <path d="M 170 220 Q 200 240 230 220" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="200" y1="80" x2="200" y2="40" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="200" y1="360" x2="200" y2="320" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="200" x2="40" y2="200" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="360" y1="200" x2="320" y2="200" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div>
+            <div class="section-badge">Služby</div>
+            <h2>Co nabízím</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 13c0 1.65.67 3.13 1.76 4.24L3.5 19.5c-.71.71-.71 1.86 0 2.57.71.71 1.86.71 2.57 0l3.26-3.26C11.87 19.33 13.35 20 15 20c5.52 0 10-4.48 10-10S20.52 0 15 0 5 4.48 5 10zm10-7c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/>
+                        </svg>
+                    </div>
+                    <h3>Divadelní představení</h3>
+                    <p>Profesionální herectví v divadelních produkcích s důrazem na autentickost a spolehlivost při každém představení.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 6l-3.5 5 2.5 3.5h5V6z"/>
+                            <path d="M12 4l-8 11h9l3-4v-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Filmové projekty</h3>
+                    <p>Spolupráce na filmových produkcích všech velikostí. Zaměřuji se na kvalitu a profesionální přístup v každé scéně.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/>
+                        </svg>
+                    </div>
+                    <h3>Videové obsahu</h3>
+                    <p>Tvorba video obsahu – od krátkých videí po delší formáty. Vždy s vysokou kvalitou a profesionálním výkonem.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Interpretace postav</h3>
+                    <p>Hluboká práce s charakterem a psychologií postav. Cada role dostane pozornost, kterou si zaslouží.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M11.99 5V1h-1v4c-5.39.49-9.68 4.99-9.68 10.5 0 5.52 4.29 10.01 9.68 10.5v4h1v-4c5.39-.49 9.68-4.99 9.68-10.5 0-5.52-4.29-10.01-9.68-10.5zm-8.68 10.5c0-4.41 3.25-8.07 7.5-8.47v16.94c-4.25-.4-7.5-4.06-7.5-8.47z"/>
+                        </svg>
+                    </div>
+                    <h3>Konzultace a příprava</h3>
+                    <p>Nabízím konzultace na přípravy rolí a hereckého výkonu. Rád pomohu s interpretací a profesionálním přístupem.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.3-1.54L6.5 17h11l-3.54-4.71z"/>
+                        </svg>
+                    </div>
+                    <h3>Fotosessiony</h3>
+                    <p>Profesionální fotosessiony pro portfolia a mediální materiály. Přirozené a kvalitní fotografie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <div class="section-badge">Přístup</div>
+        <h2>Jak s vámi pracuji</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>Konzultace a plánování</h3>
+                <p>Nejdříve si společně ujasníme vaši vizi a požadavky. Chci si přesně porozumět roli a charakteru, kterou chcete vytvořit.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>Příprava a studium</h3>
+                <p>Věnuji čas studiu postavy, textu a kontextu. Každá role vyžaduje hloubkový přístup a kvalitní přípravu.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>Řeší a zkoušení</h3>
+                <p>Během zkoušek si vždy dovolím být flexibilní. Komunikuji s režisérem a týmem, abychom dosáhli nejlepšího výsledku.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3>Autentický výkon</h3>
+                <p>V den natáčení nebo představení se zcela ponořím do role. Moje cíl je přinést vám nejlepší možný herečův výkon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div>
+            <div class="section-badge">FAQ</div>
+            <h2>Často kladené otázky</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Kolik měřím?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Měřím 186 cm vysoký, což mně dává dobrý záběr na scéně a před kamerou.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Odkud jsem?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Jsem z Ostravy, ale teď bydlím a pracuji v Brně. Ostrava má pro mě speciální místo v srdci.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-q-text">Máš rád řízek?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Určitě! Řízek je skvělé jídlo. Když nejsou zkoušky nebo natáčení, můžete mě najít při dobrém masíčku.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="section-badge">Kontakt</div>
+        <div class="contact-container">
+            <div class="contact-content">
+                <h2>Pojďme spolu tvořit</h2>
+                <p>
+                    Zajímá vás spolupráce? Máte otázku ohledně mých služeb? Neváhejte se ozvat. Rád si popovídám o novém projektu a tom, jak bychom mohli spolupracovat.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value"><a href="mailto:honza11novak@gmail.com">honza11novak@gmail.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17.92 7.02C19.45 8.18 20.5 9.89 20.5 12c0 2.11-1.05 3.82-2.58 4.98l1.06 1.06c1.77-1.59 2.88-3.82 2.88-6.04 0-2.22-1.11-4.45-2.88-6.04l-1.06 1.06zM5.84 7.02L4.78 5.96C3.01 7.55 1.9 9.78 1.9 12s1.11 4.45 2.88 6.04l1.06-1.06C6.55 15.82 5.5 14.11 5.5 12c0-2.11 1.05-3.82 2.58-4.98zM7 9.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm10 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM12 6c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <div class="contact-label">Telefon</div>
+                            <div class="contact-value"><a href="tel:+420604407335">604 407 335</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <div class="contact-label">Město</div>
+                            <div class="contact-value">Brno, Česká republika</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>Máte otázku?</h3>
+                <p>Rád odpovím na jakékoliv vaše otázky ohledně mého herectví a možné spolupráce.</p>
+                <div class="contact-cta">
+                    <a href="mailto:honza11novak@gmail.com" class="btn btn-primary">Napište mi email</a>
+                    <a href="tel:+420604407335" class="btn btn-secondary">Zavolejte mi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Jan Novák. Všechna práva vyhrazena. | <a href="mailto:honza11novak@gmail.com">Kontakt</a></p>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
