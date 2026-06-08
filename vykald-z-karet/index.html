@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výkald z karet | Osobní poradenství</title>
+    <meta name="description" content="Autentický výkald z karet pro ženy, které hledají odpovědi a směr. Inspirativní přístup s energií a jasností." />
+    <meta name="keywords" content="výkald z karet, tarot, poradenství, ženy, spirituální průvodce" />
+    <meta name="author" content="Výkald z karet" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Výkald z karet | Autentické poradenství" />
+    <meta property="og:description" content="Autentický výkald z karet pro ženy, které hledají odpovědi a směr. Inspirativní přístup s energií a jasností." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/vykald-z-karet/foto.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Výkald z karet | Autentické poradenství" />
+    <meta name="twitter:description" content="Autentický výkald z karet pro ženy, které hledají odpovědi a směr. Inspirativní přístup s energií a jasností." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/vykald-z-karet/foto.jpg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Výkald z karet",
+      "jobTitle": "Kartářka a duchovní průvodce",
+      "description": "Autentický výkald z karet pro ženy, které hledají odpovědi a transformaci.",
+      "email": "micek.michal@seznam.cz",
+      "telephone": "+420555555",
+      "url": "https://vykald-z-karet.cz",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/vykald-z-karet/foto.jpg",
+      "sameAs": []
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #374151;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== BARVY ========== */
+        :root {
+            --accent: #854d0e;
+            --accent-light: rgba(133, 77, 14, 0.08);
+            --accent-lighter: rgba(133, 77, 14, 0.04);
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --bg-light: #f5f5f3;
+            --border: #e5e7eb;
+            --white: #ffffff;
+        }
+
+        /* ========== NAVBAR ========== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: box-shadow 0.3s ease;
+            padding: 1rem 2rem;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(133, 77, 14, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ========== HERO SEKCE ========== */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(133, 77, 14, 0.02) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(133, 77, 14, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(133, 77, 14, 0.2);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .accent {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 420px;
+            line-height: 1.7;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-light);
+            color: var(--text-primary);
+            padding: 0.65rem 1.25rem;
+            border-radius: 24px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(133, 77, 14, 0.15);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .pill svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(133, 77, 14, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .image-decoration {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            opacity: 0.15;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        /* ========== STATS GRID ========== */
+        .stats {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* ========== WAVE DIVIDER ========== */
+        .wave-divider {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ========== O MNĚ SEKCE ========== */
+        .about {
+            padding: 5rem 2rem;
+            background: var(--white);
+            position: relative;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-illustration {
+            display: flex;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .about-illustration svg {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.2;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .value-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .value-text h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .value-text p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .about-text h2 {
+                font-size: 1.8rem;
+            }
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========== SLUŽBY SEKCE ========== */
+        .services {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* ========== PROCES SEKCE ========== */
+        .process {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .process-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            position: relative;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: -35px auto 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 4px 16px rgba(133, 77, 14, 0.2);
+        }
+
+        .process-step h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ========== FAQ SEKCE ========== */
+        .faq {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--accent-lighter);
+        }
+
+        .faq-question h3 {
+            font-size: 1.05rem;
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            color: var(--accent);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            font-weight: 300;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--accent-lighter);
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ========== KONTAKT SEKCE ========== */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .detail-item {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .detail-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .detail-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .detail-text h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .detail-text p {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .detail-text a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .detail-text a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .contact-info h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #f9fafb;
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <nav-content>
+            <div class="nav-logo">Výkald z karet</div>
+            <ul class="nav-links">
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#contact" class="nav-cta">Zarezervovat čas</a></li>
+            </ul>
+        </nav-content>
+    </nav>
+
+    <!-- HERO SEKCE -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Autentický výkald z karet
+                </div>
+                <h1>Objevte <span class="accent">pravdu a směr</span> skrze karty</h1>
+                <p>Věřím v sílu autenticity a intuice. Moje výklady vám přinesou jasnost, inspiraci a odvahu k transformaci vašeho života.</p>
+                
+                <div class="hero-pills">
+                    <div class="pill">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Pro ženy hledající odpovědi
+                    </div>
+                    <div class="pill">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                        </svg>
+                        Osobní sezení
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="btn btn-primary">Napište mi</a>
+                    <a href="tel:+420555555" class="btn btn-secondary">Zavolejte</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/vykald-z-karet/foto.jpg" alt="Výkald z karet - Michal Micek">
+                <svg class="image-decoration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="stroke: var(--accent); fill: none; stroke-width: 1;">
+                    <circle cx="100" cy="100" r="90"/>
+                    <circle cx="100" cy="100" r="70"/>
+                    <path d="M 100 20 L 100 180 M 20 100 L 180 100"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS GRID -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Spokojených klientek</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Let zkušeností</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">97%</div>
+                <div class="stat-label">Doporučuji své známé</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4.9★</div>
+                <div class="stat-label">Průměrné hodnocení</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O MNĚ SEKCE -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-illustration">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dekorativní mandala/spirituální motiv -->
+                    <defs>
+                        <style>
+                            .spiral-line { stroke: var(--accent); fill: none; stroke-width: 1.5; opacity: 0.3; }
+                            .spiral-circle { stroke: var(--accent); fill: none; stroke-width: 2; opacity: 0.4; }
+                            .spiral-dot { fill: var(--accent); opacity: 0.5; }
+                        </style>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" class="spiral-circle"/>
+                    <circle cx="200" cy="200" r="140" class="spiral-circle"/>
+                    <circle cx="200" cy="200" r="100" class="spiral-circle"/>
+                    <circle cx="200" cy="200" r="60" class="spiral-circle"/>
+                    
+                    <!-- Paprsky -->
+                    <line x1="200" y1="20" x2="200" y2="60" class="spiral-line" stroke-width="2"/>
+                    <line x1="200" y1="340" x2="200" y2="380" class="spiral-line" stroke-width="2"/>
+                    <line x1="20" y1="200" x2="60" y2="200" class="spiral-line" stroke-width="2"/>
+                    <line x1="340" y1="200" x2="380" y2="200" class="spiral-line" stroke-width="2"/>
+                    
+                    <line x1="65" y1="65" x2="95" y2="95" class="spiral-line" stroke-width="2"/>
+                    <line x1="305" y1="305" x2="335" y2="335" class="spiral-line" stroke-width="2"/>
+                    <line x1="335" y1="65" x2="305" y2="95" class="spiral-line" stroke-width="2"/>
+                    <line x1="95" y1="305" x2="65" y2="335" class="spiral-line" stroke-width="2"/>
+                    
+                    <!-- Vnitřní body -->
+                    <circle cx="200" cy="80" r="4" class="spiral-dot"/>
+                    <circle cx="200" cy="320" r="4" class="spiral-dot"/>
+                    <circle cx="80" cy="200" r="4" class="spiral-dot"/>
+                    <circle cx="320" cy="200" r="4" class="spiral-dot"/>
+                </svg>
+            </div>
+
+            <div class="about-text">
+                <span class="about-badge">O KARTÁŘCE</span>
+                <h2>Intuice jako vodítko</h2>
+                <p>Jsem přesvědčená, že karty nejsou jen kouskem papíru. Jsou zrcadlem vaší duše, průvodcem skrze zmatek a nejistotu. Moje cesta do světa tarotu nebyla náhodná – byla to volání mého srdce.</p>
+                
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Autentické výklady</h3>
+                            <p>Bez klišé a lží</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Podpora a láska</h3>
+                            <p>Bez odsuzování</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Hlubocí zaměření</h3>
+                            <p>Čas jen pro vás</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Praktické rady</h3>
+                            <p>Akceschopné nápady</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE DIVIDER -->
+    <svg class="wave-divider" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f5f5f3" opacity="0.6"/>
+    </svg>
+
+    <!-- SLUŽBY SEKCE -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Moje služby</h2>
+            <p>Různé druhy výkladů přizpůsobené vašim potřebám a otázkám. Každé sezení je jedinečné a hluboké.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                    </svg>
+                </div>
+                <h3>Osobní sezení</h3>
+                <p>Hluboký jednosměrný výkład přizpůsobený vašim otázkám. Karty odhalí to, co potřebujete vědět právě teď.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-2.96-3.83c-.3-.39-.92-.39-1.22 0-.3.39-.3 1.02 0 1.41l3.59 4.63c.3.39.92.39 1.22 0l4.38-5.67c.3-.39.3-1.02 0-1.41-.29-.38-.91-.39-1.21 0z"/>
+                    </svg>
+                </div>
+                <h3>Výkald na vztahy</h3>
+                <p>Pochopte dynamics ve vašem vztahu. Karty vám ukáží skrytou dynamiku a cestu k větší hloubce a spojení.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M11 13H5v8h6v-8zm8-8H9c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2l.01-8c0-1.1-.9-2-2-2zm-10 7h8V9h-8v3z"/>
+                    </svg>
+                </div>
+                <h3>Výkald na práci</h3>
+                <p>Najděte svou vocaci a směr. Objevte, jak vytvořit práci, která naplňuje nejen vaši peněženku, ale také vaši duši.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                </div>
+                <h3>Výkald na budoucnost</h3>
+                <p>Podívejte se před sebe. Karty vám pomůžou pochopit možnosti a cesty, které se otevírají.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2c1.1 0 2 .9 2 2 0 .55-.22 1.05-.59 1.41.94 1.33 1.59 2.98 1.59 4.59 0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8c1.61 0 3.26.65 4.59 1.59.36-.37.86-.59 1.41-.59 1.1 0 2 .9 2 2zm-7 14h10c1.1 0 2 .9 2 2v2h-14v-2c0-1.1.9-2 2-2z"/>
+                    </svg>
+                </div>
+                <h3>Měsíční průvodce</h3>
+                <p>Měsíční předpověď energií a trendů. Přiměřené rozhodování v souladu s přírodními cykly.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                    </svg>
+                </div>
+                <h3>Workshop a kruhové sezení</h3>
+                <p>Sdílená energie a moudrost skupiny. Učte se od sebe navzájem v bezpečném a podporujícím prostředí.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE DIVIDER -->
+    <svg class="wave-divider" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" opacity="0.6"/>
+    </svg>
+
+    <!-- PROCES SEKCE -->
+    <section class="process">
+        <div class="section-header">
+            <h2>Jak spolu pracujeme</h2>
+            <p>Čtyřkroková cesta vaší transformace a objevování.</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>Kontakt a domluvení</h3>
+                <p>Napíšete mi nebo zavolíte. Domluvíme si čas a prostor, který vám bude vyhovovat.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>Otevřená konverzace</h3>
+                <p>Sdílíte vaši otázku či situaci. Poslouchám vás bez odsuzování s plnou pozorností.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>Výkład a interpretace</h3>
+                <p>Položím karty a přinesu vám jasný, autentický výkład. Vysvětlím, co vidím a co to znamená.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3>Akční kroky</h3>
+                <p>Zakončujeme konkrétními radami a kroky, které můžete podniknout. Odcházíte s jasností a silou.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE DIVIDER -->
+    <svg class="wave-divider" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f5f5f3" opacity="0.6"/>
+    </svg>
+
+    <!-- FAQ SEKCE -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h2>Často kladené otázky</h2>
+            <p>Odpovědi na vaše otázky o výkladu, procesu a očekáváních.</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Jak dlouho obvykle trvá sezení?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Typické sezení trvá 45 až 60 minut. Čas závisí na hlubokosti vaší otázky a na tom, jak moc detailů karty zjevují. Neměním si poplatek podle délky – soustředím se na kvalitu nad rychlostí.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Musím věřit v tarotu, aby to fungovat?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ne. Tarotu pomáhá otevřená mysl a zvědavost. Karty slouží jako zrcadlo vašeho intuitivního vědomí. Skepticismus není problém – mnozí lidé přicházejí skeptičtí a odcházejí překvapení.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Co když mi řeknete něco nepříjemného?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Být autentická znamená být upřímná. Ale upřímnost nikdy není kruté. Pokud karty ukazují výzvu, řeknu vám to způsobem, který vás povzbuzuje k jednání, ne způsobem, který vás vystrašuje.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Jak si zarezervuji sezení?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Napište mi e-mail na micek.michal@seznam.cz nebo mě zavolejte na 555 555 5. Domluvíme si čas, který vám vyhovuje. Prvního klienta dostanu obvykle do týdne.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Je možné online sezení?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ano. Online sezení jsou stejně silná jako osobní. Energie není omezena geografií. Můžeme se spojit přes video nebo telefon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE DIVIDER -->
+    <svg class="wave-divider" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" opacity="0.6"/>
+    </svg>
+
+    <!-- KONTAKT SEKCE -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <span class="contact-badge">Kontakt</span>
+                <h2>Pojďme se poznat</h2>
+                <p>Jsem připravena poslouchat vás a pomoci vám najít cestu. Začněte conversaci – jsem zde pro vás.</p>
+
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="detail-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a></p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                            </svg>
+                        </div>
+                        <div class="detail-text">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+420555555">555 555 5</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1.5rem;">Zarezervujte si čas</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Jaký typ sezení vás zajímá?</p>
+                
+                <div class="form-buttons">
+                    <a href="mailto:micek.michal@seznam.cz?subject=Objednávka%20-%20Osobní%20sezení" class="btn btn-primary" style="text-align: center;">Osobní sezení</a>
+                    <a href="mailto:micek.michal@seznam.cz?subject=Objednávka%20-%20Online%20výkald" class="btn btn-secondary" style="text-align: center;">Online výkład</a>
+                    <a href="tel:+420555555" class="btn btn-secondary" style="text-align: center;">Zavolejte přímo</a>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; margin-top: 1.5rem;">Odpovím vám nejpozději do 24 hodin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Výkald z karet. Všechna práva vyhrazena.</p>
+        <p>Vytvořeno s energií a autenticitou | <a href="mailto:micek.michal@seznam.cz">Napište mi</a></p>
+    </footer>
+
+    <script>
+        // NAVBAR SCROLL EFFECT
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ ACCORDION
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+
+        // SMOOTH SCROLL FOR NAVIGATION LINKS
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
