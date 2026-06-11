@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klub AIID — tvůj AI web je hotový. Co chceš dál?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0a0e14; --bg-card:#111720; --bg-mid:#0d1219;
+  --cyan:#00d4ff; --cyan-dim:rgba(0,212,255,0.10); --cyan-border:rgba(0,212,255,0.22);
+  --white:#ffffff; --text:#c8d6e5; --muted:#6b7f94; --border:rgba(255,255,255,0.07);
+  --green:#22d3a0; --red:#ff4d6a; --gold:#f5a623;
+}
+html { scroll-behavior: smooth; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+
+nav { position:fixed; top:0; left:0; right:0; z-index:100; height:64px; padding:0 40px; display:flex; align-items:center; justify-content:space-between; background:rgba(10,14,20,0.92); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+.nav-logo { font-size:20px; font-weight:900; color:var(--white); letter-spacing:-0.5px; }
+.nav-logo .dot { color:var(--cyan); }
+.nav-actions { display:flex; gap:12px; align-items:center; }
+.btn-ghost { padding:9px 20px; border-radius:8px; font-size:14px; font-weight:600; color:var(--text); text-decoration:none; border:1px solid var(--border); transition:border-color 0.2s,color 0.2s; }
+.btn-ghost:hover { border-color:var(--cyan-border); color:var(--white); }
+.btn-primary { padding:9px 22px; border-radius:8px; font-size:14px; font-weight:700; background:var(--cyan); color:var(--bg); text-decoration:none; border:none; cursor:pointer; transition:opacity 0.2s,transform 0.15s; display:inline-block; }
+.btn-primary:hover { opacity:0.88; transform:translateY(-1px); }
+
+.hero { padding:130px 40px 90px; max-width:880px; margin:0 auto; text-align:center; }
+.hero-tag { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--cyan-border); background:var(--cyan-dim); color:var(--cyan); font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:6px 16px; border-radius:100px; margin-bottom:32px; }
+.pulse { width:7px; height:7px; border-radius:50%; background:var(--cyan); animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+.hero h1 { font-size:clamp(36px,6vw,66px); font-weight:900; line-height:1.08; color:var(--white); letter-spacing:-2.5px; margin-bottom:24px; }
+.hero h1 .accent { color:var(--cyan); }
+.hero-sub { font-size:19px; color:var(--muted); max-width:600px; margin:0 auto 48px; line-height:1.75; }
+.hero-sub strong { color:var(--text); font-weight:600; }
+.hero-note { font-size:13px; color:var(--muted); margin-top:16px; }
+
+.offer-banner { background:linear-gradient(90deg,rgba(245,166,35,0.08) 0%,rgba(245,166,35,0.04) 100%); border-top:1px solid rgba(245,166,35,0.2); border-bottom:1px solid rgba(245,166,35,0.2); padding:16px 40px; }
+.offer-inner { max-width:960px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
+.offer-badge { background:var(--gold); color:#000; font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; white-space:nowrap; }
+.offer-text { font-size:14px; color:var(--text); }
+.offer-text strong { color:var(--gold); }
+
+.expert-strip { background:var(--bg-mid); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:24px 40px; }
+.strip-inner { max-width:960px; margin:0 auto; display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
+.strip-label { font-size:12px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; }
+.strip-experts { display:flex; gap:10px; flex-wrap:wrap; }
+.expert-chip { display:flex; align-items:center; gap:7px; background:var(--bg-card); border:1px solid var(--border); border-radius:100px; padding:7px 16px; font-size:13px; font-weight:600; color:var(--text); }
+.expert-chip .cdot { width:6px; height:6px; border-radius:50%; background:var(--cyan); flex-shrink:0; }
+
+section { padding:80px 40px; }
+.container { max-width:960px; margin:0 auto; }
+.eyebrow { font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--cyan); margin-bottom:14px; }
+.section-h { font-size:clamp(26px,4vw,44px); font-weight:800; color:var(--white); line-height:1.15; letter-spacing:-1px; margin-bottom:14px; }
+.section-p { font-size:17px; color:var(--muted); max-width:560px; line-height:1.7; }
+
+.community { background:var(--bg-mid); }
+.expert-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px; }
+.expert-card { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; transition:border-color 0.2s,transform 0.2s; }
+.expert-card:hover { border-color:var(--cyan-border); transform:translateY(-3px); }
+.expert-role { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--cyan); margin-bottom:14px; opacity:0.8; }
+.expert-card h3 { font-size:16px; font-weight:700; color:var(--white); margin-bottom:10px; }
+.expert-card p { font-size:13px; color:var(--muted); line-height:1.65; }
+.expert-value { display:inline-block; margin-top:16px; font-size:12px; font-weight:700; color:var(--green); background:rgba(34,211,160,0.08); border:1px solid rgba(34,211,160,0.2); padding:4px 12px; border-radius:100px; }
+
+.calc-section { background:var(--bg-mid); }
+.calc-wrap { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; margin-top:48px; }
+.calc-box { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:36px; }
+.calc-box h3 { font-size:16px; font-weight:700; color:var(--white); margin-bottom:24px; }
+.slider-group { margin-bottom:28px; }
+.slider-label { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); margin-bottom:10px; }
+.slider-label span { color:var(--white); font-weight:700; }
+input[type=range] { width:100%; accent-color:var(--cyan); height:4px; cursor:pointer; }
+.calc-result { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:24px; margin-top:4px; }
+.calc-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border); font-size:14px; }
+.calc-row:last-of-type { border-bottom:none; }
+.calc-row .lbl { color:var(--muted); }
+.calc-row .val { color:var(--white); font-weight:600; }
+.calc-row .val.g { color:var(--green); }
+.calc-row .val.r { color:var(--red); }
+.calc-total { margin-top:20px; padding:20px; background:rgba(34,211,160,0.06); border:1px solid rgba(34,211,160,0.2); border-radius:10px; text-align:center; }
+.calc-total .total-lbl { font-size:13px; color:var(--muted); margin-bottom:6px; }
+.calc-total .total-val { font-size:40px; font-weight:900; color:var(--green); letter-spacing:-2px; line-height:1; }
+.calc-total .total-sub { font-size:13px; color:var(--muted); margin-top:4px; }
+.value-list { display:flex; flex-direction:column; gap:20px; padding-top:8px; }
+.value-item { display:flex; gap:16px; align-items:flex-start; }
+.value-num { width:32px; height:32px; border-radius:8px; flex-shrink:0; background:var(--cyan-dim); border:1px solid var(--cyan-border); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; color:var(--cyan); }
+.value-item h4 { font-size:15px; font-weight:700; color:var(--white); margin-bottom:4px; }
+.value-item p { font-size:13px; color:var(--muted); line-height:1.65; }
+
+.tools-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:48px; }
+.tool-card { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px 28px; display:flex; gap:20px; align-items:flex-start; }
+.tool-icon { width:40px; height:40px; border-radius:10px; flex-shrink:0; background:var(--cyan-dim); border:1px solid var(--cyan-border); display:flex; align-items:center; justify-content:center; }
+.tool-icon svg { width:18px; height:18px; stroke:var(--cyan); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.tool-card h4 { font-size:15px; font-weight:700; color:var(--white); margin-bottom:6px; }
+.tool-card p { font-size:13px; color:var(--muted); line-height:1.6; }
+.tool-badge { display:inline-block; margin-top:10px; font-size:11px; font-weight:700; color:var(--muted); border:1px solid var(--border); padding:3px 10px; border-radius:100px; }
+
+.who { background:var(--bg-mid); }
+.who-inner { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:48px; }
+.who-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:36px; }
+.who-card h3 { font-size:20px; font-weight:800; color:var(--white); margin-bottom:4px; }
+.who-card .role { font-size:11px; color:var(--cyan); font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
+.who-card p { font-size:14px; color:var(--muted); line-height:1.7; margin-bottom:10px; }
+.who-stats { display:flex; gap:28px; margin-top:20px; padding-top:20px; border-top:1px solid var(--border); }
+.who-stat .n { font-size:26px; font-weight:900; color:var(--white); letter-spacing:-1px; }
+.who-stat .l { font-size:12px; color:var(--muted); }
+.who-text p { font-size:15px; color:var(--muted); line-height:1.75; margin-bottom:12px; }
+.who-text em { color:var(--white); font-style:normal; font-weight:600; }
+
+.pricing { background:var(--bg-mid); }
+.pricing-three { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
+.price-card { background:var(--bg-card); border:1px solid var(--border); border-radius:18px; padding:36px; position:relative; }
+.price-card.featured { border-color:var(--cyan); background:linear-gradient(160deg,rgba(0,212,255,0.06) 0%,var(--bg-card) 55%); }
+.price-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--cyan); color:var(--bg); font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:4px 16px; border-radius:100px; white-space:nowrap; }
+.price-name { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+.price-amount { font-size:48px; font-weight:900; color:var(--white); letter-spacing:-2px; line-height:1; margin-bottom:4px; }
+.price-amount sup { font-size:18px; vertical-align:super; letter-spacing:0; }
+.price-amount sub { font-size:14px; color:var(--muted); font-weight:400; letter-spacing:0; }
+.price-per { font-size:13px; color:var(--muted); margin-bottom:28px; }
+.limited-tag { display:inline-flex; align-items:center; gap:6px; background:rgba(245,166,35,0.1); border:1px solid rgba(245,166,35,0.3); color:var(--gold); font-size:11px; font-weight:700; padding:4px 12px; border-radius:100px; margin-bottom:16px; }
+.price-list { list-style:none; margin-bottom:28px; }
+.price-list li { font-size:14px; color:var(--text); padding:9px 0; border-bottom:1px solid var(--border); display:flex; gap:10px; align-items:flex-start; }
+.price-list li:last-child { border-bottom:none; }
+.ck { color:var(--cyan); font-size:13px; flex-shrink:0; margin-top:2px; }
+.price-cta { display:block; width:100%; padding:15px; border-radius:10px; font-size:15px; font-weight:700; text-align:center; text-decoration:none; border:none; cursor:pointer; transition:opacity 0.2s,transform 0.15s; }
+.price-cta.primary { background:var(--cyan); color:var(--bg); }
+.price-cta.secondary { background:transparent; color:var(--white); border:1px solid var(--border); }
+.price-cta:hover { opacity:0.85; transform:translateY(-1px); }
+.price-secure { font-size:12px; color:var(--muted); text-align:center; margin-top:12px; }
+
+.faq-group-title { font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--cyan); margin:36px 0 12px; opacity:0.7; }
+.faq-group-title:first-of-type { margin-top:48px; }
+.faq-list { max-width:720px; display:flex; flex-direction:column; gap:10px; }
+.faq-item { border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.faq-q { width:100%; text-align:left; background:var(--bg-card); padding:18px 22px; font-size:15px; font-weight:600; color:var(--white); border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; transition:background 0.2s; }
+.faq-q:hover { background:#151e2c; }
+.faq-arrow { width:20px; height:20px; flex-shrink:0; border:1px solid var(--border); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:11px; transition:transform 0.3s,border-color 0.2s; }
+.faq-q.open .faq-arrow { transform:rotate(180deg); border-color:var(--cyan-border); color:var(--cyan); }
+.faq-a { display:none; padding:18px 22px; background:var(--bg); font-size:14px; color:var(--muted); line-height:1.75; border-top:1px solid var(--border); }
+.faq-a.open { display:block; }
+
+.gdpr { background:var(--bg-mid); }
+.gdpr-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:40px; }
+.gdpr-item { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; }
+.gdpr-item h4 { font-size:14px; font-weight:700; color:var(--white); margin-bottom:8px; }
+.gdpr-item p { font-size:13px; color:var(--muted); line-height:1.65; }
+
+.tel-anchor { padding:40px; background:var(--bg-mid); border-top:1px solid var(--border); }
+.tel-inner { max-width:960px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.tel-inner div p:first-child { font-size:16px; font-weight:700; color:var(--white); margin-bottom:4px; }
+.tel-inner div p:last-child { font-size:14px; color:var(--muted); }
+.tel-btn { background:transparent; border:1px solid var(--cyan-border); color:var(--cyan); padding:14px 32px; border-radius:10px; font-size:16px; font-weight:700; text-decoration:none; white-space:nowrap; transition:background 0.2s; }
+.tel-btn:hover { background:var(--cyan-dim); }
+
+.final-cta { text-align:center; }
+.final-cta h2 { font-size:clamp(30px,5vw,54px); font-weight:900; color:var(--white); letter-spacing:-2px; margin-bottom:14px; }
+.final-cta h2 span { color:var(--cyan); }
+.final-cta p { font-size:17px; color:var(--muted); margin-bottom:36px; }
+.hero-ctas { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-lg { padding:16px 36px; border-radius:10px; font-size:16px; font-weight:700; text-decoration:none; display:inline-block; transition:opacity 0.2s,transform 0.15s; }
+.btn-lg.primary { background:var(--cyan); color:var(--bg); font-weight:800; }
+.btn-lg.secondary { color:var(--white); border:1px solid var(--border); }
+.btn-lg:hover { opacity:0.85; transform:translateY(-2px); }
+
+footer { padding:32px 40px; text-align:center; border-top:1px solid var(--border); font-size:13px; color:var(--muted); }
+footer a { color:var(--muted); text-decoration:underline; }
+
+@media(max-width:900px){ .pricing-three{grid-template-columns:1fr;} }
+@media(max-width:720px){
+  nav{padding:0 20px;} .hero{padding:100px 20px 60px;} section{padding:60px 20px;}
+  .offer-banner{padding:16px 20px;} .expert-strip{padding:20px;}
+  .strip-inner{flex-direction:column;align-items:flex-start;gap:16px;}
+  .expert-grid,.calc-wrap,.who-inner,.gdpr-grid,.tools-grid{grid-template-columns:1fr;}
+  .tel-inner{flex-direction:column;text-align:center;}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">AI<span class="dot">ID</span></div>
+  <div class="nav-actions">
+    <a href="#telefon" class="btn-ghost">Zavolej nám</a>
+    <a href="#pricing" class="btn-primary">Vstoupit do Klubu</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag"><span class="pulse"></span> Klub AIID</div>
+  <h1>Tvůj AI web je hotový.<br><span class="accent">Co chceš dál?</span></h1>
+  <p class="hero-sub">Uprav texty, nech web běžet, nebo se staň součástí <strong>sítě prověřených odborníků</strong> a získej nástroje a vzdělávání, které ti pomohou vydělat víc.</p>
+  <p class="hero-note">Platba přes SimpleShop. Faktura automaticky. Zrušení kdykoliv.</p>
+</section>
+
+<!-- LIMITED OFFER -->
+<div class="offer-banner">
+  <div class="offer-inner">
+    <span class="offer-badge">Omezená nabídka</span>
+    <span class="offer-text">Zakládající cena Klubu <strong>1 490 Kč/rok</strong> platí jen pro první členy. Standardní cena bude vyšší.</span>
+  </div>
+</div>
+
+<!-- EXPERT STRIP -->
+<div class="expert-strip">
+  <div class="strip-inner">
+    <span class="strip-label">V Klubu najdeš</span>
+    <div class="strip-experts">
+      <span class="expert-chip"><span class="cdot"></span>Grafici a designéři</span>
+      <span class="expert-chip"><span class="cdot"></span>Marketingoví specialisté</span>
+      <span class="expert-chip"><span class="cdot"></span>AI specialisté</span>
+      <span class="expert-chip"><span class="cdot"></span>Účetní a daňoví poradci</span>
+      <span class="expert-chip"><span class="cdot"></span>Byznys konzultanti</span>
+    </div>
+  </div>
+</div>
+
+<!-- COMMUNITY -->
+<section class="community">
+  <div class="container">
+    <div class="eyebrow">Síť odborníků</div>
+    <h2 class="section-h">Ne kontakty z LinkedInu.<br>Lidi, kteří to myslí vážně.</h2>
+    <p class="section-p">Každý člen Klubu má vygenerovaný AI-first web. Víš přesně, s kým mluvíš. Až bude členů dost, vznikne z toho plnohodnotná sociální platforma pro digitální podnikatele.</p>
+    <div class="expert-grid">
+      <div class="expert-card">
+        <div class="expert-role">Grafika a design</div>
+        <h3>Vizuální identita bez agenturních cen</h3>
+        <p>Grafici a designéři z komunity, kteří rozumí digitálnímu podnikání. Logo, prezentace, sociální sítě — přes doporučení z Klubu, ne přes inzeráty.</p>
+        <span class="expert-value">Přímý kontakt</span>
+      </div>
+      <div class="expert-card">
+        <div class="expert-role">Marketing</div>
+        <h3>Strategie, obsah, kampaně</h3>
+        <p>Marketingoví specialisté, kteří pracují s malými a středními podnikateli. Vědí, co funguje bez velkého rozpočtu.</p>
+        <span class="expert-value">Prověřeno v praxi</span>
+      </div>
+      <div class="expert-card">
+        <div class="expert-role">Umělá inteligence</div>
+        <h3>AI nástroje pro tvůj byznys</h3>
+        <p>Specialisté na AI automatizace, prompting a implementaci nástrojů. Poradí, co konkrétně dává smysl pro tvůj obor.</p>
+        <span class="expert-value">Aktuální znalosti</span>
+      </div>
+      <div class="expert-card">
+        <div class="expert-role">Účetnictví a daně</div>
+        <h3>Peníze pod kontrolou</h3>
+        <p>Účetní a daňoví poradci dostupní v komunitě. Ušetříš čas i peníze, když víš, koho se zeptat dřív, než přijde problém.</p>
+        <span class="expert-value">Konkrétní odpovědi</span>
+      </div>
+      <div class="expert-card">
+        <div class="expert-role">Byznys a strategie</div>
+        <h3>Pohled zvenku, když ho potřebuješ</h3>
+        <p>Byznys konzultanti a koučové, kteří prošli vlastním podnikáním. Bez teorie, s konkrétní zkušeností.</p>
+        <span class="expert-value">Sdílená zkušenost</span>
+      </div>
+      <div class="expert-card">
+        <div class="expert-role">Tvůj přínos</div>
+        <h3>I ty jsi odborník pro ostatní</h3>
+        <p>Vstupem do Klubu se stáváš součástí sítě. Ostatní členové vidí tvůj AI-first profil a mohou oslovit přímo tebe.</p>
+        <span class="expert-value">Nové příležitosti</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+  <div class="container">
+    <div class="eyebrow">Kalkulačka hodnoty</div>
+    <h2 class="section-h">Spočítej si, co ti Klub přinese.</h2>
+    <p class="section-p">Přesuň posuvníky podle toho, jak plánuješ Klub využívat.</p>
+    <div class="calc-wrap">
+      <div class="calc-box">
+        <h3>Nastav svůj scénář</h3>
+        <div class="slider-group">
+          <div class="slider-label">Adobe Creative Cloud <span id="adobe-lbl">Ano, pravidelně</span></div>
+          <input type="range" id="adobe-sl" min="0" max="2" step="1" value="2">
+        </div>
+        <div class="slider-group">
+          <div class="slider-label">Spolupráce z Klubu za rok <span id="collab-lbl">2 zakázky</span></div>
+          <input type="range" id="collab-sl" min="0" max="4" step="1" value="2">
+        </div>
+        <div class="slider-group">
+          <div class="slider-label">Využití e-learningu <span id="edu-lbl">Aktivně</span></div>
+          <input type="range" id="edu-sl" min="0" max="2" step="1" value="1">
+        </div>
+        <div class="calc-result">
+          <div class="calc-row"><span class="lbl">Roční členství</span><span class="val r">-1 490 Kč</span></div>
+          <div class="calc-row"><span class="lbl">Adobe CC úspora / rok</span><span class="val g" id="r-adobe">+22 800 Kč</span></div>
+          <div class="calc-row"><span class="lbl">Příjmy ze spolupráce</span><span class="val g" id="r-collab">+10 000 Kč</span></div>
+          <div class="calc-row"><span class="lbl">SEO kurz (hodnota)</span><span class="val g">+3 400 Kč</span></div>
+          <div class="calc-row"><span class="lbl">E-learning přístup</span><span class="val g" id="r-edu">+1 200 Kč</span></div>
+        </div>
+        <div class="calc-total">
+          <div class="total-lbl">Čistá hodnota za rok</div>
+          <div class="total-val" id="r-total">+35 910 Kč</div>
+          <div class="total-sub">oproti členství 1 490 Kč</div>
+        </div>
+      </div>
+      <div class="value-list">
+        <div class="value-item">
+          <div class="value-num">1</div>
+          <div>
+            <h4>Tvůj AI web tě představí</h4>
+            <p>Každý člen Klubu vidí tvůj profil. Ví, co děláš, jak pracuješ a co nabízíš — bez dlouhého vysvětlování.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-num">2</div>
+          <div>
+            <h4>Přímé propojení bez prostředníků</h4>
+            <p>Žádná platforma nebere provizi. Kontakty z Klubu jsou tvoje — navázaná spolupráce patří tobě.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-num">3</div>
+          <div>
+            <h4>Vzdělávání, které drží krok s AI</h4>
+            <p>Záznamy školení, kurzy a měsíční setkávání. Nezůstaneš pozadu, když se nástroje mění každý měsíc.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-num">4</div>
+          <div>
+            <h4>Prémiové nástroje za zlomek ceny</h4>
+            <p>Adobe Creative Cloud za 900 Kč/měsíc místo běžných 2 800 Kč. Úspora pokryje členství za první dva měsíce.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section>
+  <div class="container">
+    <div class="eyebrow">Vzdělávání a nástroje</div>
+    <h2 class="section-h">Víc než komunita.</h2>
+    <p class="section-p">K síti odborníků dostaneš vzdělávání a nástroje, které dávají smysl pro digitální podnikání.</p>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <div>
+          <h4>SEO kurz Edu Partners</h4>
+          <p>Kompletní vzdělávání v digitální viditelnosti. Google i AI vyhledávače. Volně v prodeji za 3 400 Kč.</p>
+          <span class="tool-badge">Hodnota 3 400 Kč</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div>
+          <h4>Záznamy odborných školení</h4>
+          <p>Archív školení kdykoli a odkudkoli. Marketing, AI nástroje, právo, byznys — za extrémně zvýhodněnou cenu oproti běžnému přístupu.</p>
+          <span class="tool-badge">E-learning přístup</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div>
+          <h4>Adobe Creative Cloud za 900 Kč/měsíc</h4>
+          <p>Photoshop, Illustrator, Premiere, Acrobat. Skupinová licence přes Edu Partners dostupná každému členovi.</p>
+          <span class="tool-badge">Běžná cena 2 800 Kč/měsíc</span>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div>
+          <h4>Měsíční online setkávání členů</h4>
+          <p>Živá setkávání komunity. Sdílení zkušeností, Q&A, networking — pravidelně každý měsíc.</p>
+          <span class="tool-badge">Živá komunita</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who">
+  <div class="container">
+    <div class="eyebrow">Za kým jdeš</div>
+    <h2 class="section-h">Reálný člověk. Reálná firma.</h2>
+    <div class="who-inner">
+      <div class="who-card">
+        <h3>Mgr. Michal Míček, LL.M.</h3>
+        <div class="role">Zakladatel AIID · Edu Partners s.r.o.</div>
+        <p>Podnikatel a lektor s více než tisícem absolventů vzdělávacích programů. Expert na digitální vzdělávání, host pořadu Snídaně s Novou na TV Nova.</p>
+        <p>Autor frameworku VISIBLE7 pro AI viditelnost profesionálů a firem.</p>
+        <div class="who-stats">
+          <div class="who-stat"><div class="n">1 000+</div><div class="l">absolventů kurzů</div></div>
+          <div class="who-stat"><div class="n">10+</div><div class="l">let v digitálu</div></div>
+        </div>
+      </div>
+      <div class="who-text">
+        <p>Klub AIID provozuje společnost Edu Partners s.r.o., IČO 28660757. Vzdělávací platforma s tisíci absolventy odborných kurzů v oblasti digitálního podnikání.</p>
+        <p>Sjednáváme hromadné softwarové licence, provozujeme e-learningovou platformu a budujeme komunitu podnikatelů, kteří chtějí využívat AI naplno.</p>
+        <p><em>"AIID je naše odpověď na otázku: Jak se dostat do výsledků ChatGPT a Perplexity?"</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div style="text-align:center;max-width:680px;margin:0 auto;">
+      <div class="eyebrow">Cena členství</div>
+      <h2 class="section-h">Vyber si cestu, která ti sedí.</h2>
+      <p class="section-p" style="margin:0 auto;">Žádné skryté poplatky. Žádné automatické prodlužování bez souhlasu.</p>
+    </div>
+    <div class="pricing-three">
+
+      <div class="price-card">
+        <div class="price-name">Úprava textů</div>
+        <div class="price-amount"><sup>Kč</sup>499<sub></sub></div>
+        <div class="price-per">jednorázová platba</div>
+        <ul class="price-list">
+          <li><span class="ck">✓</span> Pošleš nám co chceš změnit</li>
+          <li><span class="ck">✓</span> Upravíme texty, hodnoty a kontakty</li>
+          <li><span class="ck">✓</span> Hotovo do 48 hodin</li>
+          <li><span class="ck">✓</span> Faktura automaticky</li>
+        </ul>
+        <a href="https://form.simpleshop.cz/4zrpo/buy/" class="price-cta secondary">Objednat úpravu</a>
+        <p class="price-secure">Napíšeš nám, co změnit. My to uděláme.</p>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">Web AI First</div>
+        <div class="price-amount"><sup>Kč</sup>299<sub>/rok</sub></div>
+        <div class="price-per">= 25 Kč měsíčně · SimpleShop</div>
+        <ul class="price-list">
+          <li><span class="ck">✓</span> AI-first web aktivní celý rok</li>
+          <li><span class="ck">✓</span> llms.txt, robots.txt, sitemap, schema.org</li>
+          <li><span class="ck">✓</span> Viditelnost v ChatGPT, Perplexity, Google</li>
+          <li><span class="ck">✓</span> Faktura automaticky</li>
+        </ul>
+        <a href="https://form.simpleshop.cz/xKozJ/buy/" class="price-cta secondary">Prodloužit web</a>
+        <p class="price-secure">Platba zabezpečena SimpleShop</p>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge">Doporučujeme</div>
+        <div class="price-name">Klub AIID</div>
+        <div class="limited-tag">Omezená zakládající cena</div>
+        <div class="price-amount"><sup>Kč</sup>1 490<sub>/rok</sub></div>
+        <div class="price-per">= 124 Kč měsíčně · SimpleShop</div>
+        <ul class="price-list">
+          <li><span class="ck">✓</span> AI-first web aktivní celý rok</li>
+          <li><span class="ck">✓</span> Přístup do sítě odborníků Klubu</li>
+          <li><span class="ck">✓</span> Jednorázová úprava textů a hodnot webu</li>
+          <li><span class="ck">✓</span> SEO kurz Edu Partners (hodnota 3 400 Kč)</li>
+          <li><span class="ck">✓</span> Záznamy školení za zvýhodněnou cenu</li>
+          <li><span class="ck">✓</span> Adobe Creative Cloud za 900 Kč/měsíc</li>
+          <li><span class="ck">✓</span> Osobní 20min call s Michalem</li>
+          <li><span class="ck">✓</span> Měsíční online setkávání členů</li>
+          <li><span class="ck">✓</span> Faktura automaticky</li>
+        </ul>
+        <a href="https://form.simpleshop.cz/WropQ/buy/" class="price-cta primary">Vstoupit do Klubu</a>
+        <p class="price-secure">Platba zabezpečena SimpleShop · Faktura na IČO i fyzické osoby</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="eyebrow">Časté otázky</div>
+    <h2 class="section-h">Máš otázky? Máme odpovědi.</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-group-title">Váš web — úpravy a nastavení</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Má web redakční systém?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Ne. Web je postaven AI first ve struktuře maximálně vycházející vstříc AI agentům. Optimalizací struktury dat a rychlosti načítání jdeme naproti tomu, jak AI doporučuje obsah. Redakční systém by tuto strukturu narušil — proto ho záměrně nepoužíváme.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Jak mohu změnit texty na svém webu?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">V ceně členství Klubu AIID je zahrnuta jedna jednorázová úprava textů a hodnot na webu. Stačí nám napsat, co chceš změnit, a my to zajistíme. Pokud nejsi člen Klubu, úpravu nabízíme jako jednorázovou službu za 499 Kč. Další úpravy nad rámec jsou možné za příplatek dle individuální domluvy.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Mohu do webu přidat fotogalerii nebo další funkce?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Ano. Základní web je záměrně čistý a optimalizovaný pro AI viditelnost. Rozšíření jako fotogalerie, kontaktní formulář nebo další funkcionality jsou možné za příplatek, který dohodneme individuálně podle rozsahu. Kontaktuj nás na michal.micek@edu-partners.cz.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Jak funguje převod na vlastní doménu?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Vlastní doménu ti pomůžeme zajistit a registrujeme ji přímo na tvoje jméno — ty jsi jejím vlastníkem. My pak doménu propojíme s tvým webem. Vše zařídíme za tebe, bez technických znalostí na tvé straně. Náklady na doménu jsou standardně kolem 300 Kč/rok a hradíš je přímo ty jako vlastník.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Mohu si web spravovat sám?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Web je záměrně postaven jako čistý strukturovaný HTML5 kód optimalizovaný pro AI — bez redakčního systému ani administrace. Není to omezení, je to výhoda: přesně takový formát AI vyhledávače preferují. Pokud tě zajímá, jak web funguje a jak ho upravovat, naučíme tě to v našem kurzu. Jinak nám prostě napíšeš a změny provedeme za tebe.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Dostanu fakturu? Lze uplatnit jako náklad?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Ano, faktura se vystaví automaticky po platbě. Standardní podnikatelský výdaj. Vydáváme faktury na IČO i na fyzické osoby. Provozovatel: Edu Partners s.r.o., IČO 28660757.</div>
+      </div>
+
+      <div class="faq-group-title">Klub AIID — členství a výhody</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Jak přesně funguje přístup k odborníkům?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Po vstupu do Klubu dostaneš přístup do komunity, kde jsou ostatní členové viditelní přes své AI-first profily. Kontakty si naváže každý sám — žádná platforma nebere provizi ze spolupráce. S rostoucím počtem členů plánujeme vybudovat plnohodnotnou sociální platformu pro digitální podnikatele.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Jak získám Adobe Creative Cloud za 900 Kč/měsíc?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Po vstupu do Klubu tě kontaktujeme s instrukcemi pro aktivaci skupinové licence. Dostupná pro všechny členy bez dalších podmínek. Platí se zvlášť vedle ročního členství.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Co se stane s webem, pokud Klub nezakoupím?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Po uplynutí 4 měsíců bezplatné verze bude tvůj AI web deaktivován. Obsah zůstane uložen a pokud vstoupíš do Klubu nebo zakoupíš Web AI First kdykoli později, web obnovíme.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Prodlužuje se členství automaticky?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Ne. Před koncem roku ti pošleme email s možností prodloužení. Žádné automatické strhávání plateb bez tvého souhlasu.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GDPR -->
+<section class="gdpr">
+  <div class="container">
+    <div class="eyebrow">Ochrana osobních údajů</div>
+    <h2 class="section-h">Tvá data jsou v bezpečí.</h2>
+    <p class="section-p">Zpracováváme pouze to, co potřebujeme pro provoz členství.</p>
+    <div class="gdpr-grid">
+      <div class="gdpr-item"><h4>Co shromažďujeme</h4><p>Jméno, email, IČO pro vystavení faktury. Žádné citlivé osobní údaje.</p></div>
+      <div class="gdpr-item"><h4>Jak data používáme</h4><p>Výhradně pro správu členství, zasílání faktur a komunikaci o Klubu. Nepředáváme třetím stranám.</p></div>
+      <div class="gdpr-item"><h4>Emailová komunikace</h4><p>Zasíláme provozní emaily a newsletter. Odhlášení z newsletteru kdykoliv jedním kliknutím.</p></div>
+      <div class="gdpr-item"><h4>Právo na výmaz</h4><p>Kontaktuj nás na info@edupartners.cz a tvá data smažeme. Plné znění na aiid.cz/gdpr.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEL ANCHOR -->
+<div class="tel-anchor" id="telefon">
+  <div class="tel-inner">
+    <div>
+      <p>Nejsi si jistý, která varianta je pro tebe?</p>
+      <p>Zavolej Michalovi. Projdeme to spolu za 20 minut, bez závazku.</p>
+    </div>
+    <a href="tel:+420606663826" class="tel-btn">+420 606 663 826</a>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Připraven být<br><span>vidět v AI?</span></h2>
+    <p>Vstup do Klubu nebo si nejdřív zarezervuj 20minutový call.</p>
+    <div class="hero-ctas">
+      <a href="#telefon" class="btn-lg secondary">Potřebuješ vědět více? Zavolej.</a>
+      <a href="https://form.simpleshop.cz/WropQ/buy/" class="btn-lg primary">Vstoupit do Klubu za 1 490 Kč/rok</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Edu Partners s.r.o., IČO 28660757 · AIID.cz · <a href="#">Obchodní podmínky</a> · <a href="#">Ochrana osobních údajů</a></p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+const adobeLabels = ['Ne, Adobe nevyužívám','Příležitostně','Ano, pravidelně'];
+const adobeVals   = [0,11400,22800];
+const collabLabels = ['Žádná','1 zakázka','2 zakázky','3 zakázky','5 a více'];
+const collabVals   = [0,5000,10000,15000,25000];
+const eduLabels    = ['Nevyužívám','Aktivně','Velmi aktivně'];
+const eduVals      = [0,1200,2400];
+
+function fmtNum(n) { return n.toLocaleString('cs-CZ'); }
+
+function updateCalc() {
+  const ai = parseInt(document.getElementById('adobe-sl').value);
+  const ci = parseInt(document.getElementById('collab-sl').value);
+  const ei = parseInt(document.getElementById('edu-sl').value);
+  document.getElementById('adobe-lbl').textContent = adobeLabels[ai];
+  document.getElementById('collab-lbl').textContent = collabLabels[ci];
+  document.getElementById('edu-lbl').textContent = eduLabels[ei];
+  const adobe = adobeVals[ai], collab = collabVals[ci], edu = eduVals[ei], seo = 3400, cena = 1490;
+  document.getElementById('r-adobe').textContent = adobe > 0 ? '+'+fmtNum(adobe)+' Kč' : '+0 Kč';
+  document.getElementById('r-collab').textContent = collab > 0 ? '+'+fmtNum(collab)+' Kč' : '+0 Kč';
+  document.getElementById('r-edu').textContent = edu > 0 ? '+'+fmtNum(edu)+' Kč' : '+0 Kč';
+  const total = adobe+collab+edu+seo-cena;
+  const el = document.getElementById('r-total');
+  el.textContent = (total >= 0 ? '+' : '')+fmtNum(total)+' Kč';
+  el.style.color = total >= 0 ? 'var(--green)' : 'var(--red)';
+}
+
+document.getElementById('adobe-sl').addEventListener('input', updateCalc);
+document.getElementById('collab-sl').addEventListener('input', updateCalc);
+document.getElementById('edu-sl').addEventListener('input', updateCalc);
+updateCalc();
+</script>
+</body>
+</html>
