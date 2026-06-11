@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pravidla členství — Klub AIID | Edu Partners s.r.o.</title>
+  <meta name="description" content="Pravidla členství v Klubu AIID provozovaném společností Edu Partners s.r.o. Platná od 11. 6. 2026.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0a0a0a;
+      color: #f0f0f0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    a { color: #00d4ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #1a1a1a;
+      padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .nav-logo { font-size: 18px; font-weight: 800; letter-spacing: -0.5px; }
+    .nav-logo span { color: #00d4ff; }
+    .nav-back { font-size: 13px; color: #555; }
+    .nav-back:hover { color: #00d4ff; text-decoration: none; }
+
+    /* LAYOUT */
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO */
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: #00d4ff; margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 36px; font-weight: 800; line-height: 1.15;
+      letter-spacing: -0.8px; color: #ffffff; margin-bottom: 16px;
+    }
+    .hero h1 span { color: #00d4ff; }
+    .hero-meta {
+      font-size: 13px; color: #444;
+      display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* SEKCE */
+    .section {
+      padding: 48px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .section:last-child { border-bottom: none; }
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: #333; margin-bottom: 20px;
+    }
+    .section h2 {
+      font-size: 22px; font-weight: 800; color: #ffffff;
+      letter-spacing: -0.3px; margin-bottom: 16px; line-height: 1.25;
+    }
+    .section p {
+      font-size: 15px; color: #888; line-height: 1.8; margin-bottom: 12px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section p strong { color: #ccc; font-weight: 600; }
+
+    /* BENEFIT LIST */
+    .benefit-list { list-style: none; margin: 16px 0; }
+    .benefit-list li {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 0; border-bottom: 1px solid #141414;
+      font-size: 15px; color: #aaa;
+    }
+    .benefit-list li:last-child { border-bottom: none; }
+    .benefit-list li .icon {
+      font-family: monospace; font-size: 12px; font-weight: 700;
+      color: #00d4ff; background: rgba(0,212,255,0.08);
+      padding: 3px 8px; border-radius: 4px; white-space: nowrap;
+      margin-top: 2px;
+    }
+    .benefit-list li .icon.purple { color: #a78bfa; background: rgba(167,139,250,0.08); }
+    .benefit-list li .icon.green { color: #00ff9d; background: rgba(0,255,157,0.08); }
+    .benefit-list li .icon.yellow { color: #febc2e; background: rgba(254,188,46,0.08); }
+    .benefit-list li .icon.blue { color: #60a5fa; background: rgba(96,165,250,0.08); }
+    .benefit-list li .text strong { color: #ffffff; display: block; margin-bottom: 2px; font-size: 14px; }
+    .benefit-list li .text span { font-size: 13px; color: #555; }
+
+    /* CENY */
+    .price-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    @media (max-width: 560px) { .price-cards { grid-template-columns: 1fr; } }
+    .price-card {
+      background: #111; border: 1px solid #1a1a1a;
+      border-radius: 12px; padding: 20px;
+    }
+    .price-card.featured { border-color: #00d4ff; background: #0a1820; }
+    .price-card .plan { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #555; margin-bottom: 8px; }
+    .price-card.featured .plan { color: #00d4ff; }
+    .price-card .amount { font-size: 28px; font-weight: 800; color: #ffffff; letter-spacing: -1px; }
+    .price-card .amount span { font-size: 14px; font-weight: 400; color: #555; }
+    .price-card p { font-size: 13px; color: #666; margin-top: 8px; line-height: 1.6; }
+
+    /* PRAVIDLA TABULKA */
+    .rules-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    .rules-table tr { border-bottom: 1px solid #141414; }
+    .rules-table tr:last-child { border-bottom: none; }
+    .rules-table td { padding: 14px 0; vertical-align: top; font-size: 14px; }
+    .rules-table td:first-child {
+      color: #555; font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      width: 140px; padding-right: 16px; padding-top: 16px;
+    }
+    .rules-table td:last-child { color: #aaa; line-height: 1.7; }
+    .rules-table td:last-child strong { color: #ddd; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: #0d1a1f; border: 1px solid #1a3040;
+      border-left: 3px solid #00d4ff;
+      border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 24px 0;
+    }
+    .highlight-box p { font-size: 14px; color: #aaa; margin: 0; line-height: 1.7; }
+    .highlight-box p strong { color: #ffffff; }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 0; border-top: 1px solid #1a1a1a;
+      text-align: center;
+    }
+    footer p { font-size: 12px; color: #333; margin-bottom: 6px; }
+    footer a { color: #444; }
+    .footer-date { font-size: 11px; color: #222; margin-top: 8px; }
+
+    /* CTA */
+    .cta-section { padding: 48px 0; text-align: center; }
+    .cta-section h2 { font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+    .cta-section p { font-size: 15px; color: #666; margin-bottom: 28px; }
+    .btn-primary {
+      display: inline-block; background: #00d4ff; color: #000;
+      padding: 14px 32px; border-radius: 10px; font-weight: 800;
+      font-size: 15px; letter-spacing: 0.3px;
+    }
+    .btn-primary:hover { opacity: 0.9; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">AI<span>ID</span></div>
+  <a href="https://aiid.cz/klub-aiid-edu-partners-vip.html" class="nav-back">← Zpět na Klub</a>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="eyebrow">Pravidla členství</p>
+    <h1>Klub AIID —<br><span>jak to funguje.</span></h1>
+    <p style="font-size:15px;color:#777;line-height:1.8;margin-top:16px;">
+      Jasná pravidla bez právního žargonu. Víš přesně co dostáváš, co se od tebe čeká a jak kdykoli odejít.
+    </p>
+    <div class="hero-meta">
+      <span>📄 Provozovatel: <strong style="color:#555;">Edu Partners s.r.o.</strong></span>
+      <span>📅 Platná od: <strong style="color:#555;">11. 6. 2026</strong></span>
+    </div>
+  </div>
+
+  <!-- CO JE KLUB -->
+  <div class="section">
+    <p class="section-label">01 — Co je Klub</p>
+    <h2>Komunita lidí kteří chtějí být vidět v AI.</h2>
+    <p>Klub AIID je členský program provozovaný společností <strong>Edu Partners s.r.o.</strong> Sdružuje podnikatele, freelancery a odborníky kteří chtějí budovat svou digitální autoritu v době kdy AI mění způsob jak lidé hledají experty.</p>
+    <p>Členstvím získáváš přístup k nástrojům, vzdělání a komunitě která ti pomůže být vidět — nejen na Googlu, ale i v ChatGPT, Perplexity a dalších AI asistentů.</p>
+
+    <div class="highlight-box">
+      <p>Klub není kurz, není předplatné softwaru. Je to <strong>komunita + nástroje + vzdělání</strong> pod jednou střechou. Cílem je aby tě AI doporučovalo dřív než konkurenci.</p>
+    </div>
+  </div>
+
+  <!-- CO DOSTÁVÁŠ -->
+  <div class="section">
+    <p class="section-label">02 — Co dostáváš jako člen</p>
+    <h2>Benefity členství.</h2>
+    <p>Jako člen Klubu AIID získáváš tyto benefity po celou dobu aktivního členství:</p>
+
+    <ul class="benefit-list">
+      <li>
+        <span class="icon">DOMÉNA</span>
+        <div class="text">
+          <strong>Vlastní doména pro tvůj AI web</strong>
+          <span>Zajistíme nákup domény (vlastníkem jsi ty) a propojení s tvým AIID webem. Hodnota služby: 1 000 Kč.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon purple">OBSAH</span>
+        <div class="text">
+          <strong>Úprava textů webu</strong>
+          <span>Přepíšeme AI generovaný obsah tvým hlasem — tvoje příběhy, tvoje čísla, tvoje recenze. Hodnota služby: 500 Kč.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon yellow">SEO KURZ</span>
+        <div class="text">
+          <strong>Přístup ke kurzu SEO pro online podnikatele</strong>
+          <span>E-learning na platformě Edu Partners — naučíš se být vidět na Googlu i v AI. Hodnota kurzu: 3 400 Kč.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon green">CALL</span>
+        <div class="text">
+          <strong>20minutový onboarding call</strong>
+          <span>Osobní konzultace s Michalem Míčkem — nastavení domény, základy online byznysu, odpovědi na tvoje otázky.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon blue">KOMUNITA</span>
+        <div class="text">
+          <strong>Měsíční setkávání členů</strong>
+          <span>Online nebo prezenční setkávání digitálních podnikatelů. Sdílení zkušeností, novinky z AI světa, networking.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">AI UPDATE</span>
+        <div class="text">
+          <strong>Roční aktualizace AI souborů</strong>
+          <span>Jednou ročně aktualizujeme llms.txt, robots.txt a sitemap.xml podle aktuálních standardů AI vyhledávání.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CENY -->
+  <div class="section">
+    <p class="section-label">03 — Ceny a plány</p>
+    <h2>Dvě možnosti.</h2>
+    <p>Vyber si podle toho co potřebuješ. Kdykoli můžeš přejít z Základu do Klubu.</p>
+
+    <div class="price-cards">
+      <div class="price-card">
+        <p class="plan">ZÁKLAD</p>
+        <div class="amount">299 Kč <span>/ rok</span></div>
+        <p>Web běží dál na aiid.cz/tvoje-jmeno. Všechny AI soubory zůstávají aktivní. Bez dalších benefitů.</p>
+      </div>
+      <div class="price-card featured">
+        <p class="plan">KLUB AIID</p>
+        <div class="amount">1 490 Kč <span>/ rok</span></div>
+        <p>Vlastní doména, úprava textů, SEO kurz, onboarding call, měsíční setkávání a AI update. Vše v jednom.</p>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:#444;margin-top:8px;">Ceny jsou uvedeny včetně DPH. Platba probíhá jednorázově na celý rok.</p>
+  </div>
+
+  <!-- JAK ČLENSTVÍ VZNIKÁ -->
+  <div class="section">
+    <p class="section-label">04 — Vznik a trvání členství</p>
+    <h2>Jak to funguje.</h2>
+
+    <table class="rules-table">
+      <tr>
+        <td>Vznik</td>
+        <td>Členství vzniká uhrazením členského příspěvku přes platební bránu na stránce aiid.cz. Potvrzení přijdeš emailem do 24 hodin.</td>
+      </tr>
+      <tr>
+        <td>Trvání</td>
+        <td>Členství je roční. Začíná dnem přijetí platby a trvá <strong>12 kalendářních měsíců.</strong></td>
+      </tr>
+      <tr>
+        <td>Obnova</td>
+        <td>Členství se <strong>neobnovuje automaticky.</strong> Před koncem ročního období tě upozorníme emailem. Obnova je dobrovolná.</td>
+      </tr>
+      <tr>
+        <td>Zkušební web</td>
+        <td>Zdarma vygenerovaný web běží <strong>4 měsíce</strong> od vytvoření. Po uplynutí je deaktivován — pokud si nepořídíš členství nebo Základ.</td>
+      </tr>
+      <tr>
+        <td>Doručení</td>
+        <td>Onboarding call naplánujeme do 7 pracovních dnů od přijetí platby. Přístup ke kurzu přiřadíme do 48 hodin.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ODSTOUPENÍ -->
+  <div class="section">
+    <p class="section-label">05 — Odstoupení a vrácení peněz</p>
+    <h2>Kdykoli můžeš odejít.</h2>
+
+    <table class="rules-table">
+      <tr>
+        <td>14 dní</td>
+        <td>Máš právo odstoupit od smlouvy <strong>do 14 dnů od platby</strong> bez udání důvodu. Vrátíme celou částku. Stačí napsat na ahoj@aiid.cz.</td>
+      </tr>
+      <tr>
+        <td>Po 14 dnech</td>
+        <td>Po uplynutí 14denní lhůty členství nadále běží do konce ročního období. Předčasné ukončení bez nároku na vrácení poměrné části.</td>
+      </tr>
+      <tr>
+        <td>Výjimky</td>
+        <td>Pokud jsme nesplnili přislíbené benefity (call, kurz, doména) v dohodnutém termínu, máš právo na vrácení plné částky kdykoli.</td>
+      </tr>
+      <tr>
+        <td>Doména</td>
+        <td>Doména zůstává tvým majetkem i po ukončení členství. Hosting a propojení s AIID webem končí s členstvím.</td>
+      </tr>
+      <tr>
+        <td>Data webu</td>
+        <td>Po ukončení členství ti na vyžádání poskytneme ZIP archiv tvého webu do 14 pracovních dnů.</td>
+      </tr>
+    </table>
+
+    <div class="highlight-box">
+      <p>Chceš odejít nebo máš problém? Napiš na <strong>ahoj@aiid.cz</strong> nebo zavolej přímo Michalovi. Řešíme vše lidsky a rychle — bez formulářů a čekání.</p>
+    </div>
+  </div>
+
+  <!-- POVINNOSTI ČLENA -->
+  <div class="section">
+    <p class="section-label">06 — Co se od tebe čeká</p>
+    <h2>Tvoje povinnosti jako člena.</h2>
+    <p>Držíme to jednoduché. Od členů očekáváme:</p>
+
+    <table class="rules-table">
+      <tr>
+        <td>Platba</td>
+        <td>Uhrazení ročního členského příspěvku ve výši dle zvoleného plánu.</td>
+      </tr>
+      <tr>
+        <td>Pravdivost</td>
+        <td>Informace které uvádíš ve formuláři (jméno, profese, web) musí být pravdivé. Web reprezentuje tebe.</td>
+      </tr>
+      <tr>
+        <td>Obsah</td>
+        <td>Na svém webu nezveřejňuješ obsah který je v rozporu se zákonem, je klamavý nebo poškozuje třetí strany.</td>
+      </tr>
+      <tr>
+        <td>Komunita</td>
+        <td>Na setkáváních a v komunitních kanálech jednáš s respektem k ostatním členům.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- OCHRANA DAT -->
+  <div class="section">
+    <p class="section-label">07 — Tvoje data</p>
+    <h2>Co děláme s tvými daty.</h2>
+
+    <table class="rules-table">
+      <tr>
+        <td>Správce</td>
+        <td><strong>Edu Partners s.r.o.</strong>, IČO: [doplnit], sídlo: [doplnit]</td>
+      </tr>
+      <tr>
+        <td>Jaká data</td>
+        <td>Jméno, email, telefon, profese, město — pouze pro účely členství a provoz webu.</td>
+      </tr>
+      <tr>
+        <td>K čemu</td>
+        <td>Vytvoření a provoz tvého AI webu, komunikace ohledně členství, zasílání novinek (lze kdykoli odhlásit).</td>
+      </tr>
+      <tr>
+        <td>Třetí strany</td>
+        <td>Data neprodáváme ani nesdílíme s třetími stranami za účelem marketingu.</td>
+      </tr>
+      <tr>
+        <td>Výmaz</td>
+        <td>Na žádost smažeme všechna tvá data do 30 dnů. Web bude deaktivován.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ZMĚNY PRAVIDEL -->
+  <div class="section">
+    <p class="section-label">08 — Změny pravidel</p>
+    <h2>Jak tě informujeme o změnách.</h2>
+    <p>Tato pravidla můžeme aktualizovat. O <strong>podstatných změnách</strong> tě vždy informujeme emailem nejméně <strong>30 dní předem.</strong> Pokud se změnami nesouhlasíš, máš právo ukončit členství a my vrátíme poměrnou část příspěvku za zbývající období.</p>
+    <p>Aktuální verze pravidel je vždy dostupná na této stránce s datem poslední aktualizace.</p>
+  </div>
+
+  <!-- KONTAKT -->
+  <div class="section">
+    <p class="section-label">09 — Kontakt</p>
+    <h2>Máš otázku? Ozvi se.</h2>
+    <p>Nejrychleji odpovídáme na email nebo telefon — ne přes formuláře.</p>
+
+    <table class="rules-table">
+      <tr>
+        <td>Email</td>
+        <td><a href="mailto:ahoj@aiid.cz">ahoj@aiid.cz</a></td>
+      </tr>
+      <tr>
+        <td>Web</td>
+        <td><a href="https://aiid.cz">aiid.cz</a></td>
+      </tr>
+      <tr>
+        <td>Provozovatel</td>
+        <td>Edu Partners s.r.o., IČO: [doplnit]</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Připraven být vidět v AI?</h2>
+    <p>Přidej se ke Klubu AIID a buď první koho ChatGPT doporučí.</p>
+    <a href="https://aiid.cz/klub-aiid-edu-partners-vip.html" class="btn-primary">Zpět na Klub →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MÍČEK® · <a href="https://aiid.cz">aiid.cz</a> · Edu Partners s.r.o.</p>
+    <p class="footer-date">Pravidla členství Klubu AIID · Platná od 11. 6. 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
