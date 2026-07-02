@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ostr ad vsk | Oszteacski – Ostrava</title>
+    <meta name="description" content="Oszteacski specialista na tvorbu webů s AI-first přístupem. Vytvořil jsem 100 webů s fokusem na moderní technologie. Pracuji s freelancery a startup týmy v Ostravě.">
+    <meta name="keywords" content="Ostr ad vsk, Oszteacski, tvorba webu, web design, AI-first, Ostrava, freelance">
+    <meta name="author" content="Ostr ad vsk">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ostr ad vsk | Oszteacski">
+    <meta property="og:description" content="Oszteacski specialista na tvorbu webů s AI-first přístupem. Vytvořil jsem 100 webů s fokusem na moderní technologie.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ostr-ad-vsk/foto.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ostr ad vsk | Oszteacski">
+    <meta name="twitter:description" content="Oszteacski specialista na tvorbu webů s AI-first přístupem. Vytvořil jsem 100 webů.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ostr-ad-vsk/foto.jpg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ostr ad vsk",
+      "jobTitle": "Oszteacski",
+      "description": "Specialista na tvorbu webu s AI-first přístupem. Vytvořil jsem 100 webů.",
+      "email": "michal.micek@edu-partners.cz",
+      "telephone": "606663826",
+      "url": "https://aiid.cz",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ostr-ad-vsk/foto.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ostrava",
+        "addressCountry": "CZ"
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+        .nav-cta {
+            background: #00d4ff;
+            color: #000;
+            padding: 0.75rem 1.75rem;
+            border-radius: 6px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background: #00bcd4;
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SEKCE ===== */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+            background-image: radial-gradient(circle at 80% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 60%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-left h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        .hero-left h1 .accent {
+            color: #00d4ff;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #00d4ff;
+            border-radius: 50%;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            max-width: 420px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #b0b0b0;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #00d4ff;
+            color: #000;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #00bcd4;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ccc;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            color: #f0f0f0;
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 3px solid #00d4ff;
+            object-fit: cover;
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+        }
+
+        /* ===== STATS GRID ===== */
+        .stats {
+            background: #111111;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: -2rem auto 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            font-weight: 500;
+        }
+
+        /* ===== O MNĚ SEKCE ===== */
+        .about {
+            background: #0a0a0a;
+            padding: 6rem 2rem;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-left {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-illustration {
+            width: 400px;
+            height: 400px;
+            opacity: 0.9;
+        }
+
+        .about-right h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            color: #b0b0b0;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #00d4ff;
+            fill: none;
+        }
+
+        .value-title {
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 0.25rem;
+        }
+
+        .value-desc {
+            font-size: 0.9rem;
+            color: #909090;
+        }
+
+        /* ===== EXPERTISE GRID ===== */
+        .expertise {
+            background: #111111;
+            padding: 6rem 2rem;
+        }
+
+        .expertise-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        .expertise-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .expertise-header p {
+            color: #b0b0b0;
+            font-size: 1rem;
+        }
+
+        .expertise-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .expertise-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+        }
+
+        .expertise-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .expertise-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: #00d4ff;
+            fill: none;
+        }
+
+        .expertise-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #f0f0f0;
+        }
+
+        .expertise-desc {
+            color: #909090;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== POSTUP PRÁCE ===== */
+        .process {
+            background: #0a0a0a;
+            padding: 6rem 2rem;
+        }
+
+        .process-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        .process-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .process-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-card {
+            position: relative;
+            padding: 2.5rem 2rem 2rem;
+        }
+
+        .process-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .process-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-desc {
+            color: #909090;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== FAQ SEKCE ===== */
+        .faq {
+            background: #111111;
+            padding: 6rem 2rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .faq-question {
+            background: rgba(255, 255, 255, 0.04);
+            border: none;
+            width: 100%;
+            padding: 1.5rem;
+            text-align: left;
+            color: #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            color: #00d4ff;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #909090;
+            padding: 0 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        /* ===== KONTAKT SEKCE ===== */
+        .contact {
+            background: #111111;
+            padding: 6rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-left h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-item-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #00d4ff;
+            fill: none;
+        }
+
+        .contact-item-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .contact-item-label {
+            font-size: 0.85rem;
+            color: #909090;
+            font-weight: 500;
+        }
+
+        .contact-item-value {
+            color: #f0f0f0;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .contact-right {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-right h3 {
+            font-size: 1.5rem;
+            color: #f0f0f0;
+            margin-bottom: 1rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            background: #00d4ff;
+            color: #000;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .contact-btn:hover {
+            background: #00bcd4;
+            transform: translateY(-3px);
+        }
+
+        .contact-btn-secondary {
+            background: transparent;
+            color: #ccc;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-btn-secondary:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            color: #f0f0f0;
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #050505;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #999999;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #b0b0b0;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #00d4ff;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-left h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-right {
+                order: -1;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-illustration {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.25rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+                margin-top: 60px;
+                min-height: auto;
+            }
+
+            .hero-left h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+                margin: -2rem 1rem 0;
+            }
+
+            .about {
+                padding: 3rem 1rem;
+            }
+
+            .about-right h2 {
+                font-size: 1.75rem;
+            }
+
+            .expertise {
+                padding: 3rem 1rem;
+            }
+
+            .expertise-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                padding: 3rem 1rem;
+            }
+
+            .process-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .faq {
+                padding: 3rem 1rem;
+            }
+
+            .faq-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .contact {
+                padding: 3rem 1rem;
+            }
+
+            .contact-left h2 {
+                font-size: 1.75rem;
+            }
+
+            .contact-right {
+                padding: 2rem;
+            }
+        }
+
+        /* ===== ANIMACE ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav aria-label="Hlavní navigace">
+        <a href="#" class="nav-logo">Ostr</a>
+        <div class="nav-menu">
+            <a href="#about">O mně</a>
+            <a href="#services">Služby</a>
+            <a href="#process">Postup</a>
+            <a href="#contact">Kontakt</a>
+            <a href="mailto:michal.micek@edu-partners.cz" class="nav-cta">Začít projekt</a>
+        </div>
+    </nav>
+
+    <!-- HERO SEKCE -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Oszteacski</span>
+                </div>
+                <h1>Vytvoříme váš web<br><span class="accent">s AI-first přístupem</span></h1>
+                <p class="hero-subtitle">Specialista na moderní webové řešení pro freelancery a startup týmy. Vytvořil jsem 100 webů zaměřených na kvalitu a technologickou excelenci.</p>
+                <div class="hero-pills">
+                    <div class="pill">100 webů AI-first</div>
+                    <div class="pill">Kvalita v každém detailu</div>
+                    <div class="pill">Moderní technologie</div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="mailto:michal.micek@edu-partners.cz" class="btn-primary">Kontaktujte mě</a>
+                    <a href="#about" class="btn-secondary">Víc o mně</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/ostr-ad-vsk/foto.jpg" alt="Ostr ad vsk, Oszteacski" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS GRID -->
+    <section class="stats">
+        <div class="stat-card">
+            <div class="stat-number">100</div>
+            <div class="stat-label">Webů vytvořeno</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Spokojenost klientů</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Aktivních projektů</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">14</div>
+            <div class="stat-label">Let zkušeností</div>
+        </div>
+    </section>
+
+    <!-- O MNĚ SEKCE -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-left">
+                <svg class="about-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.05" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="180" fill="url(#grad1)" stroke="#00d4ff" stroke-width="2" opacity="0.4"/>
+                    <circle cx="200" cy="200" r="140" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="200" cy="200" r="100" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.2"/>
+                    <path d="M 200 80 Q 280 140 280 200 Q 280 280 200 320 Q 120 280 120 200 Q 120 140 200 80" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+                    <rect x="150" y="150" width="100" height="100" fill="#00d4ff" opacity="0.1" rx="10"/>
+                </svg>
+            </div>
+            <div class="about-right">
+                <span class="about-badge">O MNĚ</span>
+                <h2>Vytvářím webové<br>řešení budoucnosti</h2>
+                <p class="about-text">Jsem webový specialista s fokusem na AI-first přístup. Věřím, že kvalitní web není jen krásný, ale především funkční a technologicky vyspělý. S každým projektem přináším inovativní řešení a moderní technologie.</p>
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M9 12l2 2 4-4" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="value-title">Kvalita</div>
+                            <div class="value-desc">Důraz na detaily</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="value-title">Rychlost</div>
+                            <div class="value-desc">Efektivní řešení</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" stroke-width="0" fill="#00d4ff"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="value-title">Bezpečnost</div>
+                            <div class="value-desc">Chránění dat</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke-width="0" fill="#00d4ff"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="value-title">Inovace</div>
+                            <div class="value-desc">Moderní tech</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE SEKCE -->
+    <section class="expertise" id="services">
+        <div class="expertise-header">
+            <h2>Moje služby</h2>
+            <p>Komplexní řešení pro vaši digitální přítomnost</p>
+        </div>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">Web Design</h3>
+                <p class="expertise-desc">Moderní a responsivní design zaměřený na uživatelský zážitek a konverzi.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9 12h6m0 0h6m-6 0V6m0 6v6M3 12a9 9 0 1118 0 9 9 0 01-18 0z" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">Frontend Development</h3>
+                <p class="expertise-desc">Profesionální kódování s React, Vue.js a nejnovějšími web technologiemi.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">Optimalizace</h3>
+                <p class="expertise-desc">SEO, performance tuning a analýza pro maximální viditelnost a rychlost.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 6c3.315 0 6 1.343 6 3v2.5c0 1.657-2.685 3-6 3s-6-1.343-6-3V9c0-1.657 2.685-3 6-3z" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">Backend Integrace</h3>
+                <p class="expertise-desc">Napojení na API, databáze a správa serverových řešení.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">Konzultace</h3>
+                <p class="expertise-desc">Strategické rady a technická konzultace pro vaši digitální transformaci.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M18.364 5.636l-3.536 3.536m9.172-9.172l-3.536 3.536M9.172 19.172L5.636 15.636m9.172-9.172l3.536-3.536M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="expertise-title">Údržba & Support</h3>
+                <p class="expertise-desc">Průběžná péče, updaty a technická podpora pro váš web.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- POSTUP PRÁCE -->
+    <section class="process" id="process">
+        <div class="process-header">
+            <h2>Jak pracuji</h2>
+            <p>Čtyři jasné kroky k vašemu ideálnímu webu</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-number">01</div>
+                <h3 class="process-title">Konzultace</h3>
+                <p class="process-desc">Zjistím vaše potřeby, cíle a vizi. Společně definujeme stratégii a klíčové metriky úspěchu.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">02</div>
+                <h3 class="process-title">Design & Plán</h3>
+                <p class="process-desc">Vytváření wireframů, designu a technického plánu. Všechno schválíte dříve, než začnu vyvíjet.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">03</div>
+                <h3 class="process-title">Vývoj</h3>
+                <p class="process-desc">Implementuji řešení s nejmodernějšími technologiemi. Pravidelné aktualizace a komunikace s vámi.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">04</div>
+                <h3 class="process-title">Spuštění & Podpora</h3>
+                <p class="process-desc">Testování, nasazení a zajištění dlouhodobé podpory. Váš web je připraven na úspěch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SEKCE -->
+    <section class="faq">
+        <div class="faq-header">
+            <h2>Často kladené otázky</h2>
+            <p>Odpovědi na vaše dotazy</p>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jaká je cena za webový projekt?</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cena závisí na rozsahu a složitosti projektu. Nabízím flexibilní modely od jednorázových projektů až po dlouhodobou podporu. Po konzultaci vám předložím detailní nabídku přesně na míru vašim potřebám.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jak dlouho trvá vytvořit web?</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Jednoduché weby se vytvářejí 2-4 týdny, složitější projekty 1-3 měsíce. Všechno závisí na rozsahu, počtu funkcí a vašich schválení jednotlivých fází. S vám se domluvím na realistickém harmonogramu.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Máte zkušenost s mým oborem?</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pracoval jsem s 100 různými projekty napříč mnoha obory. Nemám obavy z nových výzev a rychle se zacílím. Chci pochopit vaši branži a vytvořit web, který skutečně funguje pro vaši cílovou skupinu.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Poskytujete podporu po spuštění?</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Ano, nabízím několik modelů podpory od hodinkového tarifu až po měsíční paušály. Mohu se postarat o updaty, bezpečnostní záplaty, drobné opravy a další vylepšení. Rozhodněte se, co vám vyhovuje.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Je váš web SEO optimalizován?</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Samozřejmě. SEO optimalizace je součást každého projektu. Starám se o rychlost, mobilní responsivnost, kvalitní strukturu a další faktory, které vyhledávače oceňují. Po spuštění web budete viditelný.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Jaké technologie používáte?</span>
+                    <span class="faq-toggle">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pracuji s nejmodernějšími technologiemi: React, Vue.js, Next.js, TypeScript, Node.js a dalšími. Beru na vědomí i AI-first nástroje a postupy. Vybírám tech stack na základě vašich potřeb, nikoli podle mých preferencí.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT SEKCE -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-left">
+                <span class="contact-badge">KONTAKT</span>
+                <h2>Pojďme tvořit<br>něco úžasného</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">Email</div>
+                            <a href="mailto:michal.micek@edu-partners.cz" class="contact-item-value">michal.micek@edu-partners.cz</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">Telefon</div>
+                            <a href="tel:606663826" class="contact-item-value">606 663 826</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M17.657 18.657L13.414 22.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">Město</div>
+                            <div class="contact-item-value">Ostrava</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right">
+                <h3>Pojďme si popovídat</h3>
+                <p style="color: #909090; margin-bottom: 1.5rem;">Máte otázky nebo chcete začít nový projekt? Kontaktujte mě některou z těchto možností.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:michal.micek@edu-partners.cz" class="contact-btn">📧 Napište mi email</a>
+                    <a href="tel:606663826" class="contact-btn contact-btn-secondary">📞 Zavolejte mi</a>
+                    <a href="https://www.linkedin.com/in/michal-micek/" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-secondary">💼 Navštívit LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Ostr ad vsk. Všechna práva vyhrazena. | <a href="https://www.linkedin.com/in/michal-micek/">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // NAVBAR SCROLL EFFECT
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ ACCORDION
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
