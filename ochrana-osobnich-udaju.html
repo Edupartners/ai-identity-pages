@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ochrana osobních údajů – AI·ID | Edu Partners s.r.o.</title>
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --bg-card: #131313;
+            --border: rgba(255,255,255,0.12);
+            --accent: #00d4ff;
+            --accent-dim: rgba(0,212,255,0.08);
+            --text: #f0f0f0;
+            --text-secondary: #999;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6; }
+        body::before { content: ''; position: fixed; top: -300px; left: 50%; transform: translateX(-50%); width: 900px; height: 900px; background: radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 65%); pointer-events: none; z-index: 0; }
+        header { position: sticky; top: 0; width: 100%; z-index: 100; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(8,8,8,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        .logo { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .back-link { color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+        .back-link:hover { color: var(--text); }
+        main { max-width: 780px; margin: 0 auto; padding: 60px 40px 100px; position: relative; z-index: 1; }
+        .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+        h1 { font-family: 'Syne', sans-serif; font-size: clamp(28px,4vw,42px); font-weight: 800; margin-bottom: 8px; }
+        .updated { color: #666; font-size: 13px; margin-bottom: 48px; }
+        h2 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; margin: 40px 0 14px; color: var(--text); }
+        p, li { color: #aaa; font-size: 15px; line-height: 1.75; margin-bottom: 12px; }
+        ul { padding-left: 22px; margin-bottom: 16px; }
+        strong { color: var(--text); font-weight: 600; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; margin: 24px 0 8px; }
+        .info-card p { margin-bottom: 6px; color: #999; }
+        .info-card strong { color: var(--text); }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; }
+        th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 14px; color: #aaa; }
+        th { color: var(--text); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; }
+        footer { text-align: center; padding: 40px 20px 30px; color: #666; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.06); }
+        footer a { color: var(--accent); }
+        @media (max-width: 640px) {
+            header { padding: 14px 16px; }
+            main { padding: 40px 20px 70px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/index.html" class="logo">AI<span>ID</span></a>
+        <a href="/index.html" class="back-link">← Zpět na web</a>
+    </header>
+
+    <main>
+        <div class="eyebrow">Právní informace</div>
+        <h1>Ochrana osobních údajů</h1>
+        <p class="updated">Platné od 2. 7. 2026</p>
+
+        <p>Bereme ochranu tvých osobních údajů vážně. Tento dokument vysvětluje, jaké údaje o tobě zpracováváme, proč, jak dlouho a jaká máš práva, když nám vyplníš formulář na webu AI·ID nebo nás jinak kontaktuješ.</p>
+
+        <h2>1. Kdo je správcem osobních údajů</h2>
+        <div class="info-card">
+            <p><strong>Edu Partners s.r.o.</strong></p>
+            <p>Raisova 889/5, 709 00 Ostrava</p>
+            <p>IČ: 28660757 · DIČ: CZ28660757</p>
+            <p>Tel.: <a href="tel:+420733531532">+420 733 531 532</a></p>
+            <p>E-mail: <a href="mailto:michal.micek@edu-partners.cz">michal.micek@edu-partners.cz</a></p>
+        </div>
+        <p>Jsme správcem osobních údajů, které nám poskytneš prostřednictvím formuláře na webu aiid.cz a souvisejících stránek. Jakékoli dotazy ohledně zpracování údajů nám můžeš zaslat na výše uvedený e-mail.</p>
+
+        <h2>2. Jaké údaje zpracováváme</h2>
+        <p>V závislosti na tom, zda vyplňuješ formulář jako fyzická osoba nebo za firmu, zpracováváme zejména:</p>
+        <ul>
+            <li>identifikační údaje – jméno, profese, případně název a IČ/DIČ firmy;</li>
+            <li>kontaktní údaje – e-mail, telefon, adresa provozovny;</li>
+            <li>obsahové údaje, které nám dobrovolně poskytneš pro tvorbu webu – popis expertizy, cílové skupiny, služeb, výsledků, sociálních sítí a fotografie;</li>
+            <li>technické údaje o návštěvě webu (např. IP adresa, typ prohlížeče) pro zajištění bezpečnosti a základní statistiky.</li>
+        </ul>
+
+        <h2>3. Proč údaje zpracováváme</h2>
+        <table>
+            <tr><th>Účel</th><th>Právní základ</th></tr>
+            <tr><td>Vytvoření a poskytnutí tvé digitální identity (webu)</td><td>Plnění smlouvy / požadavku před jejím uzavřením</td></tr>
+            <tr><td>Komunikace ohledně webu a jeho úprav</td><td>Oprávněný zájem / plnění smlouvy</td></tr>
+            <tr><td>Zasílání novinek, tipů a nabídek ke službám AI·ID a ke kurzům a vzdělávacím programům Edu Partners</td><td>Souhlas, který lze kdykoli odvolat</td></tr>
+            <tr><td>Vedení účetnictví a plnění zákonných povinností</td><td>Splnění právní povinnosti</td></tr>
+        </table>
+
+        <p>Pokud u formuláře zaškrtneš souhlas se zasíláním novinek, můžeme ti kromě informací o AI·ID zasílat i nabídky vzdělávacích kurzů a programů společnosti Edu Partners s.r.o. Tento souhlas je dobrovolný, nijak neovlivňuje vytvoření tvého webu a kdykoli ho můžeš odvolat kliknutím na odkaz v e-mailu nebo zprávou na <a href="mailto:michal.micek@edu-partners.cz">michal.micek@edu-partners.cz</a>.</p>
+
+        <h2>4. Jak dlouho údaje uchováváme</h2>
+        <p>Údaje uchováváme po dobu trvání smluvního vztahu (existence tvého webu) a dále po dobu nutnou k vyřízení případných reklamací, nebo po dobu vyžadovanou zákonem (např. účetní a daňové doklady po dobu 10 let). Marketingové souhlasy uchováváme do jejich odvolání.</p>
+
+        <h2>5. Komu údaje předáváme</h2>
+        <p>Tvé údaje nesdílíme s třetími stranami za účelem jejich vlastního marketingu. Pro provoz služby využíváme prověřené zpracovatele, kteří nám pomáhají web vytvořit a doručit (např. poskytovatele hostingu, e-mailové a platební infrastruktury, automatizačních a AI nástrojů). Se všemi zpracovateli máme uzavřenou smlouvu o zpracování osobních údajů podle GDPR.</p>
+
+        <h2>6. Tvá práva</h2>
+        <ul>
+            <li>právo na přístup ke svým osobním údajům;</li>
+            <li>právo na opravu nepřesných údajů;</li>
+            <li>právo na výmaz („právo být zapomenut“);</li>
+            <li>právo na omezení zpracování;</li>
+            <li>právo na přenositelnost údajů;</li>
+            <li>právo vznést námitku proti zpracování;</li>
+            <li>právo kdykoli odvolat udělený souhlas;</li>
+            <li>právo podat stížnost u Úřadu pro ochranu osobních údajů (uoou.cz).</li>
+        </ul>
+        <p>Svá práva můžeš uplatnit e-mailem na <a href="mailto:michal.micek@edu-partners.cz">michal.micek@edu-partners.cz</a>. Na tvou žádost budeme reagovat bez zbytečného odkladu, nejpozději do 30 dnů.</p>
+
+        <h2>7. Zabezpečení údajů</h2>
+        <p>Přenos dat mezi tvým prohlížečem a našimi systémy je šifrovaný pomocí SSL/TLS. Přístup k údajům mají pouze osoby, které je nezbytně potřebují ke splnění svých pracovních úkolů, a jsou vázány mlčenlivostí.</p>
+
+        <h2>8. Cookies</h2>
+        <p>Náš web může využívat základní technické a analytické cookies pro zajištění funkčnosti a měření návštěvnosti. Cookies, které nejsou nezbytně nutné pro chod webu, používáme pouze s tvým souhlasem.</p>
+
+        <h2>9. Změny tohoto dokumentu</h2>
+        <p>Tyto zásady můžeme čas od času aktualizovat, například v souvislosti se změnou legislativy nebo rozšířením služeb. Aktuální verzi vždy najdeš na této stránce.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 <a href="https://edu-partners.cz" target="_blank" rel="noopener">Edu Partners s.r.o.</a> · <a href="/index.html">AI·ID</a> · <a href="/obchodni-podminky.html">Všeobecné obchodní podmínky</a></p>
+    </footer>
+
+</body>
+</html>
