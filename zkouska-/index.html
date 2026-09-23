@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zkouška | MM specialista – Ostrava</title>
+    <meta name="description" content="Jsem AI specialista s praxí z Clevel. Specializam se na školení přes shell pro malé a střední podniky. Pracuji neformálně a přátelsky." />
+    <meta name="keywords" content="Zkouška, MM, AI specialista, Ostrava, školení, shell, poradenství" />
+    <meta name="author" content="Zkouška" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Zkouška | MM specialista" />
+    <meta property="og:description" content="Jsem AI specialista s praxí z Clevel. Specializam se na školení přes shell pro malé a střední podniky." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/zkouska/foto.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zkouška | MM specialista" />
+    <meta name="twitter:description" content="AI specialista s praxí z Clevel. Školení přes shell pro SBE." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/zkouska/foto.jpg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Zkouška",
+      "jobTitle": "MM",
+      "description": "AI specialista s praktickou zkušeností. Specialista na školení přes shell.",
+      "email": "micek.michal@seznam.cz",
+      "telephone": "7887787",
+      "url": "https://aiid.cz/zkouska",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/zkouska/foto.jpg",
+      "address": { "@type": "PostalAddress", "addressLocality": "Ostrava", "addressCountry": "CZ" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        /* ══════════════════ NAVBAR ══════════════════ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #111827;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-cta {
+            background: #2563eb;
+            color: #000;
+            padding: 0.65rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-cta:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* ══════════════════ HERO ══════════════════ */
+        .hero {
+            margin-top: 5rem;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #fafaf9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 1.5rem 0;
+            color: #111827;
+        }
+
+        .hero-content h1 .accent {
+            color: #2563eb;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: #111827;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-badge::before {
+            content: '●';
+            color: #2563eb;
+            margin-right: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: #6b7280;
+            max-width: 420px;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-pill {
+            background: #f5f5f3;
+            color: #111827;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e5e7eb;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: #000;
+            padding: 0.75rem 1.75rem;
+            border-radius: 20px;
+            border: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #111827;
+            padding: 0.75rem 1.75rem;
+            border-radius: 20px;
+            border: 1px solid #e5e7eb;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 3px solid #2563eb;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+        }
+
+        /* ══════════════════ STATS ══════════════════ */
+        .stats {
+            padding: 4rem 2rem;
+            background: #fafaf9;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1);
+        }
+
+        .stat-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* ══════════════════ ABOUT ══════════════════ */
+        .about {
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-svg {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .about-content h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: #111827;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-badge::before {
+            content: '●';
+            color: #2563eb;
+            margin-right: 0.5rem;
+        }
+
+        .about-text {
+            color: #6b7280;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .value-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 1.2rem;
+        }
+
+        .value-text h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .value-text p {
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* ══════════════════ SERVICES ══════════════════ */
+        .services {
+            padding: 4rem 2rem;
+            background: #fafaf9;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* ══════════════════ PROCESS ══════════════════ */
+        .process {
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .step-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .step-connector {
+            position: absolute;
+            top: 2rem;
+            right: -1.5rem;
+            width: 3rem;
+            height: 2px;
+            background: #e5e7eb;
+        }
+
+        .process-step:last-child .step-connector {
+            display: none;
+        }
+
+        /* ══════════════════ CONTACT ══════════════════ */
+        .contact {
+            padding: 4rem 2rem;
+            background: #fafaf9;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-content h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: #111827;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-badge::before {
+            content: '●';
+            color: #2563eb;
+            margin-right: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-text label {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-text a {
+            color: #111827;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: #2563eb;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .contact-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-buttons a {
+            padding: 0.75rem 1.75rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-buttons .btn-primary {
+            background: #2563eb;
+            color: #000;
+        }
+
+        .contact-buttons .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .contact-buttons .btn-secondary {
+            background: transparent;
+            color: #111827;
+            border: 1px solid #e5e7eb;
+        }
+
+        .contact-buttons .btn-secondary:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        /* ══════════════════ FOOTER ══════════════════ */
+        footer {
+            padding: 2rem;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        footer p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ══════════════════ RESPONSIVE ══════════════════ */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-connector {
+                display: none;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-pills {
+                gap: 0.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ══════════════════ SCROLL SHADOW NAVBAR ══════════════════ */
+        nav.scrolled {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ══════════════════ ANIMATIONS ══════════════════ */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav aria-label="Hlavní navigace">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Zkouška</a>
+            <ul class="nav-links">
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#process">Postup</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <a href="mailto:micek.michal@seznam.cz" class="nav-cta">Napište mi</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">MM – AI specialista</div>
+                <h1>Naučím tě <span class="accent">ovládat AI</span> pomocí shellu</h1>
+                <p class="hero-subtitle">Jsem AI specialista s praktickou praxí z Clevel. Zaměřuji se na školení a poradenství pro malé a střední podniky, kterým chce zvlášť jít shell pod kůži.</p>
+                <div class="hero-pills">
+                    <div class="hero-pill">Praxe Clevel</div>
+                    <div class="hero-pill">Školení shell</div>
+                    <div class="hero-pill">Ostrava</div>
+                </div>
+                <div class="hero-cta">
+                    <a href="mailto:micek.michal@seznam.cz" class="btn-primary">Napište mi</a>
+                    <a href="#contact" class="btn-secondary">Zjistit více</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/zkouska/foto.jpg" alt="Zkouška, MM specialista" />
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">97%</div>
+                <div class="stat-label">Klientů spokojeno</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">14</div>
+                <div class="stat-label">Let zkušeností</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">450+</div>
+                <div class="stat-label">Školitelů podpořeno</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Certifikací</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <svg class="about-svg" aria-hidden="true" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.15" />
+                        <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.05" />
+                    </linearGradient>
+                </defs>
+                <circle cx="200" cy="200" r="150" fill="url(#grad1)" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,5" opacity="0.3" />
+                <circle cx="200" cy="200" r="100" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" />
+                <path d="M 200 80 Q 280 140 280 200 Q 280 260 200 280 Q 120 260 120 200 Q 120 140 200 80" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.5" />
+                <circle cx="200" cy="200" r="30" fill="#2563eb" opacity="0.2" />
+                <text x="200" y="210" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle" opacity="0.6">AI</text>
+            </svg>
+            <div class="about-content">
+                <div class="about-badge">O mně</div>
+                <h2>Praxe, která se vyplátí</h2>
+                <p class="about-text">Prakticky všechno co vím o AI a shell skriptování, jsem se naučil přímo v terénu. Pracoval jsem pro Clevel, kde jsem řešil reálné problémy reálných lidí. Teď to všechno předávám dál – bez zbytečné teorie, jen praktické tipy, které fungují.</p>
+                <div class="about-values">
+                    <div class="value-item">
+                        <div class="value-icon">✓</div>
+                        <div class="value-text">
+                            <h3>Neformálně</h3>
+                            <p>Bez nafukování, s humorem</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">✓</div>
+                        <div class="value-text">
+                            <h3>Prakticky</h3>
+                            <p>Přímo v terénech</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">✓</div>
+                        <div class="value-text">
+                            <h3>Lidsky</h3>
+                            <p>Rozumím vašim problémům</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">✓</div>
+                        <div class="value-text">
+                            <h3>Efektivně</h3>
+                            <p>Bez plýtvání času</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <h2>Co ti nabízím</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Školení shell</h3>
+                    <p>Komplexní školení psaní shell skriptů s důrazem na praxi a reálné situace v provozu.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI poradenství</h3>
+                    <p>Jak jednoduše zapojit AI do tvých procesů bez zbytečných komplikací.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Automatizace</h3>
+                    <p>Automaty které šetří čas a náklady – shell scriptem, AI nebo kombinací obojího.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Debugování</h3>
+                    <p>Pomoc s chybami a problematickými skripty nebo AI modely.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Optimalizace</h3>
+                    <p>Zrychlení a zefektivnění existujících procesů a skriptů.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Workshopy</h3>
+                    <p>Skupinová školení na míru – ať už na remote, nebo přímo u vás v kancelu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+        <div class="process-container">
+            <div class="section-header">
+                <h2>Jak pracuji</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Zanalyzuji tvoj problém</h3>
+                    <p>Nejdř se podrobně podívám, co přesně potřebuješ a jak to vypadá v praxi.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Navrhu řešení</h3>
+                    <p>Připravím plán, který je realistický a odpovídá tvým podmínkám.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Implementuji s tebou</h3>
+                    <p>Spolu řešíme konkrétní kroky a já ti vysvětluju všechno zásadní.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Pokračuji v podpoře</h3>
+                    <p>Nejsi sam – jsem tu pro dotazy a úpravy během implementace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <div class="contact-badge">Kontakt</div>
+                <h2>Pojďme si povídat</h2>
+                <p class="about-text" style="margin-top: 1rem;">Máš otázku, projekt nebo prostě chceš vědět víc? Klidně se mi ozvi – odpovídám typicky do jednoho dne.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <label>Email</label>
+                            <a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <label>Telefon</label>
+                            <a href="tel:7887787">7887787</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <label>Město</label>
+                            <p style="margin: 0;">Ostrava</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3>Chceš začít?</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="btn-primary">Napište mi email</a>
+                    <a href="tel:7887787" class="btn-secondary">Zavolejte mi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Zkouška. Všechna práva vyhrazena. | <a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a></p>
+    </footer>
+
+    <!-- SCROLL NAVBAR SHADOW -->
+    <script>
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
