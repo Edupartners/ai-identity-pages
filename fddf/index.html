@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fddf | fd – df</title>
+    <meta name="description" content="Jsem fd, odborník v oboru fd. Pomáhám df dosáhnout jejich cílů. Mým největším výsledkem je fd." />
+    <meta name="keywords" content="fddf, fd, fdf, df" />
+    <meta name="author" content="fddf" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="fddf | fd" />
+    <meta property="og:description" content="Jsem fd, odborník v oboru fd. Pomáhám df dosáhnout jejich cílů. Mým největším výsledkem je fd." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/fddf/foto.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="fddf | fd" />
+    <meta name="twitter:description" content="Jsem fd, odborník v oboru fd. Pomáhám df dosáhnout jejich cílů. Mým největším výsledkem je fd." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/fddf/foto.jpg" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "fddf",
+      "jobTitle": "fd",
+      "description": "fdf – fd",
+      "email": "micek.michal@seznam.cz",
+      "telephone": "33333",
+      "url": "https://aiid.cz/fddf",
+      "image": "https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/fddf/foto.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "df",
+        "addressCountry": "CZ"
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAVBAR ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .nav-menu a:hover {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }
+
+        .nav-cta {
+            background-color: #3b82f6;
+            color: #000;
+            padding: 10px 24px;
+            border-radius: 999px;
+            border: none;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* ==================== HERO SEKCE ==================== */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 1.5rem 0 1rem 0;
+            color: #f0f0f0;
+        }
+
+        .hero-content h1 .accent {
+            color: #3b82f6;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: #3b82f6;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: #b8b8b8;
+            max-width: 420px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            color: #d0d0d0;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #3b82f6;
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #d0d0d0;
+            padding: 14px 32px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #3b82f6;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+            animation: floatImage 3s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* ==================== STATS GRID ==================== */
+        .stats {
+            padding: 3rem 2rem;
+            background-color: #111111;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+        }
+
+        .stat-number {
+            font-family: 'Syne', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #b8b8b8;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ==================== O MNĚ SEKCE ==================== */
+        .about {
+            padding: 4rem 2rem;
+            background-color: #0a0a0a;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: #3b82f6;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .about-text {
+            color: #b8b8b8;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .value-text h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 0.3rem;
+        }
+
+        .value-text p {
+            font-size: 13px;
+            color: #999999;
+        }
+
+        .about-image svg {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.1));
+        }
+
+        /* ==================== EXPERTIZA GRID ==================== */
+        .expertise {
+            padding: 4rem 2rem;
+            background-color: #111111;
+        }
+
+        .expertise-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .section-header p {
+            color: #b8b8b8;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .expertise-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .expertise-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 0.8rem;
+        }
+
+        .expertise-card p {
+            color: #999999;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ==================== POSTUP PRÁCE ==================== */
+        .process {
+            padding: 4rem 2rem;
+            background-color: #0a0a0a;
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .process-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            font-family: 'Syne', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: #3b82f6;
+            opacity: 0.2;
+        }
+
+        .process-number {
+            font-family: 'Syne', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 0.8rem;
+        }
+
+        .process-step p {
+            color: #999999;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ==================== FAQ SEKCE ==================== */
+        .faq {
+            padding: 4rem 2rem;
+            background-color: #111111;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .faq-button {
+            width: 100%;
+            padding: 1.5rem;
+            background: transparent;
+            border: none;
+            color: #f0f0f0;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Syne', sans-serif;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-button:hover {
+            background: rgba(59, 130, 246, 0.05);
+            color: #3b82f6;
+        }
+
+        .faq-icon {
+            color: #3b82f6;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 500px;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: #b8b8b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* ==================== KONTAKT SEKCE ==================== */
+        .contact {
+            padding: 4rem 2rem;
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-content h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: #3b82f6;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(59, 130, 246, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-details h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #999999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details p {
+            color: #f0f0f0;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .contact-details a {
+            color: #f0f0f0;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: #3b82f6;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-form h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            padding: 12px 24px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: transparent;
+            color: #3b82f6;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .contact-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .contact-btn.primary {
+            background: #3b82f6;
+            color: #000;
+            border-color: #3b82f6;
+        }
+
+        .contact-btn.primary:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background-color: #050505;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: #999999;
+            font-size: 14px;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #3b82f6;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #2563eb;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .hero-image {
+                order: -1;
+                margin-bottom: 2rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                gap: 1.5rem;
+                font-size: 13px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.8rem 1rem;
+            }
+
+            .nav-logo {
+                font-size: 18px;
+            }
+
+            .nav-menu {
+                gap: 0.8rem;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 40px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .contact-content h2 {
+                font-size: 28px;
+            }
+
+            .stats {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav aria-label="Hlavní navigace">
+        <div class="nav-logo">fddf</div>
+        <ul class="nav-menu">
+            <li><a href="#about">O mně</a></li>
+            <li><a href="#expertise">Služby</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <a href="mailto:micek.michal@seznam.cz" class="nav-cta">Napište mi</a>
+    </nav>
+
+    <!-- HERO SEKCE -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Dostupný
+                </div>
+                <h1>Jsem <span class="accent">fddf</span></h1>
+                <p class="hero-subtitle">Tvůj partner v dosahování cílů. S přístupem zaměřeným na výsledky a vždycky s lidským přístupem.</p>
+                <div class="hero-pills">
+                    <span class="pill">Profese: fd</span>
+                    <span class="pill">Sídlo: df</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="btn-primary">Kontaktuj mě</a>
+                    <a href="#about" class="btn-secondary">Více o mně</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/Edupartners/ai-identity-pages/main/fddf/foto.jpg" alt="fddf, fd" />
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS GRID -->
+    <section class="stats">
+        <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Let zkušeností</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Spokojených klientů</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">97%</div>
+            <div class="stat-label">Úspěšností projektů</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Dostupnosti</div>
+        </div>
+    </section>
+
+    <!-- O MNĚ SEKCE -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <svg aria-hidden="true" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="200" r="180" fill="rgba(59, 130, 246, 0.08)" stroke="rgba(59, 130, 246, 0.2)" stroke-width="2" />
+                    <path d="M200 100 Q300 150 300 250 Q200 320 100 250 Q100 150 200 100" fill="rgba(59, 130, 246, 0.1)" stroke="rgba(59, 130, 246, 0.3)" stroke-width="2" />
+                    <circle cx="200" cy="200" r="30" fill="rgba(59, 130, 246, 0.2)" />
+                    <path d="M140 180 L160 200 M260 180 L240 200" stroke="rgba(59, 130, 246, 0.3)" stroke-width="3" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="about-content">
+                <div class="about-badge">O MNĚ</div>
+                <h2>Tvůj ideální partner pro úspěch</h2>
+                <p class="about-text">Jsem fd, expert v oboru fdf. Moji životní misi je pomáhat df dosáhnout jejich cílů skrze moderní přístupy a praktické řešení. Věřím v kolegiální spolupráci a dlouhodobé partnerství.</p>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Orientace na výsledky</h3>
+                            <p>Konkrétní a měřitelné cíle</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <path d="M12 1v6m0 6v6"></path>
+                                <path d="M4.22 4.22l4.24 4.24m0 5.08l-4.24 4.24"></path>
+                                <path d="M19.78 4.22l-4.24 4.24m0 5.08l4.24 4.24"></path>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Transparentnost</h3>
+                            <p>Otevřená komunikace vždy</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Týmová práce</h3>
+                            <p>Spolupráce všech zainteresovaných</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <h3>Kvalita nad vším</h3>
+                            <p>Nejlepší řešení pro tebe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTIZA GRID -->
+    <section class="expertise" id="expertise">
+        <div class="expertise-container">
+            <div class="section-header">
+                <h2>Čím ti mohu pomoci</h2>
+                <p>Mám bohaté zkušenosti v řadě oblastí. Tady jsou hlavní služby, které ti nabízím.</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#3b82f6">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Konzultace a poradenství</h3>
+                    <p>Individuální přístup k tvým potřebám s konkrétními doporučeními pro tvůj úspěch.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#3b82f6">
+                            <path d="M5 13.18c.33.04.66.13 1 .23v-6.4c-.34.1-.67.19-1 .23v6.17zm7-6.68V3.5a.5.5 0 0 0-1 0v2.82c.27-.02.54-.02.81-.02.27 0 .54 0 .81.02V3.5a.5.5 0 0 0-1 0v2.99c-.27-.13-.53-.26-.81-.38zM19 13.41v-6.4c-.33-.1-.66-.19-1-.23v6.17c.34.1.67.19 1 .23zM3 21a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2H1v12h2zm19-8a2 2 0 0 0-2-2h-2v12h2a2 2 0 0 0 2-2v-8zm-2-1.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM9 5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 16a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm8-8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z"></path>
+                        </svg>
+                    </div>
+                    <h3>Strategické plánování</h3>
+                    <p>Vytvořím s tebou jádrovou strategii dosažení tvých ambiciózních cílů.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#3b82f6">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                        </svg>
+                    </div>
+                    <h3>Implementace a podpora</h3>
+                    <p>Společně projdeme fází realizace se vzájemnou podporou a kontrolou.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#3b82f6">
+                            <path d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.738 4.063 2.047 5.625.055 3.215 1.308 4.368 2.953 5.368 1.466 0.899 3.382 1.314 5.278 1.314 1.004 0 2-0.106 2.944-0.314 1.024 1.923 2.955 3.222 5.252 3.222 0.505 0 1.011-0.056 1.502-0.166 2.571-0.626 3.925-2.354 3.925-4.668 0-0.648-0.034-1.346-0.109-2.051 1.207-1.554 1.899-3.508 1.899-5.553 0-6.016-5.659-10.007-12-10.007zm0 2c5.523 0 10 3.132 10 7.007 0 3.874-4.477 7.007-10 7.007-0.739 0-1.474-0.061-2.188-0.182-0.484 0.104-1.424 0.295-2.812 0.295-1.318 0-2.711-0.36-3.489-0.861-0.547 0.389-0.866-0.063-0.829-1.105 0.022-0.638 0.161-1.511 0.618-2.706-1.117-1.265-1.75-2.881-1.75-4.448 0-3.875 4.477-7.007 10-7.007z"></path>
+                        </svg>
+                    </div>
+                    <h3>Mentoring a trénink</h3>
+                    <p>Sdílím své znalosti a zkušenosti, abys mohl vyrůst a překonávat překážky.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#3b82f6">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Osobní rozvoj</h3>
+                    <p>Rozviješ svůj potenciál a dosahuješ nových výšin v osobním a profesionálním životě.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#3b82f6">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Budování týmu</h3>
+                    <p>Pomáhám Ti sestavit a motivovat tým, který s tebou bude růst.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POSTUP PRÁCE -->
+    <section class="process">
+        <div class="process-container">
+            <div class="section-header">
+                <h2>Jak spolu pracujeme</h2>
+                <p>Mám strukturovaný přístup, ale vždy flexibilní k tvým potřebám.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step" data-step="01">
+                    <div class="process-number">01</div>
+                    <h3>Poznání a analýza</h3>
+                    <p>Nejdřív si vzájemně rozumíme. Podrobně zanalyzuji tvou situaci, cíle a možnosti.</p>
+                </div>
+                <div class="process-step" data-step="02">
+                    <div class="process-number">02</div>
+                    <h3>Plánování a strategie</h3>
+                    <p>Vytvoříme společný plán akcí s konkrétními kroky a milníky.</p>
+                </div>
+                <div class="process-step" data-step="03">
+                    <div class="process-number">03</div>
+                    <h3>Implementace</h3>
+                    <p>Společně jsme zde během realizace. Problémy řešíme v reálném čase.</p>
+                </div>
+                <div class="process-step" data-step="04">
+                    <div class="process-number">04</div>
+                    <h3>Evaluace a optimalizace</h3>
+                    <p>Zhodnotíme výsledky a nastavíme další kroky. Neustálé zlepšování je náš cíl.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SEKCE -->
+    <section class="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>Často kladené otázky</h2>
+                <p>Odpovědi na nejčastější dotazy ohledně mé práce.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-button" aria-expanded="false">
+                    <span>Jaká je tvoje dostupnost?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-answer">
+                        Jsem dostupný 24/7 pro své klienty. V případě urgentních požadavků se snažím odpovědět co nejrychleji, obvykle do 2 hodin.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-button" aria-expanded="false">
+                    <span>Jaké jsou tvoje sazby?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-answer">
+                        Sazby se liší podle rozsahu a typu projektu. Vždy ale nabízím nejlepší poměr ceny a kvality. Kontaktuj mě pro detailní nabídku přesně na míru.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-button" aria-expanded="false">
+                    <span>Jak dlouho trvá první konzultace?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-answer">
+                        První konzultace obvykle trvá 30–45 minut. Je to ideální čas na to, abychom se poznali a já ti kladl otázky, abych rozuměl tvojím potřebám.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-button" aria-expanded="false">
+                    <span>Jaké máš zkušenosti s mým oborem?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-content">
+                    <div class="faq-answer">
+                        Mám bohaté zkušenosti v různých oborech, s důrazem na fdf. Každý projekt je pro mě příležitost k učení a aplikaci nejnovějších poznatků.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT SEKCE -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <div class="contact-badge">KONTAKT</div>
+                <h2>Pojďme si promluvit</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:micek.michal@seznam.cz">micek.michal@seznam.cz</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <a href="tel:33333">33333</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Místo</h3>
+                            <p>df</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Jak se mohu podílit?</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:micek.michal@seznam.cz" class="contact-btn primary">Napište mi</a>
+                    <a href="tel:33333" class="contact-btn">Zavolejte mi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 <strong>fddf</strong>. Všechna práva vyhrazena.</p>
+        <p>
+            Vytvořeno s 💙 pro profesionály, kteří věří v konstantní zlepšování.
+        </p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ accordion
+        const faqButtons = document.querySelectorAll('.faq-button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('active');
+                    el.querySelector('.faq-button').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
